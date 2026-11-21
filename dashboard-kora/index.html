@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kora — Tableau de bord e-commerce</title>
+  <meta name="description" content="Template de back-office e-commerce : chiffre d'affaires, commandes, produits et stock, clients, canaux de vente et paiements mobile money.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0C0D10">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23C8F65D'/%3E%3Cpath d='M11 8v16M11 16l9-8M14 13l7 11' stroke='%230C0D10' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.7 3 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M7 7l10 10M17 9v8H9"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6.5h11v10H3zM14 10h4l3 3.5v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4v16M3.5 7.5 7 4l3.5 3.5M17 20V4M13.5 16.5 17 20l3.5-3.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 19.5 5.3 16A8 8 0 1 1 8 18.7z"/><path d="M9 10.5c.3 1.8 2.5 4 4.5 4.5l1.3-1.3 2 .9"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5a2.7 2.7 0 0 1-5.3.5 2.7 2.7 0 0 1-5.4 0A2.7 2.7 0 0 1 4 9.5z"/><path d="M5.5 12v8h13v-8M10 20v-5h4v5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#views">Aller au contenu</a>
+<div class="app">
+  <aside class="side" id="side" aria-label="Navigation principale">
+    <div class="brand"><span class="logo" aria-hidden="true">K</span><span>Kora<em>store</em></span></div>
+    <nav class="nav">
+      <p class="nav-title">Boutique</p>
+      <a href="#apercu" data-go="apercu"><svg class="i"><use href="#i-grid"/></svg>Aperçu</a>
+      <a href="#commandes" data-go="commandes"><svg class="i"><use href="#i-bag"/></svg>Commandes<span class="badge" id="nav-todo">0</span></a>
+      <a href="#produits" data-go="produits"><svg class="i"><use href="#i-box"/></svg>Produits</a>
+      <a href="#clients" data-go="clients"><svg class="i"><use href="#i-users"/></svg>Clients</a>
+    </nav>
+    <div class="side-card">
+      <p class="eyebrow">Objectif de novembre</p>
+      <p class="goal"><b id="goal-val">0</b> / 20 M FCFA</p>
+      <div class="meter"><i id="goal-bar"></i></div>
+      <p class="muted small" id="goal-note">—</p>
+    </div>
+    <div class="shop-switch">
+      <span class="dot-live" aria-hidden="true"></span>
+      <div><b>Boutique en ligne</b><span>kora-store.ci · ouverte</span></div>
+    </div>
+  </aside>
+  <div class="scrim" data-close-side></div>
+
+  <div class="main">
+    <header class="top">
+      <button class="icon-btn only-m" type="button" data-open-side aria-label="Ouvrir le menu" aria-controls="side" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+      <div class="titles">
+        <p class="muted small" id="today">—</p>
+        <h1 id="view-title">Aperçu</h1>
+      </div>
+      <div class="search" role="search">
+        <svg class="i"><use href="#i-search"/></svg>
+        <input id="q" type="search" placeholder="Commande, client, produit…" autocomplete="off" aria-label="Rechercher" aria-controls="q-results" aria-expanded="false">
+        <kbd>/</kbd>
+        <ul class="results" id="q-results" role="listbox" hidden></ul>
+      </div>
+      <div class="pop-wrap">
+        <button class="icon-btn" type="button" id="bell" aria-label="Notifications" aria-expanded="false" aria-controls="notifs"><svg class="i"><use href="#i-bell"/></svg><span class="ping" aria-hidden="true"></span></button>
+        <div class="pop" id="notifs" hidden>
+          <p class="pop-title">Notifications</p>
+          <ul id="notif-list"></ul>
+        </div>
+      </div>
+      <div class="me"><span class="avatar" style="--h:84">AK</span><div class="hide-s"><b>Aïcha K.</b><span>Gérante</span></div></div>
+    </header>
+
+    <main id="views" tabindex="-1">
+      <!-- ============== APERÇU ============== -->
+      <section class="view" data-view="apercu" aria-labelledby="view-title">
+        <div class="row-between">
+          <div class="seg" role="tablist" aria-label="Période" id="period">
+            <button role="tab" type="button" data-p="7j" aria-selected="false">7 jours</button>
+            <button role="tab" type="button" data-p="30j" aria-selected="true">30 jours</button>
+            <button role="tab" type="button" data-p="12m" aria-selected="false">12 mois</button>
+          </div>
+          <p class="muted small" id="period-note">—</p>
+        </div>
+
+        <div class="kpis" id="kpis"></div>
+
+        <div class="grid g-main">
+          <article class="card span-2">
+            <div class="card-head">
+              <div><h2>Chiffre d'affaires</h2><p class="muted small">Comparé à la période précédente</p></div>
+              <ul class="legend-inline"><li><i style="background:var(--lime)"></i>Cette période</li><li><i class="dash"></i>Précédente</li></ul>
+            </div>
+            <div id="ch-revenue"></div>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Canaux de vente</h2><p class="muted small">Part du chiffre d'affaires</p></div></div>
+            <div class="donut-wrap"><div id="ch-channels"></div><ul class="legend" id="lg-channels"></ul></div>
+          </article>
+        </div>
+
+        <div class="grid g-3">
+          <article class="card">
+            <div class="card-head"><div><h2>Parcours d'achat</h2><p class="muted small">Des visites aux commandes</p></div></div>
+            <ol class="funnel" id="funnel"></ol>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Moyens de paiement</h2><p class="muted small">Nombre de commandes</p></div></div>
+            <ul class="hbars" id="payments"></ul>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Livraisons par zone</h2><p class="muted small">Commandes livrées</p></div></div>
+            <ul class="hbars alt" id="zones"></ul>
+          </article>
+        </div>
+
+        <div class="grid g-main">
+          <article class="card span-2">
+            <div class="card-head"><div><h2>Commandes récentes</h2></div><a class="link" href="#commandes" data-go="commandes">Tout voir <svg class="i"><use href="#i-chev"/></svg></a></div>
+            <div class="table-wrap"><table class="tbl" id="recent"></table></div>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Meilleures ventes</h2><p class="muted small">Sur la période</p></div></div>
+            <ul class="tops" id="tops"></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============== COMMANDES ============== -->
+      <section class="view" data-view="commandes" hidden>
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Statut" id="o-tabs"></div>
+          <div class="tools">
+            <label class="field-s"><svg class="i"><use href="#i-search"/></svg><input id="o-q" type="search" placeholder="N° ou client" aria-label="Filtrer les commandes"></label>
+            <button class="btn ghost" type="button" id="o-export"><svg class="i"><use href="#i-download"/></svg>Exporter</button>
+          </div>
+        </div>
+        <article class="card flush">
+          <div class="table-wrap">
+            <table class="tbl tbl-orders">
+              <thead><tr>
+                <th scope="col">Commande</th><th scope="col">Client</th>
+                <th scope="col"><button type="button" class="th-sort" data-sort="date">Date <svg class="i"><use href="#i-sort"/></svg></button></th>
+                <th scope="col">Paiement</th>
+                <th scope="col" class="num"><button type="button" class="th-sort" data-sort="total">Total <svg class="i"><use href="#i-sort"/></svg></button></th>
+                <th scope="col">Statut</th><th scope="col"><span class="sr">Action</span></th>
+              </tr></thead>
+              <tbody id="o-body"></tbody>
+            </table>
+          </div>
+          <div class="tbl-foot"><p class="muted small" id="o-count">—</p><button class="btn ghost" type="button" id="o-more">Afficher plus</button></div>
+        </article>
+      </section>
+
+      <!-- ============== PRODUITS ============== -->
+      <section class="view" data-view="produits" hidden>
+        <div class="toolbar">
+          <div class="chips" id="p-cats" role="group" aria-label="Catégories"></div>
+          <div class="tools">
+            <label class="switch"><input type="checkbox" id="p-low"><span></span>Stock faible</label>
+            <button class="btn lime" type="button" data-open="#m-product"><svg class="i"><use href="#i-plus"/></svg>Nouveau produit</button>
+          </div>
+        </div>
+        <div class="stock-alert" id="p-alert" hidden></div>
+        <ul class="products" id="p-grid"></ul>
+      </section>
+
+      <!-- ============== CLIENTS ============== -->
+      <section class="view" data-view="clients" hidden>
+        <div class="kpis k3" id="c-kpis"></div>
+        <div class="grid g-main">
+          <article class="card span-2 flush">
+            <div class="card-head pad"><div><h2>Fichier clients</h2><p class="muted small">Classés par montant dépensé</p></div>
+              <div class="chips" id="c-seg" role="group" aria-label="Segments"></div></div>
+            <div class="table-wrap"><table class="tbl" id="c-table"></table></div>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Segments</h2><p class="muted small">Répartition des clients</p></div></div>
+            <div class="donut-wrap"><div id="ch-seg"></div><ul class="legend" id="lg-seg"></ul></div>
+            <div class="tip-card">
+              <p class="eyebrow">Conseil</p>
+              <p id="c-advice">—</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Fiche commande -->
+<aside class="drawer" id="d-order" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden>
+  <div class="drawer-panel">
+    <header class="drawer-head"><div><p class="muted small" id="d-date">—</p><h2 id="d-title">Commande</h2></div><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="drawer-body" id="d-body"></div>
+    <footer class="drawer-foot" id="d-foot"></footer>
+  </div>
+</aside>
+
+<!-- Nouveau produit -->
+<div class="modal" id="m-product" role="dialog" aria-modal="true" aria-labelledby="m-title" hidden>
+  <form class="modal-panel" id="f-product" novalidate>
+    <header class="drawer-head"><h2 id="m-title">Nouveau produit</h2><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="form-grid">
+      <label class="fld full"><span>Nom du produit</span><input name="name" required placeholder="Ex. Chemise en wax" maxlength="60"></label>
+      <label class="fld"><span>Catégorie</span><select name="cat"></select></label>
+      <label class="fld"><span>Prix (FCFA)</span><input name="price" type="number" min="500" step="500" required placeholder="15000"></label>
+      <label class="fld"><span>Stock initial</span><input name="stock" type="number" min="0" step="1" required placeholder="20"></label>
+      <label class="fld"><span>Variantes</span><input name="variants" placeholder="S · M · L"></label>
+      <label class="switch full"><input type="checkbox" name="online" checked><span></span>Mettre en ligne immédiatement</label>
+    </div>
+    <p class="form-err" id="f-err" role="alert"></p>
+    <footer class="drawer-foot"><button class="btn ghost" type="button" data-close>Annuler</button><button class="btn lime" type="submit">Créer le produit</button></footer>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

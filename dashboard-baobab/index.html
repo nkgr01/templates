@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baobab — Caisse et gestion commerciale</title>
+  <meta name="description" content="Template de logiciel de caisse et de gestion commerciale : encaissement, ticket, ventes du jour, clôture de caisse, stock, bons de commande et crédits clients.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F4EFE6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23D9622B'/%3E%3Cpath d='M16 27V15M16 15c-5 0-8-3-8-6 3 0 6 1 8 4 2-3 5-4 8-4 0 3-3 6-8 6z' stroke='%23FFFDF8' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6l2.2-8H7"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5h11a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11M9 8.5h6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16M8 8v8M11 8v8M14 8v8M17 8v8"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9M7 17H4.5V10a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v7H17"/><path d="M7 14h10v6.5H7z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6.5h11v10H3zM14 10h4l3 3.5v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 15v4.5h16V15"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 19.5 5.3 16A8 8 0 1 1 8 18.7z"/><path d="M9 10.5c.3 1.8 2.5 4 4.5 4.5l1.3-1.3 2 .9"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <!-- catégories -->
+    <symbol id="c-epicerie" viewBox="0 0 24 24"><path d="M7 4h10l1 4v11.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19.5V8z"/><path d="M6 8h12M10 12.5c1-1 3-1 4 0M10 16c1 1 3 1 4 0"/></symbol>
+    <symbol id="c-boissons" viewBox="0 0 24 24"><path d="M10 2.5h4V6l1.5 2.5V20a1.5 1.5 0 0 1-1.5 1.5h-4A1.5 1.5 0 0 1 8.5 20V8.5L10 6z"/><path d="M8.5 12h7M8.5 16.5h7"/></symbol>
+    <symbol id="c-frais" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19 13 11"/></symbol>
+    <symbol id="c-boulangerie" viewBox="0 0 24 24"><path d="M4.5 15.5 15.5 4.5a3.5 3.5 0 0 1 5 5l-11 11a3.5 3.5 0 0 1-5-5z"/><path d="m9 11 2 2M12 8l2 2M15 5.5 17 7.5M6 14l2 2"/></symbol>
+    <symbol id="c-hygiene" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="4"/><circle cx="9" cy="5" r="2"/><circle cx="15.5" cy="4" r="1.3"/><path d="M8 14.5h8"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#views">Aller au contenu</a>
+<header class="top">
+  <div class="brand">
+    <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21V11M12 11c-4 0-6.5-2.4-6.5-5 2.5 0 5 1 6.5 3.5C13.5 7 16 6 18.5 6c0 2.6-2.5 5-6.5 5z"/></svg></span>
+    <div><b>Baobab</b><span>Alimentation générale · Marcory</span></div>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#caisse" data-go="caisse"><svg class="i"><use href="#i-cart"/></svg><span>Caisse</span></a>
+    <a href="#ventes" data-go="ventes"><svg class="i"><use href="#i-chart"/></svg><span>Ventes</span></a>
+    <a href="#stock" data-go="stock"><svg class="i"><use href="#i-box"/></svg><span>Stock</span><b class="badge" id="nav-stock" hidden>0</b></a>
+    <a href="#ardoises" data-go="ardoises"><svg class="i"><use href="#i-book"/></svg><span>Ardoises</span></a>
+  </nav>
+  <div class="top-right">
+    <div class="clock"><b id="clock">--:--</b><span id="date">—</span></div>
+    <div class="cashier"><span class="status" aria-hidden="true"></span><div><b>Caisse 1</b><span>Mariam D.</span></div></div>
+  </div>
+</header>
+
+<main id="views" tabindex="-1">
+  <h1 class="sr" id="view-title">Caisse</h1>
+
+  <!-- ================ CAISSE ================ -->
+  <section class="view pos" data-view="caisse">
+    <div class="pos-left">
+      <div class="scan">
+        <svg class="i"><use href="#i-scan"/></svg>
+        <input id="scan" type="search" placeholder="Scanner ou chercher un produit" autocomplete="off" aria-label="Scanner ou rechercher un produit">
+        <kbd>F2</kbd>
+      </div>
+      <div class="cats" id="cats" role="group" aria-label="Rayons"></div>
+      <ul class="tiles" id="tiles" aria-label="Produits"></ul>
+    </div>
+
+    <aside class="ticket" id="ticket" aria-label="Ticket en cours">
+      <header class="t-head">
+        <div><p class="eyebrow">Ticket en cours</p><h2 id="t-num">N° —</h2></div>
+        <button class="btn soft sm" type="button" id="t-clear"><svg class="i"><use href="#i-trash"/></svg>Vider</button>
+        <button class="icon-btn only-m" type="button" id="t-close" aria-label="Fermer le ticket"><svg class="i"><use href="#i-x"/></svg></button>
+      </header>
+      <ul class="t-lines" id="t-lines"></ul>
+      <div class="t-sum">
+        <div><span>Articles</span><b id="t-count">0</b></div>
+        <div class="disc"><label for="t-disc">Remise</label>
+          <div class="seg mini" id="t-disc" role="radiogroup" aria-label="Remise">
+            <button type="button" role="radio" data-d="0" aria-checked="true">0 %</button><button type="button" role="radio" data-d="5" aria-checked="false">5 %</button><button type="button" role="radio" data-d="10" aria-checked="false">10 %</button>
+          </div>
+        </div>
+        <div class="t-total"><span>Total</span><b id="t-total">0 FCFA</b></div>
+      </div>
+      <fieldset class="pay">
+        <legend class="eyebrow">Paiement</legend>
+        <div class="pay-grid" id="pay"></div>
+        <div class="cash" id="cash">
+          <label class="fld"><span>Montant reçu</span><input id="given" type="number" inputmode="numeric" min="0" step="50" placeholder="0"></label>
+          <div class="quick" id="quick"></div>
+          <p class="change">Monnaie à rendre <b id="change">0 FCFA</b></p>
+        </div>
+        <label class="fld" id="credit" hidden><span>Client (ardoise)</span><select id="credit-client"></select></label>
+      </fieldset>
+      <button class="btn primary big" type="button" id="checkout" disabled><svg class="i"><use href="#i-check"/></svg><span>Encaisser</span></button>
+    </aside>
+    <button class="ticket-fab only-m" type="button" id="t-open" aria-controls="ticket"><svg class="i"><use href="#i-receipt"/></svg><span id="fab-label">Ticket vide</span></button>
+  </section>
+
+  <!-- ================ VENTES ================ -->
+  <section class="view" data-view="ventes" hidden>
+    <div class="head-row">
+      <div><p class="eyebrow">Journal des ventes</p><h2 class="h-big" id="v-day">Aujourd'hui</h2></div>
+      <button class="btn dark" type="button" id="close-day"><svg class="i"><use href="#i-lock"/></svg>Clôturer la caisse</button>
+    </div>
+    <div class="kpis" id="v-kpis"></div>
+    <div class="grid g-2-1">
+      <article class="card">
+        <div class="card-head"><div><h3>Ventes par heure</h3><p class="muted small">Aujourd'hui comparé à la moyenne des 4 derniers mêmes jours</p></div></div>
+        <div id="ch-hours"></div>
+      </article>
+      <article class="card">
+        <div class="card-head"><div><h3>Moyens de paiement</h3><p class="muted small">Montants encaissés aujourd'hui</p></div></div>
+        <div class="donut-wrap"><div id="ch-pay"></div><ul class="legend" id="lg-pay"></ul></div>
+      </article>
+    </div>
+    <div class="grid g-1-2">
+      <article class="card">
+        <div class="card-head"><div><h3>Par rayon</h3><p class="muted small">Chiffre d'affaires et marge du jour</p></div></div>
+        <ul class="rayons" id="v-cats"></ul>
+      </article>
+      <article class="card">
+        <div class="card-head"><div><h3>30 derniers jours</h3><p class="muted small">Coût d'achat et marge brute</p></div></div>
+        <div id="ch-30"></div>
+      </article>
+    </div>
+    <article class="card flush">
+      <div class="card-head pad"><div><h3>Tickets du jour</h3><p class="muted small" id="v-tcount">—</p></div></div>
+      <div class="table-wrap"><table class="tbl" id="v-tickets"></table></div>
+    </article>
+  </section>
+
+  <!-- ================ STOCK ================ -->
+  <section class="view" data-view="stock" hidden>
+    <div class="head-row">
+      <div><p class="eyebrow">Inventaire</p><h2 class="h-big">Stock du magasin</h2></div>
+      <div class="tools">
+        <button class="btn soft" type="button" id="po-open"><svg class="i"><use href="#i-truck"/></svg>Bon de commande</button>
+        <button class="btn primary" type="button" id="in-open"><svg class="i"><use href="#i-in"/></svg>Entrée de stock</button>
+      </div>
+    </div>
+    <div class="kpis k4" id="s-kpis"></div>
+    <div class="grid g-2-1">
+      <article class="card flush">
+        <div class="card-head pad">
+          <div class="chips" id="s-filter" role="group" aria-label="Filtrer le stock"></div>
+          <label class="field-s"><svg class="i"><use href="#i-search"/></svg><input id="s-q" type="search" placeholder="Produit ou référence" aria-label="Rechercher dans le stock"></label>
+        </div>
+        <div class="table-wrap"><table class="tbl" id="s-table"></table></div>
+      </article>
+      <article class="card">
+        <div class="card-head"><div><h3>Mouvements récents</h3><p class="muted small">Entrées et sorties</p></div></div>
+        <ol class="moves" id="moves"></ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================ ARDOISES ================ -->
+  <section class="view" data-view="ardoises" hidden>
+    <div class="head-row">
+      <div><p class="eyebrow">Crédits clients</p><h2 class="h-big">Ardoises</h2></div>
+      <p class="pill-total" id="a-total">—</p>
+    </div>
+    <ul class="slates" id="slates"></ul>
+  </section>
+</main>
+
+<!-- Reçu -->
+<div class="modal" id="m-receipt" role="dialog" aria-modal="true" aria-labelledby="r-title" hidden>
+  <div class="modal-panel narrow">
+    <div class="receipt" id="receipt"></div>
+    <footer class="m-foot"><button class="btn soft" type="button" data-close>Nouveau client</button><button class="btn primary" type="button" id="r-print"><svg class="i"><use href="#i-print"/></svg>Imprimer</button></footer>
+  </div>
+</div>
+
+<!-- Clôture -->
+<div class="modal" id="m-close" role="dialog" aria-modal="true" aria-labelledby="cl-title" hidden>
+  <div class="modal-panel">
+    <header class="m-head"><h2 id="cl-title">Clôture de la caisse 1</h2><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body" id="cl-body"></div>
+    <footer class="m-foot"><button class="btn soft" type="button" data-close>Annuler</button><button class="btn dark" type="button" id="cl-ok"><svg class="i"><use href="#i-lock"/></svg>Valider la clôture</button></footer>
+  </div>
+</div>
+
+<!-- Entrée de stock -->
+<div class="modal" id="m-in" role="dialog" aria-modal="true" aria-labelledby="in-title" hidden>
+  <form class="modal-panel" id="f-in" novalidate>
+    <header class="m-head"><h2 id="in-title">Entrée de stock</h2><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body form-grid">
+      <label class="fld full"><span>Produit</span><select name="pid" required></select></label>
+      <label class="fld"><span>Quantité reçue</span><input name="qty" type="number" min="1" step="1" required placeholder="24"></label>
+      <label class="fld"><span>Fournisseur</span><select name="sup"></select></label>
+      <p class="hint full" id="in-hint"></p>
+    </div>
+    <footer class="m-foot"><button class="btn soft" type="button" data-close>Annuler</button><button class="btn primary" type="submit"><svg class="i"><use href="#i-in"/></svg>Enregistrer l'entrée</button></footer>
+  </form>
+</div>
+
+<!-- Bon de commande -->
+<div class="modal" id="m-po" role="dialog" aria-modal="true" aria-labelledby="po-title" hidden>
+  <div class="modal-panel wide">
+    <header class="m-head"><div><p class="eyebrow">Proposition automatique</p><h2 id="po-title">Bon de commande fournisseurs</h2></div><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body" id="po-body"></div>
+    <footer class="m-foot"><button class="btn soft" type="button" data-close>Fermer</button><button class="btn primary" type="button" id="po-send"><svg class="i"><use href="#i-chat"/></svg>Envoyer aux fournisseurs</button></footer>
+  </div>
+</div>
+
+<!-- Remboursement ardoise -->
+<div class="modal" id="m-pay" role="dialog" aria-modal="true" aria-labelledby="pay-title" hidden>
+  <form class="modal-panel narrow" id="f-pay" novalidate>
+    <header class="m-head"><h2 id="pay-title">Remboursement</h2><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body form-grid one">
+      <p id="pay-who" class="muted"></p>
+      <label class="fld"><span>Montant remboursé (FCFA)</span><input name="amount" type="number" min="50" step="50" required></label>
+      <div class="quick" id="pay-quick"></div>
+    </div>
+    <footer class="m-foot"><button class="btn soft" type="button" data-close>Annuler</button><button class="btn primary" type="submit"><svg class="i"><use href="#i-check"/></svg>Enregistrer</button></footer>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

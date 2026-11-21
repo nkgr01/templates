@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas — Gestion d'entreprise</title>
+  <meta name="description" content="Template de logiciel de gestion d'entreprise : trésorerie et prévisions, facturation avec TVA, relances, suivi de projets en tableau kanban, équipe et congés.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0F1730">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230F1730'/%3E%3Cpath d='M8 24 16 8l8 16M11 18h10' stroke='%23F5B13D' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5M10 20v-5.5h4V20"/></symbol>
+    <symbol id="i-invoice" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 11h7M9 14.5h7M9 18h4"/></symbol>
+    <symbol id="i-kanban" viewBox="0 0 24 24"><rect x="3.5" y="4" width="5" height="16" rx="1.5"/><rect x="9.5" y="4" width="5" height="11" rx="1.5"/><rect x="15.5" y="4" width="5" height="7" rx="1.5"/></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.8.7 3 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 8V6.5A2.5 2.5 0 0 0 16.5 4H6a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h12a2 2 0 0 0 2-2v-2"/><path d="M21 10h-5a2 2 0 0 0 0 4h5z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 8h14M5 8l-2.5 6a3 3 0 0 0 5 0zM19 8l-2.5 6a3 3 0 0 0 5 0z"/></symbol>
+    <symbol id="i-grip" viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.2" fill="currentColor"/><circle cx="15" cy="6" r="1.2" fill="currentColor"/><circle cx="9" cy="12" r="1.2" fill="currentColor"/><circle cx="15" cy="12" r="1.2" fill="currentColor"/><circle cx="9" cy="18" r="1.2" fill="currentColor"/><circle cx="15" cy="18" r="1.2" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#views">Aller au contenu</a>
+<div class="app">
+  <aside class="side" id="side" aria-label="Navigation principale">
+    <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 19 12 5l7 14M8 14h8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Atlas</b><span>Conseil &amp; Ingénierie</span></div></div>
+    <nav class="nav">
+      <a href="#accueil" data-go="accueil"><svg class="i"><use href="#i-home"/></svg>Tableau de bord</a>
+      <a href="#factures" data-go="factures"><svg class="i"><use href="#i-invoice"/></svg>Factures<span class="count" id="nav-late"></span></a>
+      <a href="#projets" data-go="projets"><svg class="i"><use href="#i-kanban"/></svg>Projets</a>
+      <a href="#equipe" data-go="equipe"><svg class="i"><use href="#i-team"/></svg>Équipe<span class="count soft" id="nav-leave"></span></a>
+    </nav>
+    <div class="side-foot">
+      <p class="eyebrow">Exercice 2026</p>
+      <div class="fy"><span>Objectif de chiffre d'affaires</span><b id="fy-val">—</b><div class="meter"><i id="fy-bar"></i></div></div>
+      <div class="me"><span class="avatar" style="--h:220">YK</span><div><b>Yasmine Koné</b><span>Directrice générale</span></div></div>
+    </div>
+  </aside>
+  <div class="scrim" data-close-side></div>
+
+  <div class="main">
+    <header class="top">
+      <button class="icon-btn only-m" type="button" data-open-side aria-label="Ouvrir le menu" aria-controls="side" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+      <div class="crumbs"><span class="muted">Atlas SARL · Abidjan Plateau</span><h1 id="view-title">Tableau de bord</h1></div>
+      <label class="search"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="Rechercher une facture, un client…" aria-label="Rechercher une facture"></label>
+      <button class="btn primary" type="button" data-new-invoice><svg class="i"><use href="#i-plus"/></svg><span class="hide-s">Nouvelle facture</span></button>
+    </header>
+
+    <main id="views" tabindex="-1">
+      <!-- ============ TABLEAU DE BORD ============ -->
+      <section class="view" data-view="accueil">
+        <div class="kpis" id="kpis"></div>
+        <div class="grid g-2-1">
+          <article class="card">
+            <div class="card-head">
+              <div><h2>Trésorerie</h2><p class="muted small">Solde fin de mois, réel et prévisionnel</p></div>
+              <div class="seg" role="radiogroup" aria-label="Scénario de prévision" id="scenario">
+                <button type="button" role="radio" data-s="prudent" aria-checked="false">Prudent</button>
+                <button type="button" role="radio" data-s="central" aria-checked="true">Central</button>
+                <button type="button" role="radio" data-s="optimiste" aria-checked="false">Optimiste</button>
+              </div>
+            </div>
+            <div id="ch-cash"></div>
+            <p class="note" id="cash-note"></p>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Échéances</h2><p class="muted small">Les 30 prochains jours</p></div></div>
+            <ol class="agenda" id="agenda"></ol>
+          </article>
+        </div>
+        <div class="grid g-2-1">
+          <article class="card">
+            <div class="card-head"><div><h2>Encaissements et décaissements</h2><p class="muted small">Par mois, en FCFA</p></div>
+              <ul class="legend-inline"><li><i style="background:var(--cobalt)"></i>Encaissements</li><li><i style="background:var(--rose)"></i>Décaissements</li></ul></div>
+            <div id="ch-flows"></div>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Charges du mois</h2><p class="muted small" id="exp-month">—</p></div></div>
+            <div class="donut-wrap"><div id="ch-exp"></div><ul class="legend" id="lg-exp"></ul></div>
+          </article>
+        </div>
+        <div class="grid g-1-1">
+          <article class="card">
+            <div class="card-head"><div><h2>Clients qui vous doivent le plus</h2><p class="muted small">Factures non réglées</p></div><a class="link" href="#factures" data-go="factures">Voir les factures</a></div>
+            <ul class="debtors" id="debtors"></ul>
+          </article>
+          <article class="card">
+            <div class="card-head"><div><h2>Projets en cours</h2><p class="muted small">Budget consommé et avancement</p></div><a class="link" href="#projets" data-go="projets">Ouvrir le tableau</a></div>
+            <ul class="mini-projects" id="mini-projects"></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ FACTURES ============ -->
+      <section class="view" data-view="factures" hidden>
+        <div class="aging" id="aging"></div>
+        <article class="card flush">
+          <div class="card-head pad">
+            <div class="tabs" role="tablist" aria-label="Statut des factures" id="i-tabs"></div>
+          </div>
+          <div class="table-wrap"><table class="tbl" id="i-table"></table></div>
+        </article>
+      </section>
+
+      <!-- ============ PROJETS ============ -->
+      <section class="view" data-view="projets" hidden>
+        <div class="row-between">
+          <p class="muted">Glissez une carte d'une colonne à l'autre, ou utilisez les flèches de la carte.</p>
+          <button class="btn ghost" type="button" id="p-new"><svg class="i"><use href="#i-plus"/></svg>Nouveau projet</button>
+        </div>
+        <div class="board" id="board"></div>
+      </section>
+
+      <!-- ============ ÉQUIPE ============ -->
+      <section class="view" data-view="equipe" hidden>
+        <div class="kpis k4" id="t-kpis"></div>
+        <div class="grid g-2-1">
+          <article class="card flush">
+            <div class="card-head pad"><div><h2>Collaborateurs</h2><p class="muted small" id="t-today">—</p></div>
+              <div class="chips" id="t-dep" role="group" aria-label="Départements"></div></div>
+            <div class="table-wrap"><table class="tbl" id="t-table"></table></div>
+          </article>
+          <div class="stack">
+            <article class="card">
+              <div class="card-head"><div><h2>Demandes de congé</h2><p class="muted small">À valider</p></div></div>
+              <ul class="leaves" id="leaves"></ul>
+            </article>
+            <article class="card">
+              <div class="card-head"><div><h2>Masse salariale</h2><p class="muted small">Brut mensuel par département</p></div></div>
+              <ul class="hbars" id="payroll"></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<!-- Nouvelle facture -->
+<div class="modal" id="m-invoice" role="dialog" aria-modal="true" aria-labelledby="inv-title" hidden>
+  <form class="modal-panel wide" id="f-inv" novalidate>
+    <header class="m-head"><div><p class="eyebrow" id="inv-num">Facture</p><h2 id="inv-title">Nouvelle facture</h2></div><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body inv">
+      <div class="inv-form">
+        <div class="form-grid">
+          <label class="fld full"><span>Client</span><select name="client" required></select></label>
+          <label class="fld"><span>Date d'émission</span><input name="date" type="date" required></label>
+          <label class="fld"><span>Échéance</span><select name="terms"><option value="0">À réception</option><option value="15">15 jours</option><option value="30" selected>30 jours</option><option value="45">45 jours</option><option value="60">60 jours</option></select></label>
+        </div>
+        <div class="lines-head"><span>Désignation</span><span>Qté</span><span>Prix unitaire HT</span><span></span></div>
+        <ul class="lines" id="inv-lines"></ul>
+        <button class="btn ghost sm" type="button" id="add-line"><svg class="i"><use href="#i-plus"/></svg>Ajouter une ligne</button>
+        <label class="switch"><input type="checkbox" name="vat" checked><span></span>Appliquer la TVA (18 %)</label>
+        <p class="form-err" id="inv-err" role="alert"></p>
+      </div>
+      <aside class="inv-preview" aria-label="Aperçu de la facture">
+        <div class="paper" id="inv-paper"></div>
+      </aside>
+    </div>
+    <footer class="m-foot"><button class="btn ghost" type="button" data-close>Annuler</button><button class="btn ghost" type="submit" data-mode="draft">Enregistrer en brouillon</button><button class="btn primary" type="submit" data-mode="send"><svg class="i"><use href="#i-send"/></svg>Créer et envoyer</button></footer>
+  </form>
+</div>
+
+<!-- Nouveau projet -->
+<div class="modal" id="m-project" role="dialog" aria-modal="true" aria-labelledby="pr-title" hidden>
+  <form class="modal-panel" id="f-proj" novalidate>
+    <header class="m-head"><h2 id="pr-title">Nouveau projet</h2><button class="icon-btn" type="button" data-close aria-label="Fermer"><svg class="i"><use href="#i-x"/></svg></button></header>
+    <div class="m-body form-grid">
+      <label class="fld full"><span>Intitulé</span><input name="title" required maxlength="60" placeholder="Ex. Refonte du site vitrine"></label>
+      <label class="fld"><span>Client</span><select name="client"></select></label>
+      <label class="fld"><span>Budget (FCFA)</span><input name="budget" type="number" min="100000" step="50000" required placeholder="2500000"></label>
+      <label class="fld"><span>Date de livraison</span><input name="due" type="date" required></label>
+      <label class="fld"><span>Responsable</span><select name="lead"></select></label>
+    </div>
+    <footer class="m-foot"><button class="btn ghost" type="button" data-close>Annuler</button><button class="btn primary" type="submit"><svg class="i"><use href="#i-plus"/></svg>Créer le projet</button></footer>
+  </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

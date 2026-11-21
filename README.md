@@ -1,7 +1,7 @@
 # Bibliothèque de templates — Sites vitrines premium
 
 Douze templates multi-pages, optimisés pour le SEO, avec des composants 3D temps réel, en quatre collections
-(GSAP ci-dessous, Motion / « façon Framer », Boutiques, Côte d'Ivoire), plus un dashboard.
+(GSAP ci-dessous, Motion / « façon Framer », Boutiques, Côte d'Ivoire), plus quatre dashboards.
 Stack : **HTML + Tailwind CSS + JavaScript vanilla + GSAP/ScrollTrigger + Lenis + Three.js / WebGL**.
 
 | Dossier | Type | Direction artistique | Composant 3D |
@@ -201,6 +201,42 @@ davantage de la maquette (couleurs, disposition), car le design original apparti
   carrousel de cartes, envoi d'argent (met à jour le solde, le plafond et l'historique), plafond modifiable,
   ajout d'objectif, recherche (Ctrl K), tri et filtre des transactions, menu repliable, menu mobile.
 - `noindex` : un dashboard n'a pas vocation à être indexé par Google.
+
+## Dashboards métier (Côte d'Ivoire, FCFA)
+
+| Dossier | Type | Direction artistique | Écrans |
+|---|---|---|---|
+| `dashboard-kora/` | Back-office e-commerce | Sombre, lime électrique, police Sora | Aperçu, Commandes, Produits, Clients |
+| `dashboard-baobab/` | Caisse et gestion commerciale d'une supérette | Crème, terracotta, encre, police Plus Jakarta Sans | Caisse, Ventes, Stock, Ardoises |
+| `dashboard-atlas/` | Gestion d'entreprise (PME de services) | Marine profond, cobalt, ambre, police Manrope | Tableau de bord, Factures, Projets, Équipe |
+
+Points communs :
+
+- **Sans dépendance** : HTML + CSS + `assets/js/app.js`, plus `assets/js/charts.js`, une mini-librairie
+  faite main (courbes, barres groupées ou empilées, anneaux, mini-courbes, compteurs animés) identique dans
+  les trois dossiers.
+- **Données de démonstration** générées en haut de `app.js` avec un générateur pseudo-aléatoire stable
+  (les chiffres sont toujours les mêmes, datés par rapport au jour d'ouverture). Pour un vrai client,
+  remplacez ces tableaux par les réponses de son serveur, en gardant la même forme.
+- **Navigation par écrans** avec adresse propre (`#commandes`, `#stock`…), bouton retour du navigateur,
+  fenêtres accessibles (Échap, focus piégé), version mobile (menu latéral, barre d'onglets en bas,
+  ticket de caisse en panneau).
+- **Contexte local** : FCFA, Wave / Orange Money / MTN MoMo, communes d'Abidjan, TVA 18 %, CNPS.
+
+Ce que chaque dashboard sait faire :
+
+- **Kora** : période 7 j / 30 j / 12 mois comparée à la précédente, objectif du mois, parcours d'achat,
+  commandes filtrables, triables et exportables (fichier CSV pour Excel), fiche commande avec suivi et
+  changement de statut, recherche globale (touche `/`), ajustement du stock et mise hors ligne d'un produit,
+  ajout de produit, segments clients (VIP, fidèles, à relancer…).
+- **Baobab** : caisse (tuiles par rayon, recherche ou code + Entrée, touche `F2`), remise, monnaie à rendre,
+  vente à crédit sur l'ardoise d'un client, ticket imprimable au format 80 mm, journal du jour, clôture de
+  caisse avec écart, stock avec couverture en jours, entrée de stock, bon de commande regroupé par fournisseur,
+  remboursement d'ardoise.
+- **Atlas** : trésorerie réelle et prévision sur 3 mois (prudent / central / optimiste), échéances
+  (salaires, CNPS, TVA, prêt, règlements attendus), balance âgée des factures, création de facture avec
+  aperçu en direct, encaissement et relance, kanban glisser-déposer (ou flèches au clavier), équipe,
+  présences, validation des congés.
 
 ## Production
 
