@@ -1,0 +1,8 @@
+# Vidéos promo : trop lourdes pour le dépôt (à publier sur YouTube)
+_video/
+# Dossier local créé par la CLI Vercel
+.vercel/
+# Fichiers système
+Thumbs.db
+Desktop.ini
+.DS_Store

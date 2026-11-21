@@ -1,0 +1,101 @@
+/* =========================================================
+   Ébène — restaurant gastronomique, Abidjan — styles propres
+   ========================================================= */
+:root {
+  --mo-bg: #0E2A22;
+  --mo-fg: #F2E8D5;
+  --mo-accent: #D99A3D;
+  --mo-accent-ink: #0E2A22;
+  --mo-pill: rgba(242, 232, 213, .08);
+  --mo-pill-strong: #D99A3D;
+  --mo-glow: rgba(217, 154, 61, .16);
+}
+html { background: var(--mo-bg); color-scheme: dark; }
+body { -webkit-font-smoothing: antialiased; }
+/* Grain argentique sur tout le site */
+body::after { content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+::selection { background: #D99A3D; color: #0E2A22; }
+
+.display { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; letter-spacing: -.015em; line-height: .95; }
+.display em { font-style: italic; color: var(--mo-accent); }
+.kicker { font-size: .74rem; letter-spacing: .28em; text-transform: uppercase; font-weight: 500; }
+.ornament { display: inline-flex; align-items: center; gap: .9rem; }
+.ornament::before, .ornament::after { content: ""; width: 34px; height: 1px; background: currentColor; opacity: .5; }
+
+.site-header { transition: background-color .5s, box-shadow .5s; }
+.site-header.is-scrolled { background: rgba(9, 28, 23, .86); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(217,154,61,.18); }
+.nav-link { position: relative; padding: .5rem 1rem; border-radius: 999px; font-size: .92rem; white-space: nowrap; opacity: .8; transition: opacity .25s; }
+.nav-link:hover, .nav-link[aria-current="page"] { opacity: 1; }
+[data-nav-pill] a[aria-current="page"] { color: var(--mo-accent); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .7rem; border-radius: 999px; padding: 1rem 1.8rem; font-size: .95rem; font-weight: 500; transition: background-color .35s, color .35s, border-color .35s; }
+.btn-ochre { background: var(--mo-accent); color: var(--mo-accent-ink); }
+.btn-ochre:hover { background: #EDC27A; }
+.btn-line { border: 1px solid rgba(242,232,213,.4); }
+.btn-line:hover { border-color: var(--mo-accent); color: var(--mo-accent); }
+
+/* Cartes de plats */
+.dish .media { overflow: hidden; border-radius: 200px 200px 18px 18px; background: #163A2F; }
+.dish .media img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+.dish:hover .media img { transform: scale(1.06); }
+.arch { border-radius: 999px 999px 24px 24px; overflow: hidden; }
+
+/* Carte du restaurant (lignes de menu à points de suite) */
+.menu-line { display: grid; grid-template-columns: 1fr auto; gap: .25rem 1.5rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(242,232,213,.12); }
+.menu-line h3 { display: flex; align-items: baseline; gap: .8rem; font-family: "DM Serif Display", serif; font-size: 1.6rem; line-height: 1.15; }
+.menu-line h3::after { content: ""; flex: 1; border-bottom: 1px dotted rgba(242,232,213,.3); transform: translateY(-.3em); min-width: 2rem; }
+.menu-line .price { font-family: "DM Serif Display", serif; font-size: 1.4rem; color: var(--mo-accent); white-space: nowrap; }
+.menu-line p { grid-column: 1 / -1; color: rgba(242,232,213,.65); max-width: 46rem; }
+.tag { display: inline-flex; align-items: center; padding: .2rem .6rem; border-radius: 999px; border: 1px solid rgba(242,232,213,.25); font-family: Outfit, sans-serif; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; vertical-align: middle; }
+.tag-ochre { border-color: var(--mo-accent); color: var(--mo-accent); }
+
+/* Formulaires */
+.field { width: 100%; border: 0; border-bottom: 1px solid rgba(242,232,213,.25); background: transparent; padding: .9rem 0; color: inherit; transition: border-color .3s; color-scheme: dark; }
+.field:focus { outline: none; border-color: var(--mo-accent); }
+.field option { background: #0E2A22; }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .box { display: flex; align-items: center; justify-content: center; text-align: center; height: 100%; padding: .85rem 1rem; border-radius: 999px; border: 1px solid rgba(242,232,213,.22); cursor: pointer; transition: all .25s; }
+.opt input:checked + .box { background: var(--mo-accent); color: var(--mo-accent-ink); border-color: var(--mo-accent); }
+.opt input:focus-visible + .box { outline: 2px solid var(--mo-accent); outline-offset: 2px; }
+input[type="range"] { accent-color: var(--mo-accent); width: 100%; }
+
+.mobile-menu { display: none; }
+.mobile-menu.is-open { display: flex; }
+canvas[data-scene] { display: block; width: 100%; height: 100%; }
+
+/* Formulaires : autoriser les colonnes à rétrécir sur mobile */
+fieldset { min-width: 0; }
+
+/* === Pages juridiques (mentions légales, confidentialité) === */
+.legal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.legal > * { min-width: 0; }
+@media (min-width: 1024px) { .legal { grid-template-columns: 260px minmax(0, 760px); column-gap: 5rem; } .legal-updated { grid-column: 1 / -1; } }
+.legal-updated { font-size: .85rem; opacity: .6; margin: 0; }
+.legal-toc { align-self: start; font-size: .92rem; }
+@media (min-width: 1024px) { .legal-toc { position: sticky; top: 7rem; } }
+.legal-toc-title { font-weight: 600; margin-bottom: .75rem; }
+.legal-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
+.legal-toc a { display: block; padding: .35rem 0 .35rem 1rem; opacity: .7; transition: opacity .2s, color .2s; }
+.legal-toc a:hover { opacity: 1; color: var(--legal-accent); }
+.legal-body { line-height: 1.7; }
+.legal-sec { padding: 2.25rem 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); scroll-margin-top: 7rem; }
+.legal-sec:first-child { border-top: 0; padding-top: 0; }
+.legal-sec h2 { display: flex; gap: .9rem; align-items: baseline; font-size: clamp(1.35rem, 2.2vw, 1.75rem); font-weight: 600; line-height: 1.2; margin: 0 0 1.1rem; letter-spacing: -.01em; }
+.legal-sec h2 span { font-size: .8rem; font-weight: 600; color: var(--legal-accent); letter-spacing: .05em; }
+.legal-sec p { margin: 0 0 .9rem; opacity: .85; }
+.legal-sec ul { margin: 0 0 1rem; padding-left: 1.2rem; list-style: disc; opacity: .85; }
+.legal-sec li { margin: .3rem 0; }
+.legal-sec a { color: var(--legal-accent); text-decoration: underline; text-underline-offset: 3px; }
+.legal-sec strong { font-weight: 600; }
+.legal-dl { display: grid; gap: 0; margin: 1rem 0 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl > div { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl dt { opacity: .6; } .legal-dl dd { margin: 0; }
+@media (max-width: 560px) { .legal-dl > div { grid-template-columns: 1fr; gap: .1rem; } }
+.legal-table-wrap { overflow-x: auto; margin-top: 1rem; }
+.legal-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .9rem; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: .8rem .9rem .8rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-table thead th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; opacity: .6; }
+.legal-table tbody th { font-weight: 600; }
+.legal-note { font-size: .85rem; }
+mark.todo { background: color-mix(in srgb, var(--legal-accent) 22%, transparent); color: inherit; padding: 0 .3em; border-radius: 4px; }

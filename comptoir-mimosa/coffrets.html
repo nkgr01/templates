@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffret cadeau personnalisé à composer en ligne | Comptoir Mimosa</title>
+  <meta name="description" content="Composez votre coffret cadeau : choisissez jusqu'à 4 objets de créateurs, la couleur du ruban et votre message. Emballé à la main à Nantes, livré en 48 h.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.comptoir-mimosa.fr/coffrets.html">
+  <meta name="theme-color" content="#FFD449">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Comptoir Mimosa — Concept-store">
+  <meta property="og:title" content="Coffret cadeau personnalisé à composer en ligne | Comptoir Mimosa">
+  <meta property="og:description" content="Composez votre coffret cadeau : choisissez jusqu'à 4 objets de créateurs, la couleur du ruban et votre message. Emballé à la main à Nantes, livré en 48 h.">
+  <meta property="og:url" content="https://www.comptoir-mimosa.fr/coffrets.html">
+  <meta property="og:image" content="https://www.comptoir-mimosa.fr/assets/img/p-cadeau-rose.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23FFD449'/%3E%3Ccircle cx='24' cy='26' r='8' fill='%231B2350'/%3E%3Ccircle cx='40' cy='26' r='8' fill='%233047D9'/%3E%3Ccircle cx='32' cy='40' r='8' fill='%23FF9DB8'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <script src="assets/js/shop.js" defer></script>
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeGoodsStore","name":"Comptoir Mimosa","description":"Concept-store à Nantes : céramiques, bougies, cosmétiques naturels, papeterie, plantes et coffrets cadeaux, avec des ateliers créatifs chaque semaine.","url":"https://www.comptoir-mimosa.fr/","image":"https://www.comptoir-mimosa.fr/assets/img/hero.webp","telephone":"+33 2 40 00 00 00","email":"coucou@comptoir-mimosa.fr","priceRange":"€","address":{"@type":"PostalAddress","streetAddress":"14 rue Kervégan","postalCode":"44000","addressLocality":"Nantes","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"13:00"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.comptoir-mimosa.fr/"},{"@type":"ListItem","position":2,"name":"Coffrets","item":"https://www.comptoir-mimosa.fr/coffrets.html"}]}</script>
+</head>
+<body class="font-sans bg-cream text-ink" data-shop="mimosa" data-free-shipping="60">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="mx-auto max-w-site px-4 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <a href="index.html" aria-label="Comptoir Mimosa — accueil"><span class="inline-flex items-center gap-2"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="24" r="12" fill="#FFD449"/><circle cx="40" cy="24" r="12" fill="#3047D9"/><circle cx="32" cy="40" r="12" fill="#FF9DB8"/></svg><span class="font-display font-extrabold text-2xl tracking-tight">mimosa</span></span></a>
+      <nav class="hidden lg:flex items-center bg-white/70 rounded-full p-1 shadow-[0_2px_0_rgba(27,35,80,.08)]" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="boutique.html" class="nav-link">La boutique</a>
+        <a href="coffrets.html" class="nav-link" aria-current="page">Coffrets</a>
+        <a href="ateliers.html" class="nav-link">Ateliers</a>
+        <a href="contact.html" class="nav-link">Le comptoir</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="coffrets.html" class="hidden sm:inline-flex btn btn-yellow !py-2.5 !px-4 text-sm">🎁 Composer un coffret</a>
+        <button type="button" data-cart-open class="relative grid place-items-center w-11 h-11 rounded-full bg-white shadow-[0_2px_0_rgba(27,35,80,.1)]" aria-label="Ouvrir le panier"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge" data-cart-count hidden>0</span></button>
+        <button class="lg:hidden w-11 h-11 rounded-full bg-ink text-white grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-mimosa flex-col justify-end gap-1 px-6 pb-12 lg:hidden" data-menu aria-label="Navigation mobile">
+    <a data-menu-item href="index.html" class="display text-6xl py-1">Accueil</a>
+    <a data-menu-item href="boutique.html" class="display text-6xl py-1">La boutique</a>
+    <a data-menu-item href="coffrets.html" class="display text-6xl py-1 text-cobalt" aria-current="page">Coffrets</a>
+    <a data-menu-item href="ateliers.html" class="display text-6xl py-1">Ateliers</a>
+    <a data-menu-item href="contact.html" class="display text-6xl py-1">Le comptoir</a>
+    <p data-menu-item class="mt-8 font-semibold">14 rue Kervégan, Nantes — ouvert du mardi au dimanche</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <section class="pt-28 lg:pt-32">
+      <div class="mx-auto max-w-site px-4 lg:px-8">
+        <nav aria-label="Fil d'Ariane" class="kicker text-muted" data-appear><a href="index.html" class="hover:text-cobalt">Accueil</a> <span aria-hidden="true">/</span> <span class="text-ink" aria-current="page">Coffrets</span></nav>
+        <h1 class="mt-6 display text-[clamp(3.4rem,9vw,8.6rem)] max-w-5xl" data-blur-text>Composez <em>votre coffret</em></h1>
+        <p class="mt-5 max-w-xl text-lg text-muted font-medium" data-appear data-delay=".2">Jusqu'à 4 objets, une boîte en carton recyclé, du papier de soie, un ruban et votre mot écrit à la main. Le tout pour 6 € de plus.</p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-16">
+      <div class="mx-auto max-w-site px-4 lg:px-8 grid lg:grid-cols-12 gap-8" data-box data-max="4" data-base="6">
+        <fieldset class="lg:col-span-8">
+          <legend class="display text-4xl mb-6">1. Choisissez vos objets <span class="text-muted text-2xl">(<span data-box-count>0 / 4</span>)</span></legend>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="bougie-figuier" data-box-item data-price="32" data-name="Bougie Figuier" data-img="assets/img/p-bougie.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-bougie.webp" alt="Bougie allumée dans un pot en verre fumé" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Bougie Figuier</span>
+                <span class="block px-2 text-sm text-muted">32 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="mug-nuage" data-box-item data-price="18" data-name="Mug Nuage" data-img="assets/img/p-mug.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-mug.webp" alt="Mug blanc mat sur fond blanc" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Mug Nuage</span>
+                <span class="block px-2 text-sm text-muted">18 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="savons-lavande" data-box-item data-price="15" data-name="Savons Lavande × 3" data-img="assets/img/p-savons.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-savons.webp" alt="Savons artisanaux à la lavande empilés" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Savons Lavande × 3</span>
+                <span class="block px-2 text-sm text-muted">15 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="carnet-ligne" data-box-item data-price="16" data-name="Carnet Ligné A5" data-img="assets/img/p-carnet.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-carnet.webp" alt="Carnet blanc ouvert avec un stylo" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Carnet Ligné A5</span>
+                <span class="block px-2 text-sm text-muted">16 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="serum-eclat" data-box-item data-price="29" data-name="Sérum Éclat" data-img="assets/img/p-serum.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-serum.webp" alt="Flacon de sérum ambré sur un socle en bois" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Sérum Éclat</span>
+                <span class="block px-2 text-sm text-muted">29 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="cactus-rose" data-box-item data-price="19" data-name="Cactus & pot corail" data-img="assets/img/p-cactus.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-cactus.webp" alt="Petit cactus dans un pot orange sur fond rose" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Cactus & pot corail</span>
+                <span class="block px-2 text-sm text-muted">19 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="tasses-creme" data-box-item data-price="36" data-name="Tasses Crème × 4" data-img="assets/img/p-tasses.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-tasses.webp" alt="Quatre tasses en céramique crème empilées" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Tasses Crème × 4</span>
+                <span class="block px-2 text-sm text-muted">36 €</span>
+              </span>
+            </label>
+            <label class="box-item relative block">
+              <input type="checkbox" name="objets" value="aloe-pot" data-box-item data-price="24" data-name="Aloe & son pot" data-img="assets/img/p-succulente.webp">
+              <span class="card block rounded-[24px] bg-white p-2 pb-4">
+                <span class="relative block rounded-[18px] overflow-hidden aspect-square bg-[#FFE9C2]"><img src="assets/img/p-succulente.webp" alt="Aloe vera dans un pot turquoise" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="tick absolute right-2 top-2 w-8 h-8 rounded-full bg-cobalt text-white grid place-items-center" aria-hidden="true">✓</span></span>
+                <span class="block mt-3 px-2 font-display font-bold leading-tight">Aloe & son pot</span>
+                <span class="block px-2 text-sm text-muted">24 €</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+        <aside class="lg:col-span-4">
+          <div class="lg:sticky lg:top-24 rounded-[32px] bg-white p-7 space-y-6 shadow-[0_6px_0_rgba(27,35,80,.08)]">
+            <p class="display text-4xl">Votre coffret</p>
+            <div data-box-preview aria-hidden="true"></div>
+            <fieldset><legend class="display text-2xl mb-3">2. Le ruban</legend>
+              <div class="flex flex-wrap gap-2"><label class="opt relative"><input type="radio" name="ruban" value="Mimosa" checked><span class="box !py-2 !px-3 text-sm"><i class="w-4 h-4 rounded-full" style="background:#FFD449"></i>Mimosa</span></label><label class="opt relative"><input type="radio" name="ruban" value="Rose"><span class="box !py-2 !px-3 text-sm"><i class="w-4 h-4 rounded-full" style="background:#FF9DB8"></i>Rose</span></label><label class="opt relative"><input type="radio" name="ruban" value="Cobalt"><span class="box !py-2 !px-3 text-sm"><i class="w-4 h-4 rounded-full" style="background:#3047D9"></i>Cobalt</span></label><label class="opt relative"><input type="radio" name="ruban" value="Sapin"><span class="box !py-2 !px-3 text-sm"><i class="w-4 h-4 rounded-full" style="background:#2F8F5B"></i>Sapin</span></label></div>
+            </fieldset>
+            <div><label for="mot" class="display text-2xl">3. Votre mot</label><textarea id="mot" name="mot" rows="3" maxlength="200" class="field mt-3 resize-none" placeholder="Joyeux anniversaire ma belle !"></textarea></div>
+            <div class="flex items-end justify-between border-t-2 border-dashed border-ink/15 pt-5"><span class="font-semibold">Total <span class="block text-xs text-muted font-normal">emballage inclus (6 €)</span></span><span class="display text-5xl" data-box-total aria-live="polite">6 €</span></div>
+            <button type="button" class="btn btn-ink w-full" data-box-add disabled>Ajouter le coffret au panier</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="py-14 lg:py-20" aria-labelledby="t-prets">
+      <div class="mx-auto max-w-site px-4 lg:px-8">
+        <h2 id="t-prets" class="display text-[clamp(2.8rem,6vw,5.4rem)] mb-10" data-blur-text>Pas le temps ? <em>Déjà prêts.</em></h2>
+        <div id="grille" class="grid grid-cols-2 lg:grid-cols-4 gap-x-3 lg:gap-x-5 gap-y-10">
+          <article class="pcard " data-cat="cadeaux" data-product data-id="coffret-petillant" data-name="Coffret Pétillant" data-price="55" data-img="assets/img/p-cadeau-rose.webp">
+            <a href="#coffret-petillant" id="coffret-petillant" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-cadeau-rose.webp" alt="Boîte cadeau rose avec un ruban doré" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Prêt à offrir</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-display font-bold text-lg leading-tight">Coffret Pétillant</h3><p class="text-sm text-muted mt-0.5">Bougie, savons, carnet</p></div>
+                <p class="font-display font-bold text-lg whitespace-nowrap">55 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="coffret-petillant" data-name="Coffret Pétillant" data-price="55" data-img="assets/img/p-cadeau-rose.webp">
+                <p class="kicker text-cobalt">Cadeaux · Coffret</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Coffret Pétillant</h2>
+                <p class="mt-4 text-2xl">55 €</p>
+                <p class="mt-6 leading-relaxed text-muted">Notre trio préféré dans une boîte rose à ruban doré : Bougie Figuier, savons lavande et carnet A5.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-ink flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="coffret-petillant" aria-pressed="false" aria-label="Ajouter Coffret Pétillant aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-muted"><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Économisez 8 €</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Message manuscrit offert</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Livré emballé</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="coffret-petillant" aria-pressed="false" aria-label="Ajouter Coffret Pétillant aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article>
+          <article class="pcard " data-cat="cadeaux" data-product data-id="boite-surprise" data-name="Boîte Surprise" data-price="45" data-img="assets/img/p-cadeau-rouge.webp">
+            <a href="#boite-surprise" id="boite-surprise" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-cadeau-rouge.webp" alt="Paquet cadeau rouge noué avec une ficelle" width="900" height="1125" loading="lazy" decoding="async"></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-display font-bold text-lg leading-tight">Boîte Surprise</h3><p class="text-sm text-muted mt-0.5">4 à 5 objets choisis pour vous</p></div>
+                <p class="font-display font-bold text-lg whitespace-nowrap">45 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="boite-surprise" data-name="Boîte Surprise" data-price="45" data-img="assets/img/p-cadeau-rouge.webp">
+                <p class="kicker text-cobalt">Cadeaux</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Boîte Surprise</h2>
+                <p class="mt-4 text-2xl">45 €</p>
+                <p class="mt-6 leading-relaxed text-muted">Dites-nous pour qui c'est, on s'occupe du reste : au moins 55 € d'objets dans la boîte.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-ink flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="boite-surprise" aria-pressed="false" aria-label="Ajouter Boîte Surprise aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-muted"><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Valeur ≥ 55 €</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Emballage et carte offerts</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Expédiée sous 24 h</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="boite-surprise" aria-pressed="false" aria-label="Ajouter Boîte Surprise aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article>
+          <article class="pcard " data-cat="beaute cadeaux" data-product data-id="rituel-visage" data-name="Rituel Visage" data-price="64" data-img="assets/img/p-soin.webp">
+            <a href="#rituel-visage" id="rituel-visage" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-soin.webp" alt="Flacons de soins naturels entourés de pierres et de feuilles" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">−19 %</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-display font-bold text-lg leading-tight">Rituel Visage</h3><p class="text-sm text-muted mt-0.5">Nettoyant, sérum, crème</p></div>
+                <p class="font-display font-bold text-lg whitespace-nowrap"><span class="price-old">79 €</span>64 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="rituel-visage" data-name="Rituel Visage" data-price="64" data-img="assets/img/p-soin.webp">
+                <p class="kicker text-cobalt">Beauté · Coffret</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Rituel Visage</h2>
+                <p class="mt-4 text-2xl"><span class="price-old">79 €</span>64 €</p>
+                <p class="mt-6 leading-relaxed text-muted">La routine complète en trois gestes, dans une trousse en coton bio réutilisable.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-ink flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="rituel-visage" aria-pressed="false" aria-label="Ajouter Rituel Visage aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-muted"><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>3 produits pleine taille</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Vegan, sans parfum de synthèse</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Trousse offerte</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="rituel-visage" aria-pressed="false" aria-label="Ajouter Rituel Visage aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article>
+          <article class="pcard " data-cat="maison cadeaux" data-product data-id="bougie-figuier" data-name="Bougie Figuier" data-price="32" data-img="assets/img/p-bougie.webp" data-needs-option>
+            <a href="#bougie-figuier" id="bougie-figuier" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-bougie.webp" alt="Bougie allumée dans un pot en verre fumé" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Best-seller</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-display font-bold text-lg leading-tight">Bougie Figuier</h3><p class="text-sm text-muted mt-0.5">Cire de colza, 40 h</p></div>
+                <p class="font-display font-bold text-lg whitespace-nowrap">32 €</p>
+              </div>
+              <div class="swatches mt-3" aria-label="3 coloris"><i style="background:#3B5F3A"></i><i style="background:#F2C230"></i><i style="background:#7A4A2A"></i></div>
+              <template><div class="p-7 lg:p-12" data-product data-id="bougie-figuier" data-name="Bougie Figuier" data-price="32" data-img="assets/img/p-bougie.webp">
+                <p class="kicker text-cobalt">Maison · Bougies</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Bougie Figuier</h2>
+                <p class="mt-4 text-2xl">32 €</p>
+                <p class="mt-6 leading-relaxed text-muted">Notes de feuille de figuier, de lait de coco et de bois de cèdre. Coulée à la main à Nantes.</p>
+                <fieldset data-opt class="mt-8"><legend class="text-sm mb-3">Coloris : <span data-opt-label class="font-medium">Figuier</span></legend><div class="flex flex-wrap gap-3"><label class="opt-color relative" title="Figuier"><input type="radio" name="col-bougie-figuier" value="Figuier" checked><span style="background:#3B5F3A"></span><span class="sr-only">Figuier</span></label><label class="opt-color relative" title="Mimosa"><input type="radio" name="col-bougie-figuier" value="Mimosa"><span style="background:#F2C230"></span><span class="sr-only">Mimosa</span></label><label class="opt-color relative" title="Feu de bois"><input type="radio" name="col-bougie-figuier" value="Feu de bois"><span style="background:#7A4A2A"></span><span class="sr-only">Feu de bois</span></label></div></fieldset>
+                <fieldset data-opt data-required class="mt-7"><legend class="text-sm mb-3 flex w-full justify-between gap-4"><span>Format : <span data-opt-label class="font-medium">à choisir</span></span></legend><div class="flex flex-wrap gap-2"><label class="opt-size relative"><input type="radio" name="t-bougie-figuier" value="180 g"><span>180 g</span></label><label class="opt-size relative"><input type="radio" name="t-bougie-figuier" value="320 g"><span>320 g</span></label></div></fieldset>
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-ink flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="bougie-figuier" aria-pressed="false" aria-label="Ajouter Bougie Figuier aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-muted"><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Cire de colza française</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Mèche en coton</li><li class="flex gap-2"><span class="mt-0.5 text-leaf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>40 h (180 g) ou 70 h (320 g) de combustion</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="bougie-figuier" aria-pressed="false" aria-label="Ajouter Bougie Figuier aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick>Choisir un format</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="px-3 pb-3">
+    <div class="rounded-[40px] bg-ink text-white/75 overflow-hidden">
+      <div class="mx-auto max-w-site px-6 lg:px-12 pt-16 lg:pt-20 pb-8">
+        <div class="grid gap-12 lg:grid-cols-12">
+          <form data-form novalidate class="lg:col-span-6" aria-label="Inscription à la gazette">
+            <p class="display text-white text-5xl lg:text-7xl">La gazette <span class="text-mimosa">Mimosa</span></p>
+            <p class="mt-4 max-w-md">Les nouveaux arrivages, l'agenda des ateliers et un petit cadeau à l'inscription. Deux fois par mois, promis.</p>
+            <div class="mt-6 flex gap-2 max-w-md"><label for="nl" class="sr-only">Votre e-mail</label><input id="nl" name="email" type="email" required autocomplete="email" placeholder="votre@email.fr" class="flex-1 rounded-full bg-white/10 px-5 py-3.5 text-white placeholder:text-white/40 outline-none focus:bg-white/15"><button class="btn btn-yellow">Je m'inscris</button></div>
+            <p data-form-success hidden tabindex="-1" class="mt-4 text-mimosa font-semibold">Bienvenue dans la bande ! 🌼</p>
+            <p data-form-error hidden class="mt-4 text-rose">Oups, réessayez dans un instant.</p>
+          </form>
+          <div class="lg:col-span-5 lg:col-start-8 grid grid-cols-2 gap-8 text-sm">
+            <div><p class="font-display font-bold text-white text-lg mb-3">Le comptoir</p><address class="not-italic leading-relaxed">14 rue Kervégan<br>44000 Nantes<br><a href="tel:+33240000000" class="hover:text-mimosa">02 40 00 00 00</a></address><p class="mt-3">Mar – sam 10 h – 19 h<br>Dim 10 h – 13 h</p></div>
+            <div><p class="font-display font-bold text-white text-lg mb-3">Explorer</p><ul class="space-y-2"><li><a href="index.html" class="hover:text-mimosa">Accueil</a></li><li><a href="boutique.html" class="hover:text-mimosa">La boutique</a></li><li><a href="coffrets.html" class="hover:text-mimosa">Coffrets</a></li><li><a href="ateliers.html" class="hover:text-mimosa">Ateliers</a></li><li><a href="contact.html" class="hover:text-mimosa">Le comptoir</a></li><li><a href="#" class="hover:text-mimosa">Instagram</a></li></ul></div>
+          </div>
+        </div>
+        <p class="display text-mimosa text-[22vw] leading-[.8] mt-14 -mb-[3vw] select-none text-center" aria-hidden="true">mimosa</p>
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-white/45">
+          <p>© <span data-year>2026</span> Comptoir Mimosa — Nantes</p>
+          <p><a href="#" class="hover:text-white">CGV</a> · <a href="mentions-legales.html" class="hover:text-white">Mentions légales</a> · <a href="confidentialite.html" class="hover:text-white">Confidentialité</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <div data-modal hidden role="dialog" aria-modal="true" aria-label="Fiche produit">
+    <div data-modal-panel class="shop-panel relative">
+      <button type="button" data-modal-close class="absolute right-4 top-4 z-10 w-11 h-11 rounded-full grid place-items-center text-xl bg-white shadow" aria-label="Fermer la fiche">×</button>
+      <div class="grid lg:grid-cols-2"><img data-modal-img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""><div data-modal-content></div></div>
+    </div>
+  </div>
+  <div data-cart hidden role="dialog" aria-modal="true" aria-label="Votre panier">
+    <div class="cart-panel">
+      <div class="cart-head"><p class="display text-4xl">Votre panier</p><button type="button" data-cart-close class="w-10 h-10 rounded-full grid place-items-center text-xl bg-white" aria-label="Fermer le panier">×</button></div>
+      <div class="cart-free"><p data-free-msg></p><div class="track"><i data-free-bar></i></div></div>
+      <ul data-cart-items></ul>
+      <div data-cart-empty><p>Votre panier est vide pour le moment.</p><a href="boutique.html" class="mt-6 btn btn-ink">Découvrir la boutique</a></div>
+      <div data-cart-footer hidden>
+        <div class="flex justify-between text-lg"><span>Sous-total</span><strong class="font-medium" data-cart-total>0 €</strong></div>
+        <p class="mt-1 text-xs opacity-60">TVA incluse. Frais de port calculés à l'étape suivante.</p>
+        <button type="button" data-checkout class="mt-5 btn btn-ink w-full">Commander</button>
+        <p class="mt-3 text-center text-xs opacity-60">Paiement sécurisé · Retours gratuits sous 30 jours</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

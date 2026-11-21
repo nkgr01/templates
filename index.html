@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bibliothèque de templates — Sites vitrines premium 3D</title>
+  <meta name="description" content="Bibliothèque de templates de sites vitrines premium multi-pages : cabinets, SaaS et entreprises. HTML, Tailwind, GSAP, Motion, Three.js et WebGL.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230B0B0D%27/%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2712%27 fill=%27%23EDEDED%27/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['"Inter Tight"', 'system-ui', 'sans-serif'], mono: ['"JetBrains Mono"', 'monospace'] } } } };</script>
+  <style>
+    body { background: #0B0B0D; color: #EDEDED; }
+    .card { transition: transform .5s cubic-bezier(.2,.8,.2,1), border-color .4s; }
+    .card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.25); }
+    .card .preview { transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+    .card:hover .preview { transform: scale(1.04); }
+    .fade { opacity: 0; transform: translateY(24px); animation: in .9s cubic-bezier(.2,.8,.2,1) forwards; }
+    @keyframes in { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .fade { animation: none; opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <main class="mx-auto max-w-7xl px-5 sm:px-8 py-16 sm:py-24">
+    <header class="max-w-3xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-white/50 fade">Bibliothèque de templates · v3 — Collection 1 : GSAP</p>
+      <h1 class="mt-6 text-5xl sm:text-7xl font-semibold tracking-[-0.04em] leading-[.95] fade" style="animation-delay:.08s">Sites vitrines premium, prêts à personnaliser.</h1>
+      <p class="mt-6 text-lg text-white/60 leading-relaxed fade" style="animation-delay:.16s">Trois directions artistiques complètes, multi-pages et optimisées SEO, avec composants 3D temps réel (Three.js / WebGL) et animations GSAP.</p>
+      <ul class="mt-8 flex flex-wrap gap-2 font-mono text-xs fade" style="animation-delay:.24s">
+        <li class="border border-white/15 rounded-full px-3 py-1.5">HTML sémantique</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Tailwind CSS</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Vanilla JS</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">GSAP + ScrollTrigger</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Lenis</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Three.js</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">WebGL / GLSL</li>
+      </ul>
+    </header>
+
+    <section class="mt-20 grid gap-6 lg:grid-cols-3" aria-label="Templates">
+      <!-- Cabinet -->
+      <a href="cabinet-halden/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114] fade" style="animation-delay:.3s">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#0D0F13] grid place-items-center">
+            <div class="absolute inset-0" style="background:radial-gradient(circle at 65% 45%, rgba(200,169,106,.35), transparent 45%)"></div>
+            <div class="relative w-28 h-28 rotate-45 rounded-xl" style="background:linear-gradient(135deg,#E2CC98,#8E7442);box-shadow:0 0 80px rgba(200,169,106,.35)"></div>
+            <p class="absolute left-6 bottom-5 text-3xl text-[#F3EEE4]" style="font-family:Georgia,serif">Halden <span style="color:#C8A96A">&amp;</span> Associés</p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#C8A96A]">Cabinet · Avocats / Conseil</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Luxe éditorial, sombre et doré</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Serif Cormorant, orbe d'or métallique Three.js (PBR + environnement), poussière d'or, curseur custom, rideau de transition.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Cabinet, Expertises, Équipe, Contact</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : LegalService, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <!-- SaaS -->
+      <a href="saas-orbyt/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114] fade" style="animation-delay:.4s">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#07070B] grid place-items-center">
+            <div class="absolute inset-0" style="background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:32px 32px"></div>
+            <div class="relative w-36 h-36 rounded-full blur-[2px]" style="background:conic-gradient(from 30deg,#7C5CFF,#22D3EE,#F472B6,#7C5CFF);box-shadow:0 0 90px rgba(124,92,255,.6)"></div>
+            <p class="absolute left-6 bottom-5 text-3xl font-semibold tracking-tight">Orbyt</p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#22D3EE]">SaaS · Produit B2B</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Néon, glassmorphism, shaders</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Blob iridescent en GLSL (bruit simplex, fresnel), aurore WebGL pur sans librairie, dashboard en CSS, bento grid, onglets, switch tarifs.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Produit, Fonctionnalités, Tarifs, À propos, Contact</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : SoftwareApplication, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <!-- Entreprise -->
+      <a href="entreprise-norden/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114] fade" style="animation-delay:.5s">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#F1EFEA] grid place-items-center">
+            <div class="relative grid grid-cols-6 gap-1 -rotate-12 skew-x-12 scale-90">
+              <span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#121212;align-self:end"></span><span style="width:20px;height:18px;background:#FF5B1F;align-self:end"></span><span style="width:20px;height:34px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:34px;background:#121212;align-self:end"></span><span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:34px;background:#FF5B1F;align-self:end"></span><span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:26px;background:#121212;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:34px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#121212;align-self:end"></span><span style="width:20px;height:34px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:10px;background:#FF5B1F;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:34px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:10px;background:#121212;align-self:end"></span><span style="width:20px;height:26px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:42px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:18px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:34px;background:#D9D5CC;align-self:end"></span><span style="width:20px;height:10px;background:#D9D5CC;align-self:end"></span>
+            </div>
+            <p class="absolute left-6 bottom-5 text-3xl font-semibold tracking-tight text-[#121212]">NORDEN<span class="text-[#FF5B1F]">.</span></p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#FF5B1F]">Entreprise · Construction / Industrie</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Suisse, clair, typographique</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Ville isométrique en InstancedMesh (676 blocs, ombres, onde réactive à la souris), scroll horizontal épinglé, filtres de portfolio.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Entreprise, Services, Réalisations, Contact</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : GeneralContractor, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+    </section>
+
+    <header class="mt-32 max-w-3xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-white/50">Collection 2 · Composants façon Framer</p>
+      <h2 class="mt-5 text-4xl sm:text-6xl font-semibold tracking-[-0.04em] leading-[.95]">Interactions à ressort, photos et 3D.</h2>
+      <p class="mt-5 text-lg text-white/60 leading-relaxed">Animées avec Motion, le moteur de Framer Motion, en JavaScript vanilla : texte flouté qui apparaît, navigation à pastille glissante, carrousels à glisser, filtres animés, cartes empilées, fenêtres « élément partagé ».</p>
+      <ul class="mt-8 flex flex-wrap gap-2 font-mono text-xs">
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Motion (ex-Framer Motion)</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Ressorts &amp; FLIP</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Photos WebP</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Three.js / GLSL</li>
+      </ul>
+    </header>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-3" aria-label="Templates de la collection 2">
+      <!-- Agence créative -->
+      <a href="agence-kinetik/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#0B0B0C]">
+            <img src="agence-kinetik/assets/img/p-gradient.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-80" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-3xl font-bold tracking-tight" style="font-family:system-ui">kinetik<span style="color:#D2FF3A">●</span></p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#D2FF3A]">Entreprise · Agence créative</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Sombre, typo large, lime électrique</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Formes iridescentes Three.js, mots qui défilent, curseur à étiquette, cartes empilées au scroll, aperçu d'image qui suit la souris, filtres animés.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Studio, Expertises, Projets, Contact</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : ProfessionalService, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <!-- Cabinet dentaire -->
+      <a href="clinique-aelia/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#F3F7F6]">
+            <img src="clinique-aelia/assets/img/salle-soin.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A2A]/70 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-3xl font-semibold text-white">Aelia <em style="font-family:Georgia,serif;font-weight:400;color:#D6EFE7">dentaire</em></p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#4FB89E]">Cabinet · Santé / Dentaire</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Clair, doux, serif italique</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Cellule de 16 000 particules en shader GLSL, hélice ADN, prise de rendez-vous en 4 étapes, onglets à indicateur glissant, tarifs, avis à glisser.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Cabinet, Soins, Praticiens, Rendez-vous</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : Dentist, Person, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <!-- Immobilier -->
+      <a href="immobilier-orea/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#F4EFE6]">
+            <img src="immobilier-orea/assets/img/hero-villa.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-3xl text-white" style="font-family:Georgia,serif">Orea <em style="color:#C7A777">immobilier</em></p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#C7A777]">Entreprise · Immobilier de prestige</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Éditorial, crème et bronze</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Villa 3D procédurale avec mode Jour / Soir, fiches de biens qui s'agrandissent en fenêtre, filtres FLIP, estimation multi-étapes, galerie horizontale.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Propriétés, Estimation, Agence, Contact</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : RealEstateAgent, ItemList, FAQPage, BreadcrumbList</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+    </section>
+
+    <header class="mt-32 max-w-3xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-white/50">Collection 3 · Boutiques</p>
+      <h2 class="mt-5 text-4xl sm:text-6xl font-semibold tracking-[-0.04em] leading-[.95]">Vendre en ligne, avec du caractère.</h2>
+      <p class="mt-5 text-lg text-white/60 leading-relaxed">Trois vitrines de boutique avec un vrai parcours d'achat : fiches produit qui s'ouvrent depuis la photo, tailles et coloris, favoris, panier latéral avec seuil de livraison offerte. Mêmes composants Motion que la collection 2.</p>
+      <ul class="mt-8 flex flex-wrap gap-2 font-mono text-xs">
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Panier & favoris</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Fiches produit</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Schema Product</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Three.js / GLSL</li>
+      </ul>
+    </header>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-3" aria-label="Templates de la collection 3">
+      <a href="mode-arlo/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#F2EFE9]">
+            <img src="mode-arlo/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-4xl font-black tracking-tight text-white" style="font-family:system-ui">ARLO<span style="color:#D9825C">.</span></p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#D9825C]">Boutique · Vêtements</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Écru, terracotta, titres condensés</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Tissu 3D animé par le vent (shader GLSL) avec 3 matières, collection filtrable, tailles obligatoires, lookbook horizontal, cartes empilées, prix de revient transparent.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Collection, Lookbook, L'atelier, Boutiques</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : ClothingStore, ItemList/Product, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <a href="bijoux-selene/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#12100E]">
+            <img src="bijoux-selene/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-80" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-3xl tracking-[.2em] text-[#F3EBDD]" style="font-family:Georgia,serif">SÉLÈNE</p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#CFAE7A]">Boutique · Bijoux & accessoires</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Nuit profonde et or, serif fin</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Configurateur de bague 3D (métal, pierre, taille) avec prix en direct et ajout au panier, sacs, montres et lunettes, prise de rendez-vous en 3 étapes.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Créations, Sur-mesure, La maison, Boutique</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : JewelryStore, ItemList/Product, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <a href="comptoir-mimosa/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[4/3] relative overflow-hidden bg-[#FFD449]">
+            <img src="comptoir-mimosa/assets/img/p-vases.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-90" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#1B2350]/70 to-transparent"></div>
+            <p class="absolute left-6 bottom-5 text-4xl font-extrabold tracking-tight text-[#FFD449]" style="font-family:system-ui">mimosa</p>
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#FFD449]">Boutique · Concept-store</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Jaune mimosa, ludique et arrondi</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Céramiques 3D flottantes cliquables (ouvrent la fiche produit), composeur de coffret cadeau, agenda d'ateliers réservables, déco, beauté, papeterie et plantes.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Boutique, Coffrets, Ateliers, Le comptoir</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : HomeGoodsStore, Product, Event, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+    </section>
+
+    <header class="mt-32 max-w-3xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-white/50">Collection 4 · Côte d'Ivoire</p>
+      <h2 class="mt-5 text-4xl sm:text-6xl font-semibold tracking-[-0.04em] leading-[.95]">Restaurants, salles de sport, hôtels.</h2>
+      <p class="mt-5 text-lg text-white/60 leading-relaxed">Trois sites ancrés à Abidjan et Assinie : prix en FCFA, numéros +225, réservation par WhatsApp et paiement mobile money, mentions légales selon le droit ivoirien.</p>
+      <ul class="mt-8 flex flex-wrap gap-2 font-mono text-xs">
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Réservations en ligne</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Calcul de séjour en direct</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Planning & tarifs</li>
+        <li class="border border-white/15 rounded-full px-3 py-1.5">Three.js / GLSL</li>
+      </ul>
+    </header>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-3" aria-label="Templates de la collection 4">
+      <a href="restaurant-ebene/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden"><div class="preview aspect-[4/3] relative overflow-hidden bg-[#0E2A22]">
+          <img src="restaurant-ebene/assets/img/assiette.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#091C17]/85 to-transparent"></div>
+          <p class="absolute left-6 bottom-5 text-3xl tracking-[.12em] text-[#F2E8D5]" style="font-family:Georgia,serif">ÉBÈNE</p>
+        </div></div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#D99A3D]">Restaurant gastronomique · Abidjan</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Vert forêt, ocre et grain argentique</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Bol fumant en 3D entouré d'épices, carte à onglets avec aperçu des plats au survol, menu dégustation, réservation de table en 3 étapes, privatisation.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Accueil, Carte, Chef, Réserver, Infos & accès</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : Restaurant, Menu, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <a href="fitness-pulse/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden"><div class="preview aspect-[4/3] relative overflow-hidden bg-[#0A0A0A]">
+          <img src="fitness-pulse/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover grayscale" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-[#FF3B2F]/20 to-transparent"></div>
+          <p class="absolute left-6 bottom-5 text-5xl font-black italic tracking-tight text-white" style="font-family:Impact,system-ui">PULSE<span style="color:#FF3B2F">.</span></p>
+        </div></div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#FF3B2F]">Salle de sport · Abidjan</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Noir, rouge électrique, coupes en biais</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Kettlebell 3D qui bat comme un cœur, planning réservable par jour, tarifs mensuel / annuel, calculateur d'IMC, coachs, essai gratuit en 3 étapes.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Club, Planning, Abonnements, Coachs, Essai gratuit</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : ExerciseGym, OfferCatalog, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+
+      <a href="hotel-lagune/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114]">
+        <div class="overflow-hidden"><div class="preview aspect-[4/3] relative overflow-hidden bg-[#F6F1E7]">
+          <img src="hotel-lagune/assets/img/hero.webp" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0F2F3F]/80 to-transparent"></div>
+          <p class="absolute left-6 bottom-5 text-3xl text-white" style="font-family:Georgia,serif">Lagune Lodge</p>
+        </div></div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#7FD1CB]">Hôtel lodge · Assinie</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Sable, turquoise et verre dépoli</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Lagune 3D (vagues, reflets, aube / midi / coucher), hébergements filtrables en fenêtre, expériences, réservation avec prix total et acompte calculés en direct.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">5 pages · Lodge, Chambres, Expériences, Accès, Réserver</p>
+          <p class="mt-1 font-mono text-xs text-white/40">Schema : Resort, HotelRoom, FAQPage</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le template →</span>
+        </div>
+      </a>
+    </section>
+
+    <header class="mt-32 max-w-3xl">
+      <p class="font-mono text-xs uppercase tracking-widest text-white/50">Applications · Dashboards</p>
+      <h2 class="mt-5 text-4xl sm:text-6xl font-semibold tracking-[-0.04em] leading-[.95]">Interfaces de gestion, prêtes à brancher.</h2>
+      <p class="mt-5 text-lg text-white/60 leading-relaxed">Tableaux de bord en JavaScript vanilla, sans librairie de graphiques : barres empilées, courbes, jauges et listes interactives, alimentés par de simples tableaux de données à remplacer par votre API.</p>
+    </header>
+
+    <section class="mt-14 grid gap-6 lg:grid-cols-3" aria-label="Dashboards">
+      <a href="dashboard-verdi/index.html" class="card group block rounded-3xl border border-white/10 overflow-hidden bg-[#111114] lg:col-span-2">
+        <div class="overflow-hidden">
+          <div class="preview aspect-[16/10] relative overflow-hidden bg-[#F3F3F2]">
+            <img src="dashboard-verdi/assets/img/preview.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-left-top" loading="lazy">
+          </div>
+        </div>
+        <div class="p-7">
+          <p class="font-mono text-xs uppercase tracking-widest text-[#9DCB4F]">Application · Gestion financière</p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight">Dashboard clair, vert et orange</h2>
+          <p class="mt-3 text-white/60 text-sm leading-relaxed">Solde en barres empilées ou en courbes (7 j / 30 j / 12 mois), cartes bancaires, paiement rapide en fenêtre, analyse des coûts, jauge d'épargne, objectifs, historique avec recherche et tri. Menu repliable, version mobile.</p>
+          <p class="mt-5 font-mono text-xs text-white/40">1 écran · d'après la maquette « Finance Management Dashboard » (Shakuro)</p>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">Ouvrir le dashboard →</span>
+        </div>
+      </a>
+    </section>
+
+    <footer class="mt-24 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 font-mono text-xs text-white/40">
+      <p>Ouvrir avec un serveur local (ex. extension VS Code « Live Server ») pour activer la 3D.</p>
+      <p>Voir README.md pour la personnalisation.</p>
+    </footer>
+  </main>
+</body>
+</html>

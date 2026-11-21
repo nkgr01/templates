@@ -1,0 +1,99 @@
+/* =========================================================
+   Cabinet dentaire Aelia — styles propres au template
+   ========================================================= */
+:root {
+  --mo-bg: #F3F7F6;
+  --mo-fg: #0F2A2A;
+  --mo-accent: #0E7C6B;
+  --mo-accent-ink: #FFFFFF;
+  --mo-pill: #D6EFE7;
+  --mo-pill-strong: #0F2A2A;
+  --mo-glow: rgba(14, 124, 107, .10);
+}
+
+html { background: var(--mo-bg); }
+body { -webkit-font-smoothing: antialiased; }
+::selection { background: #D6EFE7; color: #0F2A2A; }
+
+.serif-i { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: -.01em; }
+.h-xl { font-weight: 600; letter-spacing: -.035em; line-height: 1.02; }
+
+/* En-tête */
+.site-header .bar { transition: box-shadow .4s, background-color .4s; background: rgba(255,255,255,.72); backdrop-filter: blur(14px) saturate(1.5); }
+.site-header.is-scrolled .bar { background: rgba(255,255,255,.9); box-shadow: 0 10px 30px -12px rgba(15,42,42,.18); }
+.nav-link { position: relative; padding: .55rem 1rem; border-radius: 999px; color: #4A5D5B; font-weight: 500; transition: color .25s; }
+.nav-link:hover { color: var(--mo-fg); }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; border-radius: 999px; padding: .9rem 1.5rem; font-weight: 600; transition: background-color .3s, color .3s, box-shadow .3s, transform .3s; }
+.btn-teal { background: var(--mo-accent); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 8px 20px -8px rgba(14,124,107,.6); }
+.btn-teal:hover { background: #0A5E51; }
+.btn-white { background: #fff; color: var(--mo-fg); box-shadow: 0 1px 2px rgba(15,42,42,.06), 0 8px 24px -10px rgba(15,42,42,.18); }
+.btn-white:hover { background: #F7FBFA; }
+.btn-outline { border: 1px solid rgba(15,42,42,.15); }
+.btn-outline:hover { background: #fff; }
+
+.chip-label { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .9rem; border-radius: 999px; background: #fff; font-size: .85rem; font-weight: 500; box-shadow: 0 1px 2px rgba(15,42,42,.05); }
+.card { background: #fff; border-radius: 2rem; box-shadow: 0 1px 2px rgba(15,42,42,.04), 0 12px 40px -18px rgba(15,42,42,.14); }
+
+/* Cartes flottantes du hero */
+.float-card { animation: floaty 6s ease-in-out infinite; }
+.float-card.delay { animation-delay: -3s; }
+@keyframes floaty { 50% { transform: translateY(-10px); } }
+
+/* Praticiens */
+.doctor img { transition: transform 1s cubic-bezier(.22,1,.36,1); }
+.doctor:hover img { transform: scale(1.05); }
+
+/* Liste technologies */
+.row-link { transition: background-color .3s, padding .5s cubic-bezier(.22,1,.36,1); }
+.row-link:hover { background: #fff; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+/* Cartes à choix (formulaire de RDV) */
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .box { display: flex; height: 100%; border-radius: 1.25rem; border: 1.5px solid rgba(15,42,42,.1); background: #fff; padding: 1rem 1.1rem; cursor: pointer; transition: border-color .25s, box-shadow .25s, background-color .25s; }
+.opt .box:hover { border-color: rgba(14,124,107,.45); }
+.opt input:checked + .box { border-color: var(--mo-accent); background: #F1FAF7; box-shadow: 0 0 0 4px rgba(14,124,107,.12); }
+.opt input:focus-visible + .box { outline: 2px solid var(--mo-accent); outline-offset: 2px; }
+.field { width: 100%; border-radius: 1rem; border: 1.5px solid rgba(15,42,42,.1); background: #fff; padding: .9rem 1rem; transition: border-color .25s, box-shadow .25s; }
+.field:focus { outline: none; border-color: var(--mo-accent); box-shadow: 0 0 0 4px rgba(14,124,107,.12); }
+
+/* Accordéon */
+[data-acc-item].is-open { background: #fff; }
+
+.mobile-menu { display: none; }
+.mobile-menu.is-open { display: flex; }
+canvas[data-scene] { display: block; width: 100%; height: 100%; }
+
+/* === Pages juridiques (mentions légales, confidentialité) === */
+.legal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.legal > * { min-width: 0; }
+@media (min-width: 1024px) { .legal { grid-template-columns: 260px minmax(0, 760px); column-gap: 5rem; } .legal-updated { grid-column: 1 / -1; } }
+.legal-updated { font-size: .85rem; opacity: .6; margin: 0; }
+.legal-toc { align-self: start; font-size: .92rem; }
+@media (min-width: 1024px) { .legal-toc { position: sticky; top: 7rem; } }
+.legal-toc-title { font-weight: 600; margin-bottom: .75rem; }
+.legal-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
+.legal-toc a { display: block; padding: .35rem 0 .35rem 1rem; opacity: .7; transition: opacity .2s, color .2s; }
+.legal-toc a:hover { opacity: 1; color: var(--legal-accent); }
+.legal-body { line-height: 1.7; }
+.legal-sec { padding: 2.25rem 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); scroll-margin-top: 7rem; }
+.legal-sec:first-child { border-top: 0; padding-top: 0; }
+.legal-sec h2 { display: flex; gap: .9rem; align-items: baseline; font-size: clamp(1.35rem, 2.2vw, 1.75rem); font-weight: 600; line-height: 1.2; margin: 0 0 1.1rem; letter-spacing: -.01em; }
+.legal-sec h2 span { font-size: .8rem; font-weight: 600; color: var(--legal-accent); letter-spacing: .05em; }
+.legal-sec p { margin: 0 0 .9rem; opacity: .85; }
+.legal-sec ul { margin: 0 0 1rem; padding-left: 1.2rem; list-style: disc; opacity: .85; }
+.legal-sec li { margin: .3rem 0; }
+.legal-sec a { color: var(--legal-accent); text-decoration: underline; text-underline-offset: 3px; }
+.legal-sec strong { font-weight: 600; }
+.legal-dl { display: grid; gap: 0; margin: 1rem 0 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl > div { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl dt { opacity: .6; } .legal-dl dd { margin: 0; }
+@media (max-width: 560px) { .legal-dl > div { grid-template-columns: 1fr; gap: .1rem; } }
+.legal-table-wrap { overflow-x: auto; margin-top: 1rem; }
+.legal-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .9rem; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: .8rem .9rem .8rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-table thead th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; opacity: .6; }
+.legal-table tbody th { font-weight: 600; }
+.legal-note { font-size: .85rem; }
+mark.todo { background: color-mix(in srgb, var(--legal-accent) 22%, transparent); color: inherit; padding: 0 .3em; border-radius: 4px; }

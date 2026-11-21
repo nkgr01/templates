@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kinetik Studio — Agence de design &amp; développement web à Paris</title>
+  <meta name="description" content="Kinetik est un studio créatif parisien : identités de marque, sites web premium, produits digitaux et motion design pour les marques ambitieuses.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.kinetik-studio.fr/">
+  <meta name="theme-color" content="#0B0B0C">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Kinetik Studio">
+  <meta property="og:title" content="Kinetik Studio — Agence de design &amp; développement web à Paris">
+  <meta property="og:description" content="Kinetik est un studio créatif parisien : identités de marque, sites web premium, produits digitaux et motion design pour les marques ambitieuses.">
+  <meta property="og:url" content="https://www.kinetik-studio.fr/">
+  <meta property="og:image" content="https://www.kinetik-studio.fr/assets/img/showreel.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B0B0C'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23D2FF3A'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  <link rel="preload" as="image" href="assets/img/p-gradient.webp" fetchpriority="high">
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Kinetik Studio","description":"Studio de design et de développement : identité de marque, sites web, produits digitaux et motion design.","url":"https://www.kinetik-studio.fr/","logo":"https://www.kinetik-studio.fr/assets/img/showreel.webp","image":"https://www.kinetik-studio.fr/assets/img/studio-1.webp","telephone":"+33 1 84 60 00 00","email":"hello@kinetik-studio.fr","priceRange":"€€€","address":{"@type":"PostalAddress","streetAddress":"18 rue de Paradis","postalCode":"75010","addressLocality":"Paris","addressCountry":"FR"},"sameAs":["https://www.linkedin.com/","https://www.instagram.com/","https://dribbble.com/"]}</script>
+</head>
+<body class="font-sans bg-ink text-bone" data-cursor>
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50 px-3 sm:px-5 pt-3" data-header>
+    <div class="bar mx-auto max-w-site rounded-full flex items-center justify-between pl-5 pr-2 py-2">
+      <a href="index.html" aria-label="Kinetik Studio — accueil"><span class="inline-flex items-center gap-2 font-display font-bold text-xl tracking-tight"><span class="w-6 h-6 rounded-full bg-lime grid place-items-center" aria-hidden="true"><span class="w-2 h-2 rounded-full bg-ink"></span></span>kinetik</span></a>
+      <nav class="hidden lg:flex items-center text-[15px]" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link" aria-current="page">Accueil</a>
+        <a href="studio.html" class="nav-link">Studio</a>
+        <a href="expertises.html" class="nav-link">Expertises</a>
+        <a href="projets.html" class="nav-link">Projets</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden lg:inline-flex btn btn-lime !py-2.5 !pl-5 !pr-2.5 text-sm" data-magnetic=".25">Démarrer un projet <span class="arrow" aria-hidden="true">→</span></a>
+      <button class="lg:hidden w-11 h-11 rounded-full bg-bone text-ink grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-lime text-ink flex-col justify-between px-6 pt-28 pb-10 lg:hidden" data-menu aria-label="Navigation mobile">
+    <ul class="space-y-1">
+      <li data-menu-item><a href="index.html" class="font-display font-bold text-5xl tracking-tight" aria-current="page">Accueil •</a></li>
+      <li data-menu-item><a href="studio.html" class="font-display font-bold text-5xl tracking-tight">Studio</a></li>
+      <li data-menu-item><a href="expertises.html" class="font-display font-bold text-5xl tracking-tight">Expertises</a></li>
+      <li data-menu-item><a href="projets.html" class="font-display font-bold text-5xl tracking-tight">Projets</a></li>
+      <li data-menu-item><a href="contact.html" class="font-display font-bold text-5xl tracking-tight">Contact</a></li>
+    </ul>
+    <p data-menu-item class="text-sm">hello@kinetik-studio.fr<br>+33 1 84 60 00 00</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <section class="relative min-h-[100svh] flex flex-col justify-end pt-32 pb-10 overflow-hidden">
+      <div class="absolute inset-0 opacity-60 lg:opacity-100" aria-hidden="true"><canvas data-scene="shapes"></canvas></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(11,11,12,.9),transparent_60%)] pointer-events-none" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-site w-full px-5 lg:px-8">
+        <p class="inline-flex items-center gap-3 rounded-full border border-line bg-card/70 backdrop-blur px-4 py-2 text-sm" data-appear><span class="dot-live" aria-hidden="true"></span> Disponible — 2 créneaux en janvier</p>
+        <h1 class="mt-7 h-display text-[clamp(3rem,8vw,8rem)]" data-blur-text>Des marques<br>qui <span class="text-lime" data-rotate-words="bougent.|marquent.|captivent.|durent.">bougent.</span></h1>
+        <div class="mt-8 flex flex-col gap-8 max-w-md">
+          <p class="max-w-md text-lg text-muted leading-relaxed" data-appear data-delay=".4">Studio indépendant de design et de développement. Nous construisons des identités, des sites et des produits qui donnent envie de cliquer — et de revenir.</p>
+          <div class="flex flex-wrap gap-3" data-appear data-delay=".55">
+            <a href="contact.html" class="btn btn-lime" data-magnetic=".3">Démarrer un projet <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="projets.html" class="btn btn-ghost" data-magnetic=".3">Voir nos projets</a>
+          </div>
+        </div>
+        <div class="mt-14 flex items-center justify-between border-t border-line pt-6 text-sm text-muted" data-appear data-delay=".7">
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-3"><img src="assets/img/client-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-9 h-9 rounded-full border-2 border-ink object-cover" aria-hidden="true"><img src="assets/img/client-2.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-9 h-9 rounded-full border-2 border-ink object-cover" aria-hidden="true"><img src="assets/img/client-3.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-9 h-9 rounded-full border-2 border-ink object-cover" aria-hidden="true"></div>
+            <p><span class="text-bone font-medium">4,9/5</span> — 60+ marques accompagnées</p>
+          </div>
+          <p class="hidden sm:block">Défiler ↓</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Ils nous font confiance" class="py-12 border-y border-line">
+      <div data-ticker="28" data-ticker-hover>
+        <ul class="flex items-center gap-14 pr-14 font-display font-semibold text-3xl text-bone/60">
+          <li class="flex items-center gap-14 whitespace-nowrap">Aube<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Lumen Bank<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Northwind<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Halcyon<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Volta<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Fieldwork<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Kōdo<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Atelier Brume<span class="text-lime text-xl" aria-hidden="true">✳</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-32">
+      <div class="mx-auto max-w-site px-5 lg:px-8 grid lg:grid-cols-12 gap-10 items-end mb-14">
+        <h2 class="lg:col-span-7 h-display text-[clamp(2.4rem,5.5vw,5rem)]" data-blur-text>Un studio, quatre métiers, une obsession : le détail.</h2>
+        <p class="lg:col-span-4 lg:col-start-9 text-muted text-lg" data-appear>Stratégie, design, code et motion travaillent dans la même pièce. Résultat : moins d'allers-retours, plus de cohérence.</p>
+      </div>
+      <figure class="relative h-[70vh] min-h-[420px] overflow-hidden" data-clip-scroll data-cursor-label="Lecture">
+        <img src="assets/img/showreel.webp" alt="Formes abstraites en dégradé violet et bleu issues du showreel" width="1800" height="1100" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover scale-110" data-parallax=".08">
+        <figcaption class="absolute inset-x-0 bottom-0 p-6 lg:p-10 flex items-end justify-between bg-gradient-to-t from-ink/70 to-transparent">
+          <span class="h-display text-4xl lg:text-6xl">Showreel 2026</span>
+          <span class="w-16 h-16 rounded-full bg-bone text-ink grid place-items-center text-xl" aria-hidden="true">▶</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="py-16 lg:py-24">
+      <div class="mx-auto max-w-site px-5 lg:px-8">
+        <div class="flex items-end justify-between gap-6 mb-14">
+          <div><p class="eyebrow" data-appear>Travaux choisis</p><h2 class="mt-4 h-display text-[clamp(2.4rem,6vw,5.5rem)]" data-blur-text>Projets récents</h2></div>
+          <a href="projets.html" class="hidden sm:inline-flex btn btn-ghost" data-magnetic=".3">Tous les projets (9)</a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-x-8 gap-y-16">
+          <div data-appear><a href="projets.html" class="work-card group block " data-cursor-label="Voir" data-cat="branding">
+            <div class="media aspect-[4/3]"><img src="assets/img/p-gradient.webp" alt="Dégradé violet et bleu de l'identité Aube" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+            <div class="mt-5 flex items-start justify-between gap-4">
+              <div><h3 class="font-display font-semibold text-2xl tracking-tight">Aube Cosmetics</h3><p class="mt-1 text-muted">Identité holographique pour une marque de soin clean beauty.</p></div>
+              <span class="tag shrink-0">Branding · 2026</span>
+            </div>
+          </a></div>
+          <div data-appear class="md:mt-28"><a href="projets.html" class="work-card group block " data-cursor-label="Voir" data-cat="web">
+            <div class="media aspect-[4/3]"><img src="assets/img/p-dash.webp" alt="Tableau de bord bancaire affiché sur un ordinateur portable" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+            <div class="mt-5 flex items-start justify-between gap-4">
+              <div><h3 class="font-display font-semibold text-2xl tracking-tight">Lumen Bank</h3><p class="mt-1 text-muted">Site et tableau de bord d'une néobanque pour indépendants.</p></div>
+              <span class="tag shrink-0">Site web · 2026</span>
+            </div>
+          </a></div>
+          <div data-appear><a href="projets.html" class="work-card group block " data-cursor-label="Voir" data-cat="produit">
+            <div class="media aspect-[4/3]"><img src="assets/img/p-ui.webp" alt="Écran de design d'interface sur un iMac" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+            <div class="mt-5 flex items-start justify-between gap-4">
+              <div><h3 class="font-display font-semibold text-2xl tracking-tight">Volta Studio</h3><p class="mt-1 text-muted">Design system et application de gestion de flotte électrique.</p></div>
+              <span class="tag shrink-0">Produit · 2025</span>
+            </div>
+          </a></div>
+          <div data-appear class="md:mt-28"><a href="projets.html" class="work-card group block " data-cursor-label="Voir" data-cat="branding">
+            <div class="media aspect-[4/3]"><img src="assets/img/p-swatch.webp" alt="Nuancier de couleurs et planches de marque" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+            <div class="mt-5 flex items-start justify-between gap-4">
+              <div><h3 class="font-display font-semibold text-2xl tracking-tight">Fieldwork</h3><p class="mt-1 text-muted">Plateforme de marque d'une coopérative agricole moderne.</p></div>
+              <span class="tag shrink-0">Branding · 2025</span>
+            </div>
+          </a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-32">
+      <div class="mx-auto max-w-site px-5 lg:px-8">
+        <p class="eyebrow" data-appear>Expertises</p>
+        <h2 class="mt-4 mb-14 h-display text-[clamp(2.4rem,6vw,5.5rem)] max-w-3xl" data-blur-text>Ce que nous faisons de mieux.</h2>
+        <div class="space-y-6" data-stack>
+          <article data-stack-card class="stack-card bg-card p-7 lg:p-12 grid lg:grid-cols-2 gap-8 lg:min-h-[480px]" style="top:96px">
+            <div class="flex flex-col justify-between gap-8">
+              <div><span class="font-display text-lg opacity-60">01</span><h3 class="mt-3 h-display text-4xl lg:text-6xl">Identité de marque</h3><p class="mt-5 max-w-md text-lg opacity-80">Plateforme, nom, logo, système visuel : une marque reconnaissable en un coup d'œil.</p></div>
+              <ul class="flex flex-wrap gap-2"><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Stratégie</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Naming</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Logo</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Guidelines</li></ul>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-56 lg:h-auto"><img src="assets/img/p-swatch.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" aria-hidden="true"></div>
+          </article>
+          <article data-stack-card class="stack-card bg-lime text-ink p-7 lg:p-12 grid lg:grid-cols-2 gap-8 lg:min-h-[480px]" style="top:124px">
+            <div class="flex flex-col justify-between gap-8">
+              <div><span class="font-display text-lg opacity-60">02</span><h3 class="mt-3 h-display text-4xl lg:text-6xl">Sites web premium</h3><p class="mt-5 max-w-md text-lg opacity-80">Des sites rapides, référencés et inoubliables, sur mesure ou sur Webflow et Framer.</p></div>
+              <ul class="flex flex-wrap gap-2"><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">UX/UI</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Développement</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">SEO</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">CMS</li></ul>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-56 lg:h-auto"><img src="assets/img/p-dash.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" aria-hidden="true"></div>
+          </article>
+          <article data-stack-card class="stack-card bg-violet text-ink p-7 lg:p-12 grid lg:grid-cols-2 gap-8 lg:min-h-[480px]" style="top:152px">
+            <div class="flex flex-col justify-between gap-8">
+              <div><span class="font-display text-lg opacity-60">03</span><h3 class="mt-3 h-display text-4xl lg:text-6xl">Produits digitaux</h3><p class="mt-5 max-w-md text-lg opacity-80">Applications et SaaS : de la recherche utilisateur au design system en production.</p></div>
+              <ul class="flex flex-wrap gap-2"><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Recherche</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Prototypage</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Design system</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Tests</li></ul>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-56 lg:h-auto"><img src="assets/img/p-ui.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" aria-hidden="true"></div>
+          </article>
+          <article data-stack-card class="stack-card bg-bone text-ink p-7 lg:p-12 grid lg:grid-cols-2 gap-8 lg:min-h-[480px]" style="top:180px">
+            <div class="flex flex-col justify-between gap-8">
+              <div><span class="font-display text-lg opacity-60">04</span><h3 class="mt-3 h-display text-4xl lg:text-6xl">Motion & 3D</h3><p class="mt-5 max-w-md text-lg opacity-80">Animations, interfaces 3D temps réel et vidéos de lancement qui captent l'attention.</p></div>
+              <ul class="flex flex-wrap gap-2"><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Three.js</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">WebGL</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Motion design</li><li class="rounded-full border border-current/20 px-3 py-1.5 text-sm [border-color:color-mix(in_srgb,currentColor_25%,transparent)]">Vidéo</li></ul>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-56 lg:h-auto"><img src="assets/img/p-gradient.webp" alt="" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" aria-hidden="true"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-y border-line">
+      <dl class="mx-auto max-w-site px-5 lg:px-8 grid grid-cols-2 lg:grid-cols-4 gap-10">
+        <div data-appear class="flex flex-col-reverse gap-1"><dt class="text-muted text-sm">ans d'expérience</dt><dd class="h-display text-6xl lg:text-7xl text-lime"><span data-counter="12">12</span></dd></div>
+        <div data-appear class="flex flex-col-reverse gap-1"><dt class="text-muted text-sm">projets livrés</dt><dd class="h-display text-6xl lg:text-7xl text-lime"><span data-counter="140">140</span>+</dd></div>
+        <div data-appear class="flex flex-col-reverse gap-1"><dt class="text-muted text-sm">prix & mentions</dt><dd class="h-display text-6xl lg:text-7xl text-lime"><span data-counter="38">38</span></dd></div>
+        <div data-appear class="flex flex-col-reverse gap-1"><dt class="text-muted text-sm">clients qui reviennent</dt><dd class="h-display text-6xl lg:text-7xl text-lime"><span data-counter="98">98</span>%</dd></div>
+      </dl>
+    </section>
+
+    <section class="py-24 lg:py-32" aria-labelledby="t-avis">
+      <div class="mx-auto max-w-site px-5 lg:px-8" data-carousel tabindex="0" aria-roledescription="carrousel">
+        <div class="flex items-end justify-between gap-6 mb-12">
+          <h2 id="t-avis" class="h-display text-[clamp(2.4rem,6vw,5rem)]" data-blur-text>Ils en parlent mieux que nous.</h2>
+          <div class="hidden sm:flex gap-2"><button type="button" class="w-12 h-12 rounded-full border border-line hover:bg-bone hover:text-ink transition" data-carousel-prev aria-label="Précédent">←</button><button type="button" class="w-12 h-12 rounded-full border border-line hover:bg-bone hover:text-ink transition" data-carousel-next aria-label="Suivant">→</button></div>
+        </div>
+        <ul class="gap-5" data-carousel-track>
+          <li class="shrink-0 w-[85%] sm:w-[48%] lg:w-[38%] bento p-8 lg:p-10 flex flex-col justify-between gap-10 min-h-[340px]" data-spotlight>
+            <blockquote class="text-xl lg:text-2xl leading-snug">« Kinetik a compris notre marque mieux que nous. Le nouveau site a doublé nos demandes de démo en trois mois. »</blockquote>
+            <footer class="flex items-center gap-4"><img src="assets/img/client-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Julien Morel</strong><span class="text-sm text-muted">CEO, Lumen Bank</span></span></footer>
+          </li>
+          <li class="shrink-0 w-[85%] sm:w-[48%] lg:w-[38%] bento p-8 lg:p-10 flex flex-col justify-between gap-10 min-h-[340px]" data-spotlight>
+            <blockquote class="text-xl lg:text-2xl leading-snug">« Un vrai partenaire : exigeant, rapide, et un sens du détail qu'on ne trouve que dans les meilleurs studios. »</blockquote>
+            <footer class="flex items-center gap-4"><img src="assets/img/client-2.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Bernard Kessler</strong><span class="text-sm text-muted">Fondateur, Northwind</span></span></footer>
+          </li>
+          <li class="shrink-0 w-[85%] sm:w-[48%] lg:w-[38%] bento p-8 lg:p-10 flex flex-col justify-between gap-10 min-h-[340px]" data-spotlight>
+            <blockquote class="text-xl lg:text-2xl leading-snug">« L'identité a créé un engouement immédiat au lancement. Nos clientes la reconnaissent partout. »</blockquote>
+            <footer class="flex items-center gap-4"><img src="assets/img/client-3.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Claire Dumas</strong><span class="text-sm text-muted">Directrice marketing, Aube</span></span></footer>
+          </li>
+          <li class="shrink-0 w-[85%] sm:w-[48%] lg:w-[38%] bento p-8 lg:p-10 flex flex-col justify-between gap-10 min-h-[340px]" data-spotlight>
+            <blockquote class="text-xl lg:text-2xl leading-snug">« Le design system a fait gagner des semaines à nos équipes produit. Investissement rentabilisé en un trimestre. »</blockquote>
+            <footer class="flex items-center gap-4"><img src="assets/img/client-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Julien Morel</strong><span class="text-sm text-muted">CTO, Volta</span></span></footer>
+          </li>
+        </ul>
+        <div class="mt-8 text-bone" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <section class="relative pt-28 lg:pt-40 pb-16 lg:pb-24 overflow-hidden">
+      <div class="mx-auto max-w-site px-5 lg:px-8 text-center">
+        <p class="eyebrow" data-appear>Prochaine étape</p>
+        <h2 class="mt-6 h-display text-[clamp(2.8rem,9vw,8.5rem)]" data-blur-text>Parlons de votre <span class="text-lime">projet.</span></h2>
+        <div class="mt-12 flex justify-center" data-appear>
+          <a href="contact.html" class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-lime text-ink grid place-items-center font-display font-semibold text-lg text-center leading-tight" data-magnetic=".4">Écrire au<br>studio ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative overflow-hidden border-t border-line mt-10">
+    <div class="mx-auto max-w-site px-5 lg:px-8 pt-20 pb-8">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="h-display text-4xl sm:text-5xl">Une idée ? <span class="text-lime">Écrivons-la.</span></p>
+          <form class="mt-8 flex gap-2 max-w-md" data-form aria-label="Inscription à la newsletter">
+            <label for="nl" class="sr-only">Votre e-mail</label>
+            <input id="nl" type="email" required placeholder="votre@email.fr" class="flex-1 rounded-full bg-card border border-line px-5 py-3 text-sm placeholder:text-muted focus:outline-none focus:border-lime">
+            <button type="submit" class="btn btn-lime !py-3 text-sm">S'inscrire</button>
+          </form>
+          <p data-form-success hidden class="mt-4 text-sm text-lime">Merci, c'est noté ✦</p>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+          <div><p class="text-muted mb-4">Navigation</p><ul class="space-y-2"><li><a href="index.html" class="hover:text-lime">Accueil</a></li><li><a href="studio.html" class="hover:text-lime">Studio</a></li><li><a href="expertises.html" class="hover:text-lime">Expertises</a></li><li><a href="projets.html" class="hover:text-lime">Projets</a></li><li><a href="contact.html" class="hover:text-lime">Contact</a></li></ul></div>
+          <div><p class="text-muted mb-4">Studio</p><address class="not-italic space-y-2"><p>18 rue de Paradis<br>75010 Paris</p><p><a href="mailto:hello@kinetik-studio.fr" class="hover:text-lime">hello@kinetik-studio.fr</a></p><p><a href="tel:+33184600000" class="hover:text-lime">+33 1 84 60 00 00</a></p></address></div>
+          <div><p class="text-muted mb-4">Réseaux</p><ul class="space-y-2"><li><a href="#" class="hover:text-lime">Instagram</a></li><li><a href="#" class="hover:text-lime">LinkedIn</a></li><li><a href="#" class="hover:text-lime">Dribbble</a></li><li><a href="#" class="hover:text-lime">Behance</a></li></ul></div>
+        </div>
+      </div>
+      <p class="mt-20 font-display font-extrabold leading-[.8] tracking-tightest text-[17vw] lg:text-[15rem] text-white/[.05] select-none" aria-hidden="true">kinetik</p>
+      <div class="mt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-muted">
+        <p>© <span data-year>2026</span> Kinetik Studio — Tous droits réservés</p>
+        <p><a href="mentions-legales.html" class="hover:text-bone">Mentions légales</a> · <a href="confidentialite.html" class="hover:text-bone">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</body>
+</html>

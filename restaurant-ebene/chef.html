@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le chef Ismaël Traoré et la maison Ébène | Restaurant Abidjan</title>
+  <meta name="description" content="Rencontrez Ismaël Traoré, chef d'Ébène à Abidjan : formé en France, il revisite la cuisine ivoirienne avec 14 producteurs locaux. Notre histoire et notre équipe.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.ebene-abidjan.ci/chef.html">
+  <meta name="theme-color" content="#0E2A22">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Ébène — Restaurant gastronomique à Abidjan">
+  <meta property="og:title" content="Le chef Ismaël Traoré et la maison Ébène | Restaurant Abidjan">
+  <meta property="og:description" content="Rencontrez Ismaël Traoré, chef d'Ébène à Abidjan : formé en France, il revisite la cuisine ivoirienne avec 14 producteurs locaux. Notre histoire et notre équipe.">
+  <meta property="og:url" content="https://www.ebene-abidjan.ci/chef.html">
+  <meta property="og:image" content="https://www.ebene-abidjan.ci/assets/img/chef-dressage.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E2A22'/%3E%3Cpath d='M14 30h36a18 18 0 0 1-36 0z' fill='%23D99A3D'/%3E%3Cpath d='M26 22c0-4 4-4 4-8M34 22c0-4 4-4 4-8' stroke='%23F2E8D5' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Ébène","description":"Restaurant gastronomique à Abidjan : la cuisine ivoirienne revisitée par le chef Ismaël Traoré, produits des marchés locaux, terrasse sur jardin.","url":"https://www.ebene-abidjan.ci/","image":"https://www.ebene-abidjan.ci/assets/img/hero.webp","telephone":"+225 27 22 00 00 00","email":"table@ebene-abidjan.ci","servesCuisine":["Ivoirienne","Africaine contemporaine","Gastronomique"],"priceRange":"15 000 – 45 000 FCFA","acceptsReservations":"True","hasMenu":"https://www.ebene-abidjan.ci/carte.html","address":{"@type":"PostalAddress","streetAddress":"Rue des Jardins, Deux-Plateaux","addressLocality":"Abidjan","addressRegion":"Cocody","addressCountry":"CI"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"12:00","closes":"15:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:30"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.ebene-abidjan.ci/"},{"@type":"ListItem","position":2,"name":"Le chef","item":"https://www.ebene-abidjan.ci/chef.html"}]}</script>
+</head>
+<body class="font-sans bg-forest text-cream">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="mx-auto max-w-site px-5 lg:px-10 h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <nav class="hidden lg:flex items-center" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="carte.html" class="nav-link">La carte</a>
+        <a href="chef.html" class="nav-link" aria-current="page">Le chef</a>
+      </nav>
+      <button class="lg:hidden justify-self-start w-11 h-11 rounded-full border border-cream/30 grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <a href="index.html" aria-label="Ébène — accueil"><span class="flex flex-col items-center leading-none"><span class="display text-[1.9rem] tracking-[.12em]">ÉBÈNE</span><span class="kicker !text-[.55rem] !tracking-[.45em] text-ochre mt-1">Table d'Abidjan</span></span></a>
+      <div class="flex items-center justify-end gap-2">
+        <a href="contact.html" class="hidden lg:inline-flex nav-link">Infos & accès</a>
+        <a href="reservation.html" class="btn btn-ochre !py-2.5 !px-5 text-sm" data-magnetic=".2">Réserver</a>
+      </div>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-forest-deep flex-col justify-end gap-2 px-6 pb-12 lg:hidden" data-menu aria-label="Navigation mobile">
+    <a data-menu-item href="index.html" class="display text-6xl py-1">Accueil</a>
+    <a data-menu-item href="carte.html" class="display text-6xl py-1">La carte</a>
+    <a data-menu-item href="chef.html" class="display text-6xl py-1 italic text-ochre" aria-current="page">Le chef</a>
+    <a data-menu-item href="reservation.html" class="display text-6xl py-1">Réserver</a>
+    <a data-menu-item href="contact.html" class="display text-6xl py-1">Infos & accès</a>
+    <p data-menu-item class="mt-8 text-sm text-cream/60">Deux-Plateaux, Abidjan — +225 27 22 00 00 00</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <div class="pt-20"></div>
+    <section class="py-16 lg:py-24 overflow-hidden" aria-labelledby="t-chef">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 relative h-[440px] lg:h-[640px] order-2 lg:order-1" data-scene-host>
+          <div class="absolute inset-[12%] rounded-full bg-[radial-gradient(circle,rgba(217,154,61,.22),transparent_65%)]" aria-hidden="true"></div>
+          <canvas data-scene="bowl" role="img" aria-label="Bol fumant en 3D, entouré d'épices"></canvas>
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
+          <nav aria-label="Fil d'Ariane" class="kicker text-cream/55" data-appear><a href="index.html" class="hover:text-ochre">Accueil</a> <span aria-hidden="true">/</span> <span class="text-ochre" aria-current="page">Le chef</span></nav>
+          <p class="mt-10 kicker text-ochre ornament" data-appear>Le chef & la maison</p>
+          <h1 id="t-chef" class="mt-6 display text-[clamp(3rem,6vw,5.8rem)]" data-blur-text>Ismaël Traoré, <em>cuisinier de mémoire.</em></h1>
+          <p class="mt-6 text-lg text-cream/75 leading-relaxed" data-appear>Formé à Paris puis à Lyon, Ismaël est rentré à Abidjan avec une idée simple : servir les plats de sa grand-mère avec la rigueur d'une grande maison. Ici, le kedjenou mijote toujours dans le canari.</p>
+          <dl class="mt-10 grid grid-cols-3 gap-6 border-t border-cream/15 pt-8" data-stagger>
+            <div class="flex flex-col-reverse gap-1"><dt class="text-sm text-cream/60">produits ivoiriens</dt><dd class="display text-5xl text-ochre"><span data-counter="90">90</span> %</dd></div><div class="flex flex-col-reverse gap-1"><dt class="text-sm text-cream/60">producteurs partenaires</dt><dd class="display text-5xl text-ochre"><span data-counter="14">14</span></dd></div><div class="flex flex-col-reverse gap-1"><dt class="text-sm text-cream/60">de cuisson pour le bœuf</dt><dd class="display text-5xl text-ochre"><span data-counter="7">7</span> h</dd></div>
+          </dl>
+          
+        </div>
+      </div>
+    </section>
+
+    <section data-hscroll aria-labelledby="t-coulisses">
+      <div class="hs-sticky">
+        <div class="mx-auto max-w-site w-full px-5 lg:px-10 mb-10 flex items-end justify-between">
+          <h2 id="t-coulisses" class="display text-[clamp(2.8rem,6vw,5.5rem)]">En <em>coulisses</em></h2>
+          <p class="hidden lg:block kicker text-cream/55">Faites défiler ↓</p>
+        </div>
+        <ul class="gap-6 px-5 lg:px-10" data-hscroll-track>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[480px]"><figure><div class="arch aspect-[3/4]"><img src="assets/img/chef-dressage.webp" alt="Le dressage, au millimètre" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">Le dressage, au millimètre</figcaption></figure></li>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[360px] lg:mt-24"><figure><div class="arch aspect-[3/4]"><img src="assets/img/chef-coupe.webp" alt="Les herbes, coupées à la minute" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">Les herbes, coupées à la minute</figcaption></figure></li>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[480px]"><figure><div class="arch aspect-[3/4]"><img src="assets/img/cuisine.webp" alt="La brigade en plein service" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">La brigade en plein service</figcaption></figure></li>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[360px] lg:mt-24"><figure><div class="arch aspect-[3/4]"><img src="assets/img/assiette.webp" alt="Le kedjenou, notre signature" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">Le kedjenou, notre signature</figcaption></figure></li>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[480px]"><figure><div class="arch aspect-[3/4]"><img src="assets/img/d-pain.webp" alt="Le pain, cuit chaque matin" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">Le pain, cuit chaque matin</figcaption></figure></li>
+          <li class="shrink-0 w-[78vw] sm:w-[420px] lg:w-[360px] lg:mt-24"><figure><div class="arch aspect-[3/4]"><img src="assets/img/b-bar.webp" alt="Le bar, dès 18 h" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div><figcaption class="mt-4 kicker text-cream/60">Le bar, dès 18 h</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-32">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5"><div class="arch aspect-[4/5]" data-appear><img src="assets/img/chef.webp" alt="Portrait du chef Ismaël Traoré" width="640" height="800" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div></div>
+        <div class="lg:col-span-6 lg:col-start-7">
+          <p class="kicker text-ochre ornament" data-appear>Nos engagements</p>
+          <h2 class="mt-5 display text-[clamp(2.6rem,5vw,4.6rem)]" data-blur-text>Du champ <em>à l'assiette</em></h2>
+          <ol class="mt-10 space-y-8" data-stagger>
+            <li class="flex gap-6"><span class="display text-4xl text-ochre w-10 shrink-0">1</span><div><h3 class="display text-3xl">Le marché, chaque matin</h3><p class="mt-2 text-cream/70">Légumes de Treichville et d'Adjamé, poissons du port, achetés à l'aube par le chef lui-même.</p></div></li>
+            <li class="flex gap-6"><span class="display text-4xl text-ochre w-10 shrink-0">2</span><div><h3 class="display text-3xl">Des producteurs nommés</h3><p class="mt-2 text-cream/70">Pintades de Bouaké, cacao de Soubré, miel de Korhogo : nous connaissons chaque fournisseur par son prénom.</p></div></li>
+            <li class="flex gap-6"><span class="display text-4xl text-ochre w-10 shrink-0">3</span><div><h3 class="display text-3xl">Zéro gaspillage</h3><p class="mt-2 text-cream/70">Les parures deviennent bouillons, les fruits trop mûrs finissent en sorbets. Nos déchets verts partent au compost.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-forest-deep text-cream/70">
+    <div class="mx-auto max-w-site px-5 lg:px-10 pt-24 pb-10">
+      <div class="text-center">
+        <p class="kicker text-ochre ornament">Ébène · depuis 2019</p>
+        <p class="mt-6 display text-cream text-[clamp(2.8rem,7vw,6.5rem)]">À table, <em>on vous attend.</em></p>
+        <div class="mt-10 flex flex-wrap justify-center gap-3"><a href="reservation.html" class="btn btn-ochre" data-magnetic=".2">Réserver une table <span aria-hidden="true">→</span></a><a href="https://wa.me/2250700000000" class="btn btn-line" rel="noopener">Réserver par WhatsApp</a></div>
+      </div>
+      <div class="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 text-sm border-t border-cream/10 pt-12">
+        <div><p class="kicker text-cream mb-4">Adresse</p><address class="not-italic leading-relaxed">Rue des Jardins<br>Cocody Deux-Plateaux<br>Abidjan, Côte d'Ivoire</address></div>
+        <div><p class="kicker text-cream mb-4">Horaires</p><p class="leading-relaxed">Déjeuner : mar – sam, 12 h – 15 h<br>Dîner : mar – dim, 19 h – 23 h 30<br>Fermé le lundi</p></div>
+        <div><p class="kicker text-cream mb-4">Contact</p><p class="leading-relaxed"><a href="tel:+2252722000000" class="hover:text-ochre">+225 27 22 00 00 00</a><br><a href="mailto:table@ebene-abidjan.ci" class="hover:text-ochre">table@ebene-abidjan.ci</a></p></div>
+        <div><p class="kicker text-cream mb-4">Suivez-nous</p><ul class="space-y-1.5"><li><a href="#" class="hover:text-ochre">Instagram</a></li><li><a href="#" class="hover:text-ochre">Facebook</a></li><li><a href="#" class="hover:text-ochre">TikTok</a></li></ul></div>
+      </div>
+      <div class="mt-14 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/45">
+        <p>© <span data-year>2026</span> Ébène Restauration SARL — Abidjan</p>
+        <p><a href="mentions-legales.html" class="hover:text-ochre">Mentions légales</a> · <a href="confidentialite.html" class="hover:text-ochre">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</body>
+</html>

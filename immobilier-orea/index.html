@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orea — Agence immobilière de prestige en Provence &amp; Côte d'Azur</title>
+  <meta name="description" content="Orea vend villas, bastides et propriétés d'exception à Aix-en-Provence, dans les Alpilles et sur la Côte d'Azur. Estimation offerte et visites 3D.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.orea-immobilier.fr/">
+  <meta name="theme-color" content="#F4EFE6">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Orea — Immobilier de prestige">
+  <meta property="og:title" content="Orea — Agence immobilière de prestige en Provence &amp; Côte d'Azur">
+  <meta property="og:description" content="Orea vend villas, bastides et propriétés d'exception à Aix-en-Provence, dans les Alpilles et sur la Côte d'Azur. Estimation offerte et visites 3D.">
+  <meta property="og:url" content="https://www.orea-immobilier.fr/">
+  <meta property="og:image" content="https://www.orea-immobilier.fr/assets/img/hero-villa.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231F1D19'/%3E%3Cpath d='M14 44V30l18-14 18 14v14' fill='none' stroke='%23C7A777' stroke-width='3'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  <link rel="preload" as="image" href="assets/img/hero-villa.webp" fetchpriority="high">
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500;600&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Orea Immobilier","description":"Agence immobilière de prestige en Provence et sur la Côte d'Azur : vente de villas, bastides et propriétés d'exception.","url":"https://www.orea-immobilier.fr/","image":"https://www.orea-immobilier.fr/assets/img/hero-villa.webp","telephone":"+33 4 42 00 00 00","email":"contact@orea-immobilier.fr","priceRange":"€€€€","address":{"@type":"PostalAddress","streetAddress":"12 cours Mirabeau","postalCode":"13100","addressLocality":"Aix-en-Provence","addressCountry":"FR"},"areaServed":["Aix-en-Provence","Luberon","Alpilles","Côte d'Azur"]}</script>
+</head>
+<body class="font-sans bg-cream text-ink">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50 on-dark" data-header>
+    <div class="mx-auto max-w-site px-5 lg:px-10 h-20 flex items-center justify-between">
+      <a href="index.html" aria-label="Orea Immobilier — accueil"><span class="inline-flex items-center gap-2.5"><svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M5 27V15L16 6l11 9v12" stroke="currentColor" stroke-width="1.6"/><path d="M12 27v-7h8v7" stroke="#C7A777" stroke-width="1.6"/></svg><span class="font-serif text-2xl tracking-tight">Orea</span></span></a>
+      <nav class="hidden lg:flex items-center text-[15px]" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link" aria-current="page">Accueil</a>
+        <a href="proprietes.html" class="nav-link">Propriétés</a>
+        <a href="estimation.html" class="nav-link">Estimation</a>
+        <a href="agence.html" class="nav-link">L'agence</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="estimation.html" class="hidden lg:inline-flex btn btn-line !py-2.5 text-sm" data-magnetic=".2">Estimer mon bien</a>
+        <button class="lg:hidden w-11 h-11 rounded-full border border-current grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+          <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-ink text-cream flex-col justify-end gap-2 px-6 pb-12 lg:hidden" data-menu aria-label="Navigation mobile">
+    <a data-menu-item href="index.html" class="display text-5xl py-1 text-bronze-light italic" aria-current="page">Accueil</a>
+    <a data-menu-item href="proprietes.html" class="display text-5xl py-1">Propriétés</a>
+    <a data-menu-item href="estimation.html" class="display text-5xl py-1">Estimation</a>
+    <a data-menu-item href="agence.html" class="display text-5xl py-1">L'agence</a>
+    <a data-menu-item href="contact.html" class="display text-5xl py-1">Contact</a>
+    <p data-menu-item class="mt-8 text-sm text-cream/60">+33 4 42 00 00 00 — contact@orea-immobilier.fr</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <section class="relative h-[100svh] min-h-[640px] overflow-hidden text-white">
+      <img src="assets/img/hero-villa.webp" alt="Villa contemporaine en bois et verre au crépuscule" width="2000" height="1250" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" data-zoom-scroll="1.18">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-black/65" aria-hidden="true"></div>
+      <div class="relative h-full mx-auto max-w-site px-5 lg:px-10 flex flex-col justify-end pb-10 lg:pb-14">
+        <p class="kicker text-white/80" data-appear>Provence · Côte d'Azur · Depuis 2004</p>
+        <h1 class="mt-5 display text-[clamp(3rem,8.5vw,8.4rem)] max-w-5xl" data-blur-text>L'art de vivre, <em class="!text-bronze-light">adresse par adresse.</em></h1>
+        <form action="proprietes.html" method="get" class="search mt-10 text-ink rounded-[28px] lg:rounded-full p-2 grid gap-2 lg:grid-cols-[auto_1fr_1fr_1fr_auto] items-stretch max-w-5xl" data-appear data-delay=".5" role="search" aria-label="Rechercher un bien">
+          <div class="inline-flex rounded-full bg-cream p-1 text-sm self-center" role="radiogroup" aria-label="Projet">
+            <label class="opt relative"><input type="radio" name="projet" value="achat" checked><span class="box !py-2.5 !px-5 !rounded-full !border-0">Acheter</span></label>
+            <label class="opt relative"><input type="radio" name="projet" value="location"><span class="box !py-2.5 !px-5 !rounded-full !border-0">Louer</span></label>
+          </div>
+          <label class="hidden lg:block px-5 py-2 rounded-full hover:bg-cream/70 transition"><span class="block text-xs text-stone">Localisation</span><select name="lieu"><option>Toutes</option><option>Aix-en-Provence</option><option>Alpilles</option><option>Luberon</option><option>Côte d'Azur</option></select></label>
+          <label class="hidden lg:block px-5 py-2 rounded-full hover:bg-cream/70 transition"><span class="block text-xs text-stone">Type de bien</span><select name="type"><option>Tous</option><option>Villa</option><option>Bastide</option><option>Maison</option><option>Appartement</option></select></label>
+          <label class="hidden lg:block px-5 py-2 rounded-full hover:bg-cream/70 transition"><span class="block text-xs text-stone">Budget</span><select name="budget"><option>Tous budgets</option><option>< 1,5 M€</option><option>1,5 – 4 M€</option><option>4 – 8 M€</option><option>> 8 M€</option></select></label>
+          <button type="submit" class="btn btn-ink">Rechercher <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-label="Nos secteurs" class="py-8 border-b border-ink/10">
+      <div data-ticker="40" data-ticker-hover>
+        <ul class="flex items-center gap-12 pr-12 display text-3xl lg:text-4xl text-ink/70">
+          <li class="flex items-center gap-12 whitespace-nowrap">Aix-en-Provence<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Cassis<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Saint-Rémy<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Gordes<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Cap d'Antibes<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Ramatuelle<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Uzès<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Saint-Jean-Cap-Ferrat<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+          <li class="flex items-center gap-12 whitespace-nowrap">Lourmarin<span class="text-bronze text-xl" aria-hidden="true">◆</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-36">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <p class="kicker text-bronze" data-appear>Orea en quelques mots</p>
+          <p class="mt-6 display text-[clamp(2rem,3.6vw,3.4rem)] leading-[1.1]" data-blur-text>Depuis vingt ans, nous accompagnons celles et ceux qui cherchent <em>bien plus qu'un toit</em> : une lumière, une vue, une façon de vivre.</p>
+          <dl class="mt-12 grid grid-cols-3 gap-6 border-t border-ink/15 pt-8" data-stagger>
+            <div class="flex flex-col-reverse gap-1"><dt class="text-sm text-stone">ans d'expertise</dt><dd class="display text-5xl"><span data-counter="20">20</span></dd></div><div class="flex flex-col-reverse gap-1"><dt class="text-sm text-stone">biens vendus</dt><dd class="display text-5xl"><span data-counter="640">640</span></dd></div><div class="flex flex-col-reverse gap-1"><dt class="text-sm text-stone">jours de délai moyen</dt><dd class="display text-5xl"><span data-counter="47">47</span></dd></div>
+          </dl>
+        </div>
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="rounded-[24px] overflow-hidden h-[300px] lg:h-[480px]" data-appear><img src="assets/img/salon.webp" alt="Salon lumineux d'une villa vendue par Orea" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-[118%] object-cover" data-parallax=".1"></div>
+          <div class="rounded-[24px] overflow-hidden h-[300px] lg:h-[480px] mt-16" data-appear data-delay=".15"><img src="assets/img/fauteuil.webp" alt="Fauteuil jaune dans un intérieur épuré" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-[118%] object-cover" data-parallax=".16"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-24 overflow-hidden" aria-labelledby="t-selection">
+      <div class="mx-auto max-w-site px-5 lg:px-10" data-carousel tabindex="0" aria-roledescription="carrousel">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div><p class="kicker text-bronze" data-appear>Sélection</p><h2 id="t-selection" class="mt-4 display text-[clamp(2.4rem,5.5vw,5rem)]" data-blur-text>Biens <em>d'exception</em></h2></div>
+          <div class="flex items-center gap-3">
+            <a href="proprietes.html" class="btn btn-line !py-3 text-sm">Voir les 9 biens</a>
+            <button type="button" class="w-12 h-12 rounded-full border border-ink/20 hover:bg-ink hover:text-cream transition" data-carousel-prev aria-label="Bien précédent">←</button>
+            <button type="button" class="w-12 h-12 rounded-full border border-ink/20 hover:bg-ink hover:text-cream transition" data-carousel-next aria-label="Bien suivant">→</button>
+          </div>
+        </div>
+        <ul class="gap-6" data-carousel-track>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/hero-villa.webp" alt="Villa contemporaine en bois et verre au crépuscule" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Exclusivité</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Cassis</p><h3 class="mt-2 font-serif text-2xl">Villa Lumen</h3></div><p class="font-serif text-lg whitespace-nowrap">4 950 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>320 m²</li><li>5 chambres</li><li>2 100 m²</li></ul>
+          </a></li>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/villa-piscine.webp" alt="Villa blanche à toit plat avec piscine" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Vue mer</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Cap d'Antibes</p><h3 class="mt-2 font-serif text-2xl">Les Terrasses du Cap</h3></div><p class="font-serif text-lg whitespace-nowrap">7 800 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>410 m²</li><li>6 chambres</li><li>3 400 m²</li></ul>
+          </a></li>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/bastide.webp" alt="Grande maison provençale avec piscine et palmiers" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Nouveauté</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Saint-Rémy-de-Provence</p><h3 class="mt-2 font-serif text-2xl">Domaine des Oliviers</h3></div><p class="font-serif text-lg whitespace-nowrap">3 650 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>480 m²</li><li>7 chambres</li><li>1,8 ha</li></ul>
+          </a></li>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/villa-blanche.webp" alt="Villa d'architecte blanche avec piscine centrale" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Exclusivité</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Ramatuelle</p><h3 class="mt-2 font-serif text-2xl">Villa Albâtre</h3></div><p class="font-serif text-lg whitespace-nowrap">9 200 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>520 m²</li><li>7 chambres</li><li>5 000 m²</li></ul>
+          </a></li>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/maison-bois.webp" alt="Maison contemporaine en bois et béton" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Coup de cœur</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Aix-en-Provence</p><h3 class="mt-2 font-serif text-2xl">Maison Cyprès</h3></div><p class="font-serif text-lg whitespace-nowrap">1 890 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>210 m²</li><li>4 chambres</li><li>900 m²</li></ul>
+          </a></li>
+          <li class="shrink-0 w-[84%] sm:w-[48%] lg:w-[31.5%]"><a href="proprietes.html" class="prop group block">
+            <div class="media relative aspect-[4/5]"><img src="assets/img/villa-palmiers.webp" alt="Villa entourée de palmiers avec piscine" width="1200" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover" ><span class="badge absolute left-4 top-4">Pieds dans l'eau</span></div>
+            <div class="mt-5 flex items-start justify-between gap-4"><div><p class="kicker text-stone">Saint-Jean-Cap-Ferrat</p><h3 class="mt-2 font-serif text-2xl">Villa Palmeraie</h3></div><p class="font-serif text-lg whitespace-nowrap">12 500 000 €</p></div>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-stone mt-2"><li>600 m²</li><li>8 chambres</li><li>4 200 m²</li></ul>
+          </a></li>
+        </ul>
+        <div class="mt-10 text-ink" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <figure class="relative h-[85vh] min-h-[480px] overflow-hidden text-white" data-clip-scroll>
+        <img src="assets/img/villa-blanche.webp" alt="Villa d'architecte blanche autour d'une piscine" width="1800" height="1100" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" data-zoom-scroll="1.25">
+        <div class="absolute inset-0 bg-black/35" aria-hidden="true"></div>
+        <figcaption class="relative h-full mx-auto max-w-site px-5 lg:px-10 flex flex-col justify-center">
+          <p class="display text-[clamp(2.4rem,6vw,6rem)] max-w-4xl">« Chaque maison a une histoire. <em class="!text-bronze-light">Nous la racontons.</em> »</p>
+          <p class="mt-6 kicker text-white/80">Hélène Marchal — Fondatrice</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="px-3 lg:px-5 py-10" aria-labelledby="t-3d">
+      <div class="villa-3d relative rounded-[32px] overflow-hidden bg-sand transition-colors duration-1000 [&.is-night]:bg-[#1C2030] [&.is-night]:text-cream" data-villa-section>
+        <div class="absolute inset-0" aria-hidden="true"><canvas data-scene="villa"></canvas></div>
+        <div class="relative pointer-events-none min-h-[620px] lg:min-h-[760px] p-6 lg:p-12 flex flex-col justify-between">
+          <div class="max-w-xl">
+            <p class="kicker text-bronze">Maquette 3D interactive</p>
+            <h2 id="t-3d" class="mt-4 display text-[clamp(2.4rem,5vw,4.6rem)]" data-blur-text>Visitez avant <em>de visiter.</em></h2>
+            <p class="mt-4 opacity-75 max-w-md">Pour nos biens d'exception, nous réalisons une maquette 3D consultable en ligne. Déplacez la souris pour tourner autour de la villa.</p>
+          </div>
+          <div class="pointer-events-auto flex flex-wrap items-center justify-between gap-4">
+            <div class="inline-flex rounded-full bg-white/80 backdrop-blur p-1 text-ink text-sm" role="group" aria-label="Ambiance lumineuse">
+              <button type="button" data-villa-mode="jour" aria-pressed="true" class="px-5 py-2.5 rounded-full aria-pressed:bg-ink aria-pressed:text-cream transition-colors">☀ Jour</button>
+              <button type="button" data-villa-mode="soir" aria-pressed="false" class="px-5 py-2.5 rounded-full aria-pressed:bg-ink aria-pressed:text-cream transition-colors">☾ Soir</button>
+            </div>
+            <a href="estimation.html" class="btn btn-ink">Faire estimer mon bien <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 lg:py-32">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <p class="kicker text-bronze" data-appear>Services</p>
+        <h2 class="mt-4 display text-[clamp(2.4rem,5.5vw,5rem)] max-w-4xl" data-blur-text>Un accompagnement <em>de bout en bout</em></h2>
+        <ol class="mt-14 grid md:grid-cols-3 gap-px bg-ink/10 border-y border-ink/10" data-stagger>
+          <li class="bg-cream p-8 lg:p-10"><a href="proprietes.html" class="group block h-full" data-spotlight>
+            <span class="font-serif text-bronze text-lg">01</span>
+            <h3 class="mt-10 display text-4xl">Vente</h3>
+            <p class="mt-4 text-stone leading-relaxed">Mise en valeur photo & vidéo, maquette 3D, diffusion confidentielle auprès de 12 000 acquéreurs qualifiés.</p>
+            <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">En savoir plus <span aria-hidden="true">→</span></span>
+          </a></li>
+          <li class="bg-cream p-8 lg:p-10"><a href="estimation.html" class="group block h-full" data-spotlight>
+            <span class="font-serif text-bronze text-lg">02</span>
+            <h3 class="mt-10 display text-4xl">Estimation</h3>
+            <p class="mt-4 text-stone leading-relaxed">Un avis de valeur argumenté sous 48 h, fondé sur les ventes réelles du secteur et notre fichier acquéreurs.</p>
+            <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">En savoir plus <span aria-hidden="true">→</span></span>
+          </a></li>
+          <li class="bg-cream p-8 lg:p-10"><a href="contact.html" class="group block h-full" data-spotlight>
+            <span class="font-serif text-bronze text-lg">03</span>
+            <h3 class="mt-10 display text-4xl">Recherche sur mesure</h3>
+            <p class="mt-4 text-stone leading-relaxed">Vous décrivez la maison idéale, nous la trouvons — y compris parmi les biens jamais publiés.</p>
+            <span class="mt-8 inline-flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">En savoir plus <span aria-hidden="true">→</span></span>
+          </a></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pb-24">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-2 gap-6" data-stagger>
+        <blockquote class="rounded-[28px] bg-sand/60 p-8 lg:p-12 flex flex-col justify-between gap-10">
+          <p class="display text-2xl lg:text-3xl leading-snug">« Nous avons vendu notre bastide en six semaines, à un prix supérieur à nos attentes. Discrétion et professionnalisme absolus. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/client-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Famille Duval</strong><span class="text-sm text-stone">Vendeurs à Saint-Rémy</span></span></footer>
+        </blockquote>
+        <blockquote class="rounded-[28px] bg-sand/60 p-8 lg:p-12 flex flex-col justify-between gap-10">
+          <p class="display text-2xl lg:text-3xl leading-snug">« La visite 3D nous a permis de nous projeter depuis Londres. Nous n'avons fait qu'une seule visite avant de signer. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/client-2.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">James & Clara W.</strong><span class="text-sm text-stone">Acquéreurs à Cassis</span></span></footer>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-ink text-cream/75">
+    <div class="mx-auto max-w-site px-5 lg:px-10 pt-24 pb-10">
+      <div class="grid gap-14 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <p class="display text-cream text-[clamp(2.4rem,5vw,4.4rem)]">Trouvons la maison <em>qui vous ressemble.</em></p>
+          <a href="contact.html" class="mt-10 btn bg-cream text-ink hover:bg-bronze-light" data-magnetic=".2">Prendre rendez-vous <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="lg:col-span-6 grid grid-cols-2 gap-10 text-sm">
+          <div><p class="kicker text-bronze-light mb-4">Aix-en-Provence</p><address class="not-italic leading-relaxed">12 cours Mirabeau<br>13100 Aix-en-Provence<br><a href="tel:+33442000000" class="hover:text-cream">+33 4 42 00 00 00</a></address></div>
+          <div><p class="kicker text-bronze-light mb-4">Saint-Tropez</p><address class="not-italic leading-relaxed">3 place des Lices<br>83990 Saint-Tropez<br><a href="tel:+33494000000" class="hover:text-cream">+33 4 94 00 00 00</a></address></div>
+          <div><p class="kicker text-bronze-light mb-4">Navigation</p><ul class="space-y-1.5"><li><a href="index.html" class="hover:text-cream">Accueil</a></li><li><a href="proprietes.html" class="hover:text-cream">Propriétés</a></li><li><a href="estimation.html" class="hover:text-cream">Estimation</a></li><li><a href="agence.html" class="hover:text-cream">L'agence</a></li><li><a href="contact.html" class="hover:text-cream">Contact</a></li></ul></div>
+          <div><p class="kicker text-bronze-light mb-4">Suivez-nous</p><ul class="space-y-1.5"><li><a href="#" class="hover:text-cream">Instagram</a></li><li><a href="#" class="hover:text-cream">LinkedIn</a></li><li><a href="#" class="hover:text-cream">YouTube</a></li></ul></div>
+        </div>
+      </div>
+      <div class="mt-20 pt-8 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/45">
+        <p>© <span data-year>2026</span> Orea Immobilier SAS — Carte professionnelle T n° CPI 1310 0000 0000 — Garantie financière</p>
+        <p><a href="mentions-legales.html" class="hover:text-cream">Mentions légales</a> · <a href="#" class="hover:text-cream">Honoraires</a> · <a href="confidentialite.html" class="hover:text-cream">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</body>
+</html>

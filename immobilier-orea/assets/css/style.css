@@ -1,0 +1,97 @@
+/* =========================================================
+   Orea — Immobilier de prestige — styles propres au template
+   ========================================================= */
+:root {
+  --mo-bg: #F4EFE6;
+  --mo-fg: #1F1D19;
+  --mo-accent: #9C7A4D;
+  --mo-accent-ink: #FFFFFF;
+  --mo-pill: rgba(31, 29, 25, .07);
+  --mo-pill-strong: #1F1D19;
+  --mo-glow: rgba(156, 122, 77, .14);
+}
+
+html { background: var(--mo-bg); }
+body { -webkit-font-smoothing: antialiased; }
+::selection { background: #1F1D19; color: #F4EFE6; }
+
+.display { font-family: Fraunces, Georgia, serif; font-weight: 300; letter-spacing: -.03em; line-height: .98; font-variation-settings: "SOFT" 50, "opsz" 144; }
+.display em { font-style: italic; font-weight: 300; color: var(--mo-accent); }
+.kicker { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; }
+
+/* En-tête : transparent sur le hero, crème au scroll */
+.site-header { transition: background-color .5s, color .5s, box-shadow .5s; }
+.site-header.on-dark:not(.is-scrolled) { color: #fff; }
+.site-header.is-scrolled { background: rgba(244, 239, 230, .88); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(31,29,25,.08); color: var(--mo-fg); }
+.site-header.on-dark:not(.is-scrolled) .nav-pill { background: rgba(255,255,255,.16); }
+.nav-link { position: relative; padding: .5rem 1rem; border-radius: 999px; transition: opacity .25s; opacity: .8; }
+.nav-link:hover, .nav-link[aria-current="page"] { opacity: 1; }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .7rem; border-radius: 999px; padding: .95rem 1.6rem; font-size: .95rem; font-weight: 500; transition: background-color .35s, color .35s, border-color .35s; }
+.btn-ink { background: var(--mo-fg); color: var(--mo-bg); }
+.btn-ink:hover { background: var(--mo-accent); }
+.btn-light { background: #fff; color: var(--mo-fg); }
+.btn-light:hover { background: var(--mo-fg); color: #fff; }
+.btn-line { border: 1px solid currentColor; }
+.btn-line:hover { background: var(--mo-fg); color: var(--mo-bg); border-color: var(--mo-fg); }
+
+/* Barre de recherche du hero */
+.search { background: rgba(255,255,255,.92); backdrop-filter: blur(18px); }
+.search select { appearance: none; background: transparent; border: 0; padding: 0; font-weight: 500; width: 100%; cursor: pointer; }
+.search select:focus { outline: none; }
+
+/* Cartes de biens */
+.prop .media { overflow: hidden; border-radius: 22px; background: #E8DFD0; }
+.prop .media img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+.prop:hover .media img { transform: scale(1.05); }
+.badge { display: inline-flex; padding: .35rem .75rem; border-radius: 999px; background: rgba(255,255,255,.92); font-size: .75rem; font-weight: 500; backdrop-filter: blur(6px); }
+
+/* Fenêtre détail d'un bien */
+[data-modal-panel] { max-width: 1100px; margin: 0 auto; background: var(--mo-bg); border-radius: 28px; overflow: hidden; }
+
+/* Formulaire */
+.field { width: 100%; border: 0; border-bottom: 1px solid rgba(31,29,25,.2); background: transparent; padding: .9rem 0; transition: border-color .3s; }
+.field:focus { outline: none; border-color: var(--mo-accent); }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .box { display: flex; align-items: center; justify-content: center; text-align: center; height: 100%; padding: .9rem 1rem; border-radius: 16px; border: 1px solid rgba(31,29,25,.15); cursor: pointer; transition: all .25s; }
+.opt input:checked + .box { background: var(--mo-fg); color: var(--mo-bg); border-color: var(--mo-fg); }
+.opt input:focus-visible + .box { outline: 2px solid var(--mo-accent); outline-offset: 2px; }
+input[type="range"] { accent-color: var(--mo-accent); width: 100%; }
+
+.mobile-menu { display: none; }
+.mobile-menu.is-open { display: flex; }
+canvas[data-scene] { display: block; width: 100%; height: 100%; }
+
+/* === Pages juridiques (mentions légales, confidentialité) === */
+.legal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.legal > * { min-width: 0; }
+@media (min-width: 1024px) { .legal { grid-template-columns: 260px minmax(0, 760px); column-gap: 5rem; } .legal-updated { grid-column: 1 / -1; } }
+.legal-updated { font-size: .85rem; opacity: .6; margin: 0; }
+.legal-toc { align-self: start; font-size: .92rem; }
+@media (min-width: 1024px) { .legal-toc { position: sticky; top: 7rem; } }
+.legal-toc-title { font-weight: 600; margin-bottom: .75rem; }
+.legal-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
+.legal-toc a { display: block; padding: .35rem 0 .35rem 1rem; opacity: .7; transition: opacity .2s, color .2s; }
+.legal-toc a:hover { opacity: 1; color: var(--legal-accent); }
+.legal-body { line-height: 1.7; }
+.legal-sec { padding: 2.25rem 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); scroll-margin-top: 7rem; }
+.legal-sec:first-child { border-top: 0; padding-top: 0; }
+.legal-sec h2 { display: flex; gap: .9rem; align-items: baseline; font-size: clamp(1.35rem, 2.2vw, 1.75rem); font-weight: 600; line-height: 1.2; margin: 0 0 1.1rem; letter-spacing: -.01em; }
+.legal-sec h2 span { font-size: .8rem; font-weight: 600; color: var(--legal-accent); letter-spacing: .05em; }
+.legal-sec p { margin: 0 0 .9rem; opacity: .85; }
+.legal-sec ul { margin: 0 0 1rem; padding-left: 1.2rem; list-style: disc; opacity: .85; }
+.legal-sec li { margin: .3rem 0; }
+.legal-sec a { color: var(--legal-accent); text-decoration: underline; text-underline-offset: 3px; }
+.legal-sec strong { font-weight: 600; }
+.legal-dl { display: grid; gap: 0; margin: 1rem 0 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl > div { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl dt { opacity: .6; } .legal-dl dd { margin: 0; }
+@media (max-width: 560px) { .legal-dl > div { grid-template-columns: 1fr; gap: .1rem; } }
+.legal-table-wrap { overflow-x: auto; margin-top: 1rem; }
+.legal-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .9rem; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: .8rem .9rem .8rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-table thead th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; opacity: .6; }
+.legal-table tbody th { font-weight: 600; }
+.legal-note { font-size: .85rem; }
+mark.todo { background: color-mix(in srgb, var(--legal-accent) 22%, transparent); color: inherit; padding: 0 .3em; border-radius: 4px; }

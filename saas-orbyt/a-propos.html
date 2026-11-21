@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos — Notre mission, notre équipe | Orbyt</title>
+  <meta name="description" content="Orbyt est née à Paris en 2022 avec une mission : libérer les équipes opérationnelles des tâches répétitives. Découvrez notre histoire, nos valeurs et nos offres d'emploi.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.orbyt.io/a-propos.html">
+  <meta name="theme-color" content="#07070B">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Orbyt">
+  <meta property="og:title" content="À propos — Notre mission, notre équipe | Orbyt">
+  <meta property="og:description" content="Orbyt est née à Paris en 2022 avec une mission : libérer les équipes opérationnelles des tâches répétitives. Découvrez notre histoire, nos valeurs et nos offres d'emploi.">
+  <meta property="og:url" content="https://www.orbyt.io/a-propos.html">
+  <meta property="og:image" content="https://www.orbyt.io/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C5CFF'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307070B'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='url(%23g)' stroke-width='6'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js')</script>
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/aurora.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Orbyt","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://www.orbyt.io/","description":"Plateforme d'automatisation et d'analytics temps réel pour les équipes opérationnelles.","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"0","highPrice":"79","offerCount":"3"},"publisher":{"@type":"Organization","name":"Orbyt SAS","url":"https://www.orbyt.io/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://www.orbyt.io/"},{"@type":"ListItem","position":2,"name":"À propos","item":"https://www.orbyt.io/a-propos.html"}]}</script>
+</head>
+<body class="font-sans bg-void text-[#EDEDF5]">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="page-curtain" data-curtain aria-hidden="true"><span></span></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50 px-4 pt-4" data-header>
+    <div class="bar mx-auto max-w-site h-16 rounded-2xl px-4 sm:px-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 font-display font-semibold text-lg" aria-label="Orbyt — accueil"><span class="relative w-7 h-7 rounded-full" style="background:conic-gradient(from 210deg,#7C5CFF,#22D3EE,#F472B6,#7C5CFF)"><span class="absolute inset-[5px] rounded-full bg-void"></span></span> Orbyt</a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm text-fog" aria-label="Navigation principale">
+          <a href="index.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Produit</a>
+          <a href="fonctionnalites.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Fonctionnalités</a>
+          <a href="tarifs.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Tarifs</a>
+          <a href="a-propos.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors " aria-current="page">À propos</a>
+          <a href="contact.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Contact</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="text-sm text-fog hover:text-white px-3">Connexion</a>
+        <a href="tarifs.html" class="btn btn-primary !py-2.5 !text-sm" data-magnetic=".2">Essai gratuit</a>
+      </div>
+      <button class="burger lg:hidden flex flex-col gap-[6px] p-2" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-x-4 top-24 z-40 rounded-2xl bg-void-800/95 backdrop-blur-xl border border-white/10 p-4 flex flex-col lg:hidden" data-menu aria-label="Navigation mobile">
+          <a href="index.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Produit</a>
+          <a href="fonctionnalites.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Fonctionnalités</a>
+          <a href="tarifs.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Tarifs</a>
+          <a href="a-propos.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5 bg-white/5 text-white" aria-current="page">À propos</a>
+          <a href="contact.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Contact</a>
+          <a href="tarifs.html" class="btn btn-primary justify-center mt-3">Essai gratuit</a>
+  </nav>
+  <main id="contenu">
+    <section class="relative pt-40 pb-24 overflow-hidden">
+      <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+      <div class="absolute -right-40 -top-20 w-[640px] h-[640px] opacity-70 hidden md:block" aria-hidden="true"><canvas data-scene="mini"></canvas></div>
+      <div class="relative mx-auto max-w-site px-6">
+        <nav aria-label="Fil d'Ariane" class="text-sm text-fog mb-8"><a href="index.html" class="hover:text-white">Accueil</a> <span class="mx-2 opacity-50">/</span> <span class="text-white" aria-current="page">À propos</span></nav>
+        <h1 class="font-display font-semibold text-[clamp(2.6rem,6.5vw,5.5rem)] leading-[1] tracking-tight max-w-4xl" data-split>Libérer le temps <span class="text-grad">de ceux qui font tourner</span> les entreprises.</h1>
+        <p class="mt-8 max-w-2xl text-lg text-fog leading-relaxed" data-reveal data-delay=".3">Orbyt est née en 2022 d'un constat simple : les équipes opérationnelles passent un tiers de leur temps à copier des données d'un outil à l'autre.</p>
+        
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="mx-auto max-w-site px-6">
+        <dl class="grid grid-cols-2 lg:grid-cols-4 gap-4" data-stagger>
+          <div class="glass p-7"><dt class="sr-only">Création à Paris</dt><dd class="font-display text-5xl font-semibold">2022</dd><dd class="mt-2 text-sm text-fog">Création à Paris</dd></div>
+          <div class="glass p-7"><dt class="sr-only">Collaborateurs</dt><dd class="font-display text-5xl font-semibold"><span data-count="64">64</span></dd><dd class="mt-2 text-sm text-fog">Collaborateurs</dd></div>
+          <div class="glass p-7"><dt class="sr-only">Nationalités</dt><dd class="font-display text-5xl font-semibold"><span data-count="18">18</span></dd><dd class="mt-2 text-sm text-fog">Nationalités</dd></div>
+          <div class="glass p-7"><dt class="sr-only">M€ levés</dt><dd class="font-display text-5xl font-semibold"><span data-count="32">32</span></dd><dd class="mt-2 text-sm text-fog">M€ levés</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="py-24">
+      <div class="mx-auto max-w-site px-6 grid lg:grid-cols-12 gap-12">
+        <h2 class="lg:col-span-4 font-display font-semibold text-4xl md:text-5xl tracking-tight leading-[1.05]" data-split>Nos valeurs</h2>
+        <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4" data-stagger>
+          <article class="glass p-8" data-tilt="4"><span class="font-mono text-xs text-violet-300">01</span><h3 class="mt-3 font-display text-2xl font-semibold">Clarté radicale</h3><p class="mt-2 text-fog">Nous expliquons simplement des choses complexes, à nos clients comme entre nous.</p></article>
+          <article class="glass p-8" data-tilt="4"><span class="font-mono text-xs text-violet-300">02</span><h3 class="mt-3 font-display text-2xl font-semibold">Vitesse responsable</h3><p class="mt-2 text-fog">Livrer vite, mais jamais au détriment de la fiabilité et de la sécurité.</p></article>
+          <article class="glass p-8" data-tilt="4"><span class="font-mono text-xs text-violet-300">03</span><h3 class="mt-3 font-display text-2xl font-semibold">Obsession client</h3><p class="mt-2 text-fog">Chaque fonctionnalité naît d'un problème réel observé chez un client.</p></article>
+          <article class="glass p-8" data-tilt="4"><span class="font-mono text-xs text-violet-300">04</span><h3 class="mt-3 font-display text-2xl font-semibold">Ouverture</h3><p class="mt-2 text-fog">Équipe distribuée, culture écrite, décisions transparentes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 border-y border-white/[.06] bg-void-800/50">
+      <div class="mx-auto max-w-site px-6">
+        <h2 class="font-display font-semibold text-4xl md:text-5xl tracking-tight" data-split>L'équipe fondatrice</h2>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" data-stagger>
+          <article class="glass p-6" data-tilt="6">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-violet to-rose opacity-90 grid place-items-center font-display text-5xl font-semibold" aria-hidden="true">IC</div>
+            <h3 class="mt-5 font-display text-xl font-semibold">Inès Carpentier</h3><p class="text-sm text-fog">CEO & cofondatrice</p>
+          </article>
+          <article class="glass p-6" data-tilt="6">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-cyan to-violet opacity-90 grid place-items-center font-display text-5xl font-semibold" aria-hidden="true">ML</div>
+            <h3 class="mt-5 font-display text-xl font-semibold">Mathis Leroy</h3><p class="text-sm text-fog">CTO & cofondateur</p>
+          </article>
+          <article class="glass p-6" data-tilt="6">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-rose to-amber-300 opacity-90 grid place-items-center font-display text-5xl font-semibold" aria-hidden="true">AD</div>
+            <h3 class="mt-5 font-display text-xl font-semibold">Aïcha Diallo</h3><p class="text-sm text-fog">VP Produit</p>
+          </article>
+          <article class="glass p-6" data-tilt="6">
+            <div class="aspect-square rounded-2xl bg-gradient-to-br from-violet to-cyan opacity-90 grid place-items-center font-display text-5xl font-semibold" aria-hidden="true">TW</div>
+            <h3 class="mt-5 font-display text-xl font-semibold">Thomas Weber</h3><p class="text-sm text-fog">VP Engineering</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="carrieres" class="py-24 scroll-mt-24">
+      <div class="mx-auto max-w-site px-6">
+        <h2 class="font-display font-semibold text-4xl md:text-5xl tracking-tight" data-split>Postes ouverts</h2>
+        <ul class="mt-10 divide-y divide-white/[.06] border-y border-white/[.06]" data-stagger>
+          <li><a href="contact.html" class="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6"><span class="font-display text-xl group-hover:text-violet-300 transition-colors">Senior Frontend Engineer</span><span class="text-sm text-fog flex gap-6"><span>Ingénierie</span><span>Paris / Remote</span><span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span></span></a></li>
+          <li><a href="contact.html" class="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6"><span class="font-display text-xl group-hover:text-violet-300 transition-colors">Product Designer</span><span class="text-sm text-fog flex gap-6"><span>Produit</span><span>Paris</span><span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span></span></a></li>
+          <li><a href="contact.html" class="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6"><span class="font-display text-xl group-hover:text-violet-300 transition-colors">Account Executive</span><span class="text-sm text-fog flex gap-6"><span>Ventes</span><span>Lyon / Remote</span><span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span></span></a></li>
+          <li><a href="contact.html" class="group flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-6"><span class="font-display text-xl group-hover:text-violet-300 transition-colors">Customer Success Manager</span><span class="text-sm text-fog flex gap-6"><span>Clients</span><span>Paris</span><span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">→</span></span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="px-4 py-24">
+      <div class="relative mx-auto max-w-site rounded-[28px] overflow-hidden border border-white/10 min-h-[460px] grid place-items-center text-center" data-scale-in>
+        <canvas data-aurora class="absolute inset-0" aria-hidden="true"></canvas>
+        <div class="relative px-6 py-20">
+          <h2 class="font-display font-semibold text-[clamp(2.2rem,5vw,4.4rem)] leading-[1.02] tracking-tight max-w-3xl mx-auto" data-split>Passez en orbite dès aujourd'hui.</h2>
+          <p class="mt-6 text-lg text-white/75 max-w-xl mx-auto" data-reveal>14 jours d'essai gratuit, sans carte bancaire. Déploiement en moins d'une heure.</p>
+          <div class="mt-10 flex flex-wrap justify-center gap-3" data-reveal>
+            <a href="tarifs.html" class="btn btn-primary" data-magnetic=".25">Commencer gratuitement →</a>
+            <a href="contact.html" class="btn btn-ghost backdrop-blur">Demander une démo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-white/[.06]">
+    <div class="mx-auto max-w-site px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-6">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 font-display font-semibold text-lg"><span class="relative w-7 h-7 rounded-full" style="background:conic-gradient(from 210deg,#7C5CFF,#22D3EE,#F472B6,#7C5CFF)"><span class="absolute inset-[5px] rounded-full bg-void"></span></span> Orbyt</a>
+        <p class="mt-4 text-fog text-sm leading-relaxed max-w-xs">La plateforme qui connecte vos outils, automatise vos opérations et éclaire chaque décision en temps réel.</p>
+        <p class="mt-6 chip"><span class="dot"></span> Tous les systèmes opérationnels</p>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Produit</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="fonctionnalites.html">Fonctionnalités</a></li><li><a class="hover:text-white transition-colors" href="tarifs.html">Tarifs</a></li><li><a class="hover:text-white transition-colors" href="fonctionnalites.html#integrations">Intégrations</a></li><li><a class="hover:text-white transition-colors" href="fonctionnalites.html#securite">Sécurité</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Entreprise</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="a-propos.html">À propos</a></li><li><a class="hover:text-white transition-colors" href="a-propos.html#carrieres">Carrières</a></li><li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Ressources</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="#">Documentation</a></li><li><a class="hover:text-white transition-colors" href="#">API</a></li><li><a class="hover:text-white transition-colors" href="#">Statut</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Légal</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="mentions-legales.html">Mentions légales</a></li><li><a class="hover:text-white transition-colors" href="confidentialite.html">Confidentialité</a></li><li><a class="hover:text-white transition-colors" href="#">CGU</a></li></ul>
+      </div>
+    </div>
+    <div class="mx-auto max-w-site px-6 py-6 border-t border-white/[.06] flex flex-col sm:flex-row justify-between gap-3 text-xs text-fog">
+      <p>© <span data-year>2026</span> Orbyt SAS. Conçu à Paris.</p>
+      <p>Hébergé en Europe · Conforme RGPD · SOC 2 Type II</p>
+    </div>
+  </footer>
+
+</body>
+</html>

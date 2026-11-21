@@ -1,0 +1,96 @@
+/* =========================================================
+   motion-ui.css — styles de base des composants « façon Framer »
+   Identique dans les 3 templates. Les couleurs viennent des variables
+   --mo-* définies dans le style.css de chaque site.
+   ========================================================= */
+
+/* Avant le chargement du moteur, on masque les éléments animés (sécurité : 3 s max) */
+html.mo:not(.mo-ready):not(.mo-off) :is([data-blur-text], [data-appear], [data-stagger] > *) { opacity: 0; }
+
+/* L'attribut hidden doit toujours l'emporter sur les classes utilitaires (grid, flex…) */
+[hidden] { display: none !important; }
+
+.mo-w { display: inline-block; will-change: transform, filter, opacity; }
+.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 100; padding: .75rem 1.25rem; border-radius: 999px; background: var(--mo-fg); color: var(--mo-bg); transition: top .2s; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: 2px solid var(--mo-accent); outline-offset: 3px; }
+html.menu-open, html.modal-open { overflow: hidden; }
+
+/* Barre de progression de lecture */
+.scroll-progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 70; transform-origin: 0 50%; transform: scaleX(0); background: var(--mo-accent); }
+
+/* Navigation : pastille glissante */
+[data-nav-pill] { position: relative; isolation: isolate; }
+.nav-pill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; z-index: -1; border-radius: 999px; background: var(--mo-pill); opacity: 0; pointer-events: none; }
+[data-nav-pill] a[aria-current="page"] { color: var(--mo-fg); }
+
+/* Mots qui défilent */
+[data-rotate-words] { display: inline-grid; vertical-align: bottom; overflow: hidden; padding-bottom: .08em; }
+[data-rotate-words] > span { grid-area: 1 / 1; white-space: nowrap; }
+
+/* Bandeau infini */
+[data-ticker] { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+[data-ticker] > * { display: flex; width: max-content; }
+html.mo-off [data-ticker] > * { flex-wrap: wrap; width: auto; }
+
+/* Cartes empilées */
+[data-stack-card] { position: sticky; transform-origin: 50% 0; }
+
+/* Défilement horizontal */
+[data-hscroll] { position: relative; }
+[data-hscroll] > .hs-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+[data-hscroll-track] { display: flex; width: max-content; will-change: transform; }
+[data-hscroll].hs-off > .hs-sticky { position: static; height: auto; overflow: visible; }
+[data-hscroll].hs-off [data-hscroll-track] { width: auto; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
+[data-hscroll].hs-off [data-hscroll-track] > * { scroll-snap-align: start; }
+
+/* Carte 3D + projecteur */
+[data-tilt] { transform-style: preserve-3d; will-change: transform; }
+[data-spotlight] { position: relative; isolation: isolate; }
+[data-spotlight]::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; opacity: 0; transition: opacity .4s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), var(--mo-glow), transparent 60%); }
+[data-spotlight]:hover::after { opacity: 1; }
+
+/* Curseur */
+.mo-cursor { position: fixed; left: 0; top: 0; z-index: 90; width: 12px; height: 12px; margin: 0; translate: -50% -50%; border-radius: 999px; pointer-events: none;
+  background: var(--mo-accent); color: var(--mo-accent-ink); display: grid; place-items: center; font-size: 12px; font-weight: 600; letter-spacing: .02em; mix-blend-mode: normal; transition: background-color .2s, scale .25s; }
+.mo-cursor > span { opacity: 0; white-space: nowrap; }
+.mo-cursor.is-link { scale: 2.6; background: color-mix(in srgb, var(--mo-accent) 35%, transparent); }
+@media (hover: hover) and (pointer: fine) { body[data-cursor] [data-cursor-label] { cursor: none; } }
+
+/* Aperçu d'image au survol */
+.mo-reveal { position: fixed; left: 0; top: 0; z-index: 60; width: 280px; aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; pointer-events: none; box-shadow: 0 30px 60px -20px rgba(0,0,0,.45); }
+.mo-reveal img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Onglets */
+[data-tabs] [role="tablist"] { position: relative; isolation: isolate; }
+[data-tab-indicator] { position: absolute; left: 0; top: 0; z-index: -1; border-radius: 999px; background: var(--mo-pill-strong); pointer-events: none; }
+
+/* Accordéon */
+[data-acc-panel] { overflow: hidden; }
+
+/* Carrousel */
+[data-carousel] { overflow: hidden; }
+[data-carousel-track] { display: flex; touch-action: pan-y; cursor: grab; user-select: none; will-change: transform; }
+[data-carousel].is-dragging [data-carousel-track] { cursor: grabbing; }
+[data-carousel-track] img { pointer-events: none; }
+[data-carousel-dots] { display: flex; gap: .5rem; }
+[data-carousel-dots] button { width: 8px; height: 8px; border-radius: 999px; background: currentColor; opacity: .25; transition: width .35s cubic-bezier(.22,1,.36,1), opacity .35s; }
+[data-carousel-dots] button[aria-current="true"] { width: 28px; opacity: 1; }
+
+/* Filtres */
+[data-filter-group] { position: relative; isolation: isolate; }
+[data-filter-pill] { position: absolute; left: 0; top: 0; bottom: 0; z-index: -1; border-radius: 999px; background: var(--mo-pill-strong); }
+[data-cat][hidden] { display: none !important; }
+
+/* Fenêtre « élément partagé » */
+[data-modal] { position: fixed; inset: 0; z-index: 80; overflow-y: auto; padding: 4vh 1rem; background: rgba(20,18,15,.72); }
+[data-modal][hidden] { display: none; }
+.mo-fly { position: fixed; z-index: 85; object-fit: cover; pointer-events: none; }
+
+/* Formulaire multi-étapes */
+[data-steps-bar] { transform-origin: 0 50%; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

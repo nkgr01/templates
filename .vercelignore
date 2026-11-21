@@ -1,0 +1,4 @@
+# Fichiers à ne pas mettre en ligne sur Vercel
+# (les vidéos sont lourdes : publiez-les plutôt sur YouTube et intégrez le lien)
+_video
+README.md

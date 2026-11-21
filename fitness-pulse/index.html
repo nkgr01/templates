@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulse Club — Salle de sport et cours collectifs à Abidjan Zone 4</title>
+  <meta name="description" content="Pulse Club, salle de sport premium à Marcory Zone 4 : musculation, cross training, boxe, cycling, yoga. 40 cours par semaine, coachs diplômés. Séance d'essai offerte.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.pulseclub.ci/">
+  <meta name="theme-color" content="#0A0A0A">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Pulse Club — Salle de sport à Abidjan">
+  <meta property="og:title" content="Pulse Club — Salle de sport et cours collectifs à Abidjan Zone 4">
+  <meta property="og:description" content="Pulse Club, salle de sport premium à Marcory Zone 4 : musculation, cross training, boxe, cycling, yoga. 40 cours par semaine, coachs diplômés. Séance d'essai offerte.">
+  <meta property="og:url" content="https://www.pulseclub.ci/">
+  <meta property="og:image" content="https://www.pulseclub.ci/assets/img/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230A0A0A'/%3E%3Cpath d='M6 34h14l6-14 10 26 8-18 4 6h10' fill='none' stroke='%23FF3B2F' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/site.js" defer></script>
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ExerciseGym","name":"Pulse Club","description":"Salle de sport premium à Marcory Zone 4, Abidjan : musculation, cross training, boxe, yoga, cycling. 40 cours par semaine, coachs diplômés, ouvert de 6 h à 23 h.","url":"https://www.pulseclub.ci/","image":"https://www.pulseclub.ci/assets/img/hero.webp","telephone":"+225 07 00 00 00 00","email":"hello@pulseclub.ci","priceRange":"25 000 – 65 000 FCFA / mois","address":{"@type":"PostalAddress","streetAddress":"Boulevard VGE, Zone 4","addressLocality":"Abidjan","addressRegion":"Marcory","addressCountry":"CI"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"23:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"20:00"}]}</script>
+</head>
+<body class="font-sans bg-coal text-white">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="mx-auto max-w-site px-5 lg:px-10 h-20 flex items-center justify-between gap-6">
+      <a href="index.html" aria-label="Pulse Club — accueil"><span class="flex items-center gap-2"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><path d="M4 34h14l6-14 10 26 8-18 4 6h14" fill="none" stroke="#FF3B2F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="display text-3xl not-italic tracking-tight">PULSE<span class="text-blaze">.</span></span></span></a>
+      <nav class="hidden lg:flex items-center" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link" aria-current="page">Le club</a>
+        <a href="cours.html" class="nav-link">Planning</a>
+        <a href="abonnements.html" class="nav-link">Abonnements</a>
+        <a href="coachs.html" class="nav-link">Coachs</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="essai.html" class="hidden sm:inline-flex btn btn-blaze !py-2.5 !px-5 !text-base" data-magnetic=".2">Essai gratuit</a>
+        <button class="lg:hidden w-11 h-11 bg-white/10 grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+          <svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-blaze flex-col justify-end gap-1 px-6 pb-12 lg:hidden" data-menu aria-label="Navigation mobile">
+    <a data-menu-item href="index.html" class="display text-7xl py-1 outline" aria-current="page">Le club</a>
+    <a data-menu-item href="cours.html" class="display text-7xl py-1">Planning</a>
+    <a data-menu-item href="abonnements.html" class="display text-7xl py-1">Abonnements</a>
+    <a data-menu-item href="coachs.html" class="display text-7xl py-1">Coachs</a>
+    <a data-menu-item href="essai.html" class="display text-7xl py-1">Essai gratuit</a>
+    <p data-menu-item class="mt-8 font-semibold">Zone 4, Marcory — 6 h / 23 h, 7 j/7</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <section class="relative min-h-[100svh] flex items-end overflow-hidden">
+      <img src="assets/img/hero.webp" alt="Athlète faisant des tractions dans la salle Pulse Club" width="1800" height="1100" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125" data-zoom-scroll="1.15">
+      <div class="absolute inset-0 bg-gradient-to-t from-coal via-coal/50 to-coal/30" aria-hidden="true"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-blaze/40 to-transparent mix-blend-multiply" aria-hidden="true"></div>
+      <div class="relative w-full mx-auto max-w-site px-5 lg:px-10 pb-12 lg:pb-16 pt-32">
+        <p class="kicker text-blaze slash" data-appear>Abidjan · Zone 4 · 6 h – 23 h</p>
+        <h1 class="mt-5 display text-[clamp(4.6rem,15vw,15rem)]" data-blur-text>Plus fort, <em>chaque jour.</em></h1>
+        <div class="mt-8 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <p class="max-w-lg text-lg text-white/85" data-appear data-delay=".3">1 200 m² d'énergie, 40 cours par semaine et des coachs qui ne te lâchent pas. Ta première séance est offerte.</p>
+          <div class="flex flex-wrap gap-3" data-appear data-delay=".45"><a href="essai.html" class="btn btn-blaze" data-magnetic=".2">Séance d'essai gratuite <span aria-hidden="true">→</span></a><a href="cours.html" class="btn btn-ghost">Voir le planning</a></div>
+        </div>
+        <dl class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10" data-stagger>
+          <div class="bg-coal/80 backdrop-blur p-5 flex flex-col-reverse"><dt class="text-sm text-ash">d'entraînement</dt><dd class="display text-5xl lg:text-6xl"><span data-counter="1200">1200</span> m²</dd></div><div class="bg-coal/80 backdrop-blur p-5 flex flex-col-reverse"><dt class="text-sm text-ash">cours par semaine</dt><dd class="display text-5xl lg:text-6xl"><span data-counter="40">40</span></dd></div><div class="bg-coal/80 backdrop-blur p-5 flex flex-col-reverse"><dt class="text-sm text-ash">coachs diplômés</dt><dd class="display text-5xl lg:text-6xl"><span data-counter="12">12</span></dd></div><div class="bg-coal/80 backdrop-blur p-5 flex flex-col-reverse"><dt class="text-sm text-ash">d'ouverture par jour</dt><dd class="display text-5xl lg:text-6xl"><span data-counter="17">17</span> h</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="overflow-hidden py-4"><section aria-label="Disciplines" class="py-6 bg-blaze -rotate-1 scale-[1.02] my-6">
+      <div data-ticker="30">
+        <ul class="flex items-center gap-10 pr-10 display text-5xl lg:text-6xl">
+          <li class="flex items-center gap-10 whitespace-nowrap">Musculation<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Cross training<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Boxe<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">HIIT<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Cycling<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Yoga<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Pilates<span aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-10 whitespace-nowrap">Coaching<span aria-hidden="true">✦</span></li>
+        </ul>
+      </div>
+    </section></div>
+
+    <section class="py-16 lg:py-24" aria-labelledby="t-coeur">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5">
+          <p class="kicker text-blaze slash" data-appear>L'énergie Pulse</p>
+          <h2 id="t-coeur" class="mt-5 display text-[clamp(3.4rem,7vw,7rem)]" data-blur-text>Le club qui fait <em>battre Abidjan.</em></h2>
+          <p class="mt-6 text-lg text-ash" data-appear>Passe la souris sur le kettlebell : ton cœur s'accélère. Chez nous, chaque séance est pensée pour te faire progresser, quel que soit ton niveau de départ.</p>
+          <ul class="mt-8 space-y-3" data-stagger><li class="flex items-center gap-3 font-medium"><span class="skew-chip !py-0.5 !px-2 text-sm"><span>✓</span></span>Bilan de forme offert à l'inscription</li><li class="flex items-center gap-3 font-medium"><span class="skew-chip !py-0.5 !px-2 text-sm"><span>✓</span></span>Programme personnalisé dans l'application</li><li class="flex items-center gap-3 font-medium"><span class="skew-chip !py-0.5 !px-2 text-sm"><span>✓</span></span>Coachs présents sur le plateau toute la journée</li></ul>
+        </div>
+        <div class="lg:col-span-7 relative h-[460px] lg:h-[640px]" data-scene-host>
+          <canvas data-scene="kettlebell" role="img" aria-label="Kettlebell rouge en 3D entouré d'anneaux qui battent comme un cœur"></canvas>
+          <p class="absolute right-4 bottom-4 lg:right-8 lg:bottom-8 text-right pointer-events-none"><span class="display text-7xl lg:text-8xl text-blaze" data-bpm aria-live="off">72</span><span class="block kicker text-ash">battements / minute</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-24" aria-labelledby="t-disc">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <h2 id="t-disc" class="display text-[clamp(3.4rem,8vw,8rem)]" data-blur-text>Choisis <em>ton combat</em></h2>
+          <a href="cours.html" class="btn btn-ghost">Tout le planning <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3" data-stagger>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-force.webp" alt="Musculation" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>01</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Musculation</span><span class="mt-2 block text-ash text-sm max-w-xs">Plateau de 600 m², 80 postes, charges libres et guidées.</span></span>
+          </a>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-cordes.webp" alt="Cross training" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>02</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Cross training</span><span class="mt-2 block text-ash text-sm max-w-xs">WOD de 45 min en petit groupe, intensité maximale.</span></span>
+          </a>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-sombre.webp" alt="Boxe &amp; cardio" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>03</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Boxe & cardio</span><span class="mt-2 block text-ash text-sm max-w-xs">Technique, sac et conditionnement, encadré par un ex-champion.</span></span>
+          </a>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-cycle.webp" alt="Cycling" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>04</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Cycling</span><span class="mt-2 block text-ash text-sm max-w-xs">Vélos connectés, lumières et playlists qui envoient.</span></span>
+          </a>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-yoga.webp" alt="Yoga &amp; mobilité" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>05</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Yoga & mobilité</span><span class="mt-2 block text-ash text-sm max-w-xs">Souplesse, respiration et récupération active.</span></span>
+          </a>
+          <a href="cours.html" class="card-cls group block aspect-[4/5]">
+            <img src="assets/img/c-pilates.webp" alt="Pilates" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+            <span class="absolute inset-0 bg-gradient-to-t from-coal via-coal/20 to-transparent -z-10" aria-hidden="true"></span>
+            <span class="absolute left-0 top-6 skew-chip"><span>06</span></span>
+            <span class="absolute inset-x-6 bottom-6"><span class="display text-5xl lg:text-6xl block">Pilates</span><span class="mt-2 block text-ash text-sm max-w-xs">Gainage profond, posture et renforcement en douceur.</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-24">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <h2 class="display text-[clamp(3.4rem,8vw,8rem)] mb-12" data-blur-text>Un programme <em>pour chaque objectif</em></h2>
+        <div class="space-y-6" data-stack>
+          <article data-stack-card class="bg-coal-2 p-7 lg:p-12 grid md:grid-cols-2 gap-8 lg:min-h-[460px]" style="top:100px">
+            <div class="flex flex-col justify-between gap-8"><div><span class="display text-3xl opacity-60">01</span><h3 class="mt-3 display text-6xl lg:text-8xl">Perdre du poids</h3><p class="mt-5 max-w-md text-lg opacity-85">Cardio intelligent, renforcement et suivi nutritionnel : en moyenne −6 kg en 12 semaines chez nos membres.</p></div><a href="essai.html" class="self-start btn btn-blaze">Commencer <span aria-hidden="true">→</span></a></div>
+            <div class="overflow-hidden h-64 md:h-auto"><img src="assets/img/c-abdos.webp" alt="Perdre du poids" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+          </article>
+          <article data-stack-card class="bg-blaze p-7 lg:p-12 grid md:grid-cols-2 gap-8 lg:min-h-[460px]" style="top:126px">
+            <div class="flex flex-col justify-between gap-8"><div><span class="display text-3xl opacity-60">02</span><h3 class="mt-3 display text-6xl lg:text-8xl">Prendre du muscle</h3><p class="mt-5 max-w-md text-lg opacity-85">Programmation en cycles, technique corrigée sur le plateau et bilans tous les mois.</p></div><a href="essai.html" class="self-start btn btn-white">Commencer <span aria-hidden="true">→</span></a></div>
+            <div class="overflow-hidden h-64 md:h-auto"><img src="assets/img/barre.webp" alt="Prendre du muscle" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+          </article>
+          <article data-stack-card class="bg-white text-coal p-7 lg:p-12 grid md:grid-cols-2 gap-8 lg:min-h-[460px]" style="top:152px">
+            <div class="flex flex-col justify-between gap-8"><div><span class="display text-3xl opacity-60">03</span><h3 class="mt-3 display text-6xl lg:text-8xl">Se remettre en forme</h3><p class="mt-5 max-w-md text-lg opacity-85">Reprise en douceur, mobilité et cours collectifs accessibles. Personne n'est laissé derrière.</p></div><a href="essai.html" class="self-start btn btn-blaze">Commencer <span aria-hidden="true">→</span></a></div>
+            <div class="overflow-hidden h-64 md:h-auto"><img src="assets/img/c-pompes.webp" alt="Se remettre en forme" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+          </article>
+          <article data-stack-card class="bg-coal-3 p-7 lg:p-12 grid md:grid-cols-2 gap-8 lg:min-h-[460px]" style="top:178px">
+            <div class="flex flex-col justify-between gap-8"><div><span class="display text-3xl opacity-60">04</span><h3 class="mt-3 display text-6xl lg:text-8xl">Préparer une compétition</h3><p class="mt-5 max-w-md text-lg opacity-85">Préparation physique spécifique avec Ibrahim, ex-sprinteur international.</p></div><a href="essai.html" class="self-start btn btn-blaze">Commencer <span aria-hidden="true">→</span></a></div>
+            <div class="overflow-hidden h-64 md:h-auto"><img src="assets/img/c-dos.webp" alt="Préparer une compétition" width="900" height="1125" loading="lazy" decoding="async" class="w-full h-full object-cover" ></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 lg:py-24" aria-labelledby="t-imc">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-2 gap-10 items-center">
+        <div><p class="kicker text-blaze slash" data-appear>Outil gratuit</p><h2 id="t-imc" class="mt-5 display text-[clamp(3.2rem,6.5vw,6.5rem)]" data-blur-text>Calcule <em>ton IMC</em></h2><p class="mt-5 text-lg text-ash max-w-md" data-appear>Un premier repère en 10 secondes. Lors de ta séance d'essai, un coach fait un vrai bilan : masse musculaire, mobilité, cardio.</p></div>
+        <form class="panel p-7 lg:p-10" data-bmi onsubmit="return false" aria-label="Calculateur d'IMC">
+          <div class="flex justify-between mb-2"><label for="taille" class="font-semibold">Taille</label><output id="o-taille" class="display text-3xl">175 cm</output></div>
+          <input id="taille" name="taille" type="range" min="140" max="210" value="175" data-output="o-taille" data-unit=" cm">
+          <div class="flex justify-between mt-8 mb-2"><label for="poids" class="font-semibold">Poids</label><output id="o-poids" class="display text-3xl">78 kg</output></div>
+          <input id="poids" name="poids" type="range" min="40" max="160" value="78" data-output="o-poids" data-unit=" kg">
+          <div class="mt-10 flex items-end justify-between gap-6"><p class="kicker text-ash">Ton IMC</p><p class="display text-8xl text-blaze" data-bmi-value aria-live="polite">25,5</p></div>
+          <div class="mt-4 bmi-scale" aria-hidden="true"><i data-bmi-bar></i></div>
+          <p class="mt-6 text-ash" data-bmi-label></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="pb-20">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-2 gap-4" data-stagger>
+        <blockquote class="panel p-8 lg:p-10 flex flex-col justify-between gap-8">
+          <p class="display text-4xl lg:text-5xl !normal-case !not-italic !font-bold !leading-[1.05]">« −9 kg en 4 mois et je cours enfin 10 km. Les coachs sont exigeants mais toujours bienveillants. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/a-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 object-cover" aria-hidden="true"><span><strong class="block">Serge K.</strong><span class="text-sm text-ash">Membre depuis 2025</span></span><span class="ml-auto text-blaze tracking-widest" aria-label="5 étoiles sur 5">★★★★★</span></footer>
+        </blockquote>
+        <blockquote class="panel p-8 lg:p-10 flex flex-col justify-between gap-8">
+          <p class="display text-4xl lg:text-5xl !normal-case !not-italic !font-bold !leading-[1.05]">« Les cours de boxe de Kevin sont addictifs. Je viens à 6 h 30 avant le bureau, c'est devenu mon rituel. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/a-2.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 object-cover" aria-hidden="true"><span><strong class="block">Mariam T.</strong><span class="text-sm text-ash">Membre Pulse</span></span><span class="ml-auto text-blaze tracking-widest" aria-label="5 étoiles sur 5">★★★★★</span></footer>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-coal-2 cut-top pt-28">
+    <div class="mx-auto max-w-site px-5 lg:px-10 pb-10">
+      <div class="grid gap-12 lg:grid-cols-12 items-end">
+        <p class="lg:col-span-7 display text-[clamp(3.4rem,9vw,9rem)]">Ton premier pas, <em>c'est maintenant.</em></p>
+        <div class="lg:col-span-5 lg:text-right"><a href="essai.html" class="btn btn-blaze" data-magnetic=".2">Réserver ma séance gratuite <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 text-sm text-ash border-t border-white/10 pt-10">
+        <div><p class="kicker text-white mb-3">Le club</p><address class="not-italic leading-relaxed">Boulevard VGE, Zone 4<br>Marcory, Abidjan</address></div>
+        <div><p class="kicker text-white mb-3">Horaires</p><p class="leading-relaxed">Lun – ven : 6 h – 23 h<br>Sam – dim : 8 h – 20 h</p></div>
+        <div><p class="kicker text-white mb-3">Contact</p><p class="leading-relaxed"><a href="tel:+2250700000000" class="hover:text-blaze">+225 07 00 00 00 00</a><br><a href="mailto:hello@pulseclub.ci" class="hover:text-blaze">hello@pulseclub.ci</a></p></div>
+        <div><p class="kicker text-white mb-3">Réseaux</p><ul class="space-y-1.5"><li><a href="#" class="hover:text-blaze">Instagram</a></li><li><a href="#" class="hover:text-blaze">TikTok</a></li><li><a href="#" class="hover:text-blaze">YouTube</a></li></ul></div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-ash">
+        <p>© <span data-year>2026</span> Pulse Club SARL — Abidjan</p>
+        <p><a href="mentions-legales.html" class="hover:text-blaze">Mentions légales</a> · <a href="confidentialite.html" class="hover:text-blaze">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+</body>
+</html>

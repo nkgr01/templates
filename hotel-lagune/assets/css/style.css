@@ -1,0 +1,107 @@
+/* =========================================================
+   Lagune Lodge — hôtel à Assinie — styles propres au template
+   ========================================================= */
+:root {
+  --mo-bg: #F6F1E7;
+  --mo-fg: #0F2F3F;
+  --mo-accent: #0E8C8C;
+  --mo-accent-ink: #FFFFFF;
+  --mo-pill: rgba(15, 47, 63, .07);
+  --mo-pill-strong: #0F2F3F;
+  --mo-glow: rgba(14, 140, 140, .14);
+}
+html { background: var(--mo-bg); }
+body { -webkit-font-smoothing: antialiased; }
+::selection { background: #7FD1CB; color: #0F2F3F; }
+
+.display { font-family: Marcellus, Georgia, serif; font-weight: 400; letter-spacing: .01em; line-height: 1.02; }
+.display em { font-style: normal; color: var(--mo-accent); }
+.kicker { font-size: .74rem; letter-spacing: .3em; text-transform: uppercase; font-weight: 500; }
+
+/* Verre dépoli */
+.glass { background: rgba(255,255,255,.62); -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4); border: 1px solid rgba(255,255,255,.7); box-shadow: 0 20px 50px -24px rgba(15,47,63,.35); }
+.glass-dark { background: rgba(15,47,63,.38); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.22); }
+
+.site-header { transition: background-color .45s, color .45s, box-shadow .45s; }
+.site-header.on-dark:not(.is-scrolled) { color: #fff; }
+.site-header.is-scrolled { background: rgba(246,241,231,.82); backdrop-filter: blur(16px); box-shadow: 0 1px 0 rgba(15,47,63,.08); }
+.site-header.on-dark:not(.is-scrolled) .nav-pill { background: rgba(255,255,255,.2); }
+.nav-link { position: relative; padding: .5rem 1rem; border-radius: 999px; font-size: .95rem; white-space: nowrap; opacity: .85; transition: opacity .2s; }
+.nav-link:hover, .nav-link[aria-current="page"] { opacity: 1; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; border-radius: 999px; padding: .95rem 1.7rem; font-size: .95rem; font-weight: 500; letter-spacing: .02em; transition: background-color .3s, color .3s, box-shadow .3s, transform .3s; }
+.btn-lagoon { background: var(--mo-accent); color: #fff; box-shadow: 0 10px 24px -12px rgba(14,140,140,.8); }
+.btn-lagoon:hover { background: #0F2F3F; transform: translateY(-1px); }
+.btn-abyss { background: #0F2F3F; color: #fff; }
+.btn-abyss:hover { background: var(--mo-accent); }
+.btn-white { background: #fff; color: #0F2F3F; }
+.btn-white:hover { background: #7FD1CB; }
+.btn-line { border: 1px solid currentColor; }
+.btn-line:hover { background: #0F2F3F; color: #fff; border-color: #0F2F3F; }
+
+.room .media { overflow: hidden; border-radius: 28px; background: #EDE4D3; }
+.room .media img { transition: transform 1.2s cubic-bezier(.22,1,.36,1); }
+.room:hover .media img { transform: scale(1.06); }
+.pill { display: inline-flex; align-items: center; gap: .35rem; padding: .35rem .8rem; border-radius: 999px; font-size: .78rem; }
+[data-modal-panel] { max-width: 1100px; margin: 0 auto; background: var(--mo-bg); border-radius: 32px; overflow: hidden; }
+
+/* Barre de réservation */
+.bookbar label { display: block; padding: .55rem 1.2rem; border-radius: 999px; transition: background .2s; }
+.bookbar label:hover { background: rgba(255,255,255,.6); }
+.bookbar input, .bookbar select { display: block; width: 100%; border: 0; background: transparent; font-weight: 500; color: #0F2F3F; padding: 0; outline: none; }
+
+/* Formulaires */
+.field { width: 100%; border: 1px solid rgba(15,47,63,.15); border-radius: 16px; background: rgba(255,255,255,.75); padding: .85rem 1rem; transition: border-color .25s, box-shadow .25s; }
+.field:focus { outline: none; border-color: var(--mo-accent); box-shadow: 0 0 0 4px rgba(14,140,140,.12); }
+.opt input { position: absolute; opacity: 0; pointer-events: none; }
+.opt .box { display: flex; align-items: center; justify-content: center; text-align: center; height: 100%; padding: .8rem 1rem; border-radius: 999px; border: 1px solid rgba(15,47,63,.15); background: rgba(255,255,255,.7); cursor: pointer; transition: all .25s; }
+.opt input:checked + .box { background: #0F2F3F; color: #fff; border-color: #0F2F3F; }
+.opt input:focus-visible + .box { outline: 2px solid var(--mo-accent); outline-offset: 2px; }
+.room-opt input { position: absolute; opacity: 0; pointer-events: none; }
+.room-opt .card { display: grid; grid-template-columns: 96px 1fr auto; gap: 1rem; align-items: center; padding: .7rem 1.1rem .7rem .7rem; border-radius: 22px; border: 1px solid rgba(15,47,63,.12); background: rgba(255,255,255,.7); cursor: pointer; transition: all .25s; }
+.room-opt .card img { width: 96px; height: 72px; object-fit: cover; border-radius: 16px; }
+.room-opt input:checked + .card { border-color: var(--mo-accent); box-shadow: 0 0 0 3px rgba(14,140,140,.18); background: #fff; }
+.room-opt input:focus-visible + .card { outline: 2px solid var(--mo-accent); outline-offset: 3px; }
+.sky-btn[aria-pressed="true"] { background: #fff; color: #0F2F3F; }
+
+.mobile-menu { display: none; }
+.mobile-menu.is-open { display: flex; }
+canvas[data-scene] { display: block; width: 100%; height: 100%; }
+
+/* Formulaires : autoriser les colonnes à rétrécir sur mobile */
+fieldset { min-width: 0; }
+form[data-stay] > * { min-width: 0; }
+@media (max-width: 1023px) { form[data-stay] { grid-template-columns: minmax(0, 1fr); } .room-opt .card { grid-template-columns: 64px minmax(0, 1fr) auto; } .room-opt .card img { width: 64px; height: 56px; } }
+
+/* === Pages juridiques (mentions légales, confidentialité) === */
+.legal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+.legal > * { min-width: 0; }
+@media (min-width: 1024px) { .legal { grid-template-columns: 260px minmax(0, 760px); column-gap: 5rem; } .legal-updated { grid-column: 1 / -1; } }
+.legal-updated { font-size: .85rem; opacity: .6; margin: 0; }
+.legal-toc { align-self: start; font-size: .92rem; }
+@media (min-width: 1024px) { .legal-toc { position: sticky; top: 7rem; } }
+.legal-toc-title { font-weight: 600; margin-bottom: .75rem; }
+.legal-toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
+.legal-toc a { display: block; padding: .35rem 0 .35rem 1rem; opacity: .7; transition: opacity .2s, color .2s; }
+.legal-toc a:hover { opacity: 1; color: var(--legal-accent); }
+.legal-body { line-height: 1.7; }
+.legal-sec { padding: 2.25rem 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); scroll-margin-top: 7rem; }
+.legal-sec:first-child { border-top: 0; padding-top: 0; }
+.legal-sec h2 { display: flex; gap: .9rem; align-items: baseline; font-size: clamp(1.35rem, 2.2vw, 1.75rem); font-weight: 600; line-height: 1.2; margin: 0 0 1.1rem; letter-spacing: -.01em; }
+.legal-sec h2 span { font-size: .8rem; font-weight: 600; color: var(--legal-accent); letter-spacing: .05em; }
+.legal-sec p { margin: 0 0 .9rem; opacity: .85; }
+.legal-sec ul { margin: 0 0 1rem; padding-left: 1.2rem; list-style: disc; opacity: .85; }
+.legal-sec li { margin: .3rem 0; }
+.legal-sec a { color: var(--legal-accent); text-decoration: underline; text-underline-offset: 3px; }
+.legal-sec strong { font-weight: 600; }
+.legal-dl { display: grid; gap: 0; margin: 1rem 0 0; border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl > div { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 1rem; padding: .7rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-dl dt { opacity: .6; } .legal-dl dd { margin: 0; }
+@media (max-width: 560px) { .legal-dl > div { grid-template-columns: 1fr; gap: .1rem; } }
+.legal-table-wrap { overflow-x: auto; margin-top: 1rem; }
+.legal-table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: .9rem; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: .8rem .9rem .8rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.legal-table thead th { font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; opacity: .6; }
+.legal-table tbody th { font-weight: 600; }
+.legal-note { font-size: .85rem; }
+mark.todo { background: color-mix(in srgb, var(--legal-accent) 22%, transparent); color: inherit; padding: 0 .3em; border-radius: 4px; }

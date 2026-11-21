@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.selene-joaillerie.fr/sitemap.xml

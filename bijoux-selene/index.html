@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sélène — Bijoux en or recyclé et accessoires de créateur, Paris</title>
+  <meta name="description" content="Bijoux en or recyclé 18 carats, bagues sur-mesure, sacs en cuir et montres : les créations de l'atelier Sélène, à Paris. Gravure offerte, garantie à vie.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.selene-joaillerie.fr/">
+  <meta name="theme-color" content="#12100E">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Sélène — Bijoux &amp; accessoires">
+  <meta property="og:title" content="Sélène — Bijoux en or recyclé et accessoires de créateur, Paris">
+  <meta property="og:description" content="Bijoux en or recyclé 18 carats, bagues sur-mesure, sacs en cuir et montres : les créations de l'atelier Sélène, à Paris. Gravure offerte, garantie à vie.">
+  <meta property="og:url" content="https://www.selene-joaillerie.fr/">
+  <meta property="og:image" content="https://www.selene-joaillerie.fr/assets/img/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312100E'/%3E%3Ccircle cx='32' cy='36' r='14' fill='none' stroke='%23CFAE7A' stroke-width='3'/%3E%3Cpath d='m32 12 6 8h-12z' fill='%23CFAE7A'/%3E%3C/svg%3E">
+  <script>
+    // Active les états « avant animation » ; s'ils ne sont pas levés en 3 s, on affiche tout.
+    document.documentElement.classList.add('mo');
+    setTimeout(function () { if (!window.__moReady) document.documentElement.classList.add('mo-off'); }, 3000);
+  </script>
+  <link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@400;500;600&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/motion-ui.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/shop.css">
+  <script src="assets/js/shop.js" defer></script>
+  <!-- Animations : Motion (moteur de Framer Motion) + composants maison -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js" defer></script>
+  <script src="assets/js/motion-ui.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"JewelryStore","name":"Sélène","description":"Créateur parisien de bijoux en or recyclé 18 carats, bagues de fiançailles sur-mesure et accessoires en cuir : sacs, montres, lunettes.","url":"https://www.selene-joaillerie.fr/","image":"https://www.selene-joaillerie.fr/assets/img/hero.webp","telephone":"+33 1 45 00 00 00","email":"atelier@selene-joaillerie.fr","priceRange":"€€€","address":{"@type":"PostalAddress","streetAddress":"9 rue de Grenelle","postalCode":"75006","addressLocality":"Paris","addressCountry":"FR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"11:00","closes":"19:00"}]}</script>
+</head>
+<body class="font-sans bg-night text-pearl" data-shop="selene" data-free-shipping="150">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="mx-auto max-w-site px-5 lg:px-10 h-20 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <nav class="hidden xl:flex items-center" data-nav-pill aria-label="Navigation principale">
+        <a href="index.html" class="nav-link" aria-current="page">Accueil</a>
+        <a href="creations.html" class="nav-link">Créations</a>
+        <a href="sur-mesure.html" class="nav-link">Sur-mesure</a>
+        <a href="maison.html" class="nav-link">La maison</a>
+        <a href="boutique.html" class="nav-link">Boutique</a>
+      </nav>
+      <button class="xl:hidden justify-self-start w-11 h-11 rounded-full border border-gold/40 text-gold grid place-items-center relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 6h14M2 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+      <a href="index.html" aria-label="Sélène — accueil" class="text-pearl"><span class="font-serif text-[1.9rem] tracking-[.18em] leading-none">SÉLÈNE</span></a>
+      <div class="flex items-center justify-end gap-2">
+        <a href="sur-mesure.html" class="hidden xl:inline-flex btn btn-line !py-2.5 !px-4">Rendez-vous</a>
+        <button type="button" data-cart-open class="relative grid place-items-center w-11 h-11 rounded-full text-gold hover:bg-white/5" aria-label="Ouvrir le panier"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-badge" data-cart-count hidden>0</span></button>
+      </div>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-coal flex-col justify-end gap-2 px-6 pb-12 xl:hidden" data-menu aria-label="Navigation mobile">
+    <a data-menu-item href="index.html" class="display text-6xl py-1 italic text-gold" aria-current="page">Accueil</a>
+    <a data-menu-item href="creations.html" class="display text-6xl py-1">Créations</a>
+    <a data-menu-item href="sur-mesure.html" class="display text-6xl py-1">Sur-mesure</a>
+    <a data-menu-item href="maison.html" class="display text-6xl py-1">La maison</a>
+    <a data-menu-item href="boutique.html" class="display text-6xl py-1">Boutique</a>
+    <p data-menu-item class="mt-8 text-sm text-mist">9 rue de Grenelle, Paris 6ᵉ — +33 1 45 00 00 00</p>
+  </nav>
+  <div data-page>
+  <main id="contenu">
+    <section class="relative min-h-[100svh] flex items-end overflow-hidden">
+      <img src="assets/img/hero.webp" alt="Bagues en or posées sur un coquillage, lumière rasante" width="1800" height="1100" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover opacity-70" data-zoom-scroll="1.15">
+      <div class="absolute inset-0 bg-gradient-to-t from-night via-night/40 to-night/30" aria-hidden="true"></div>
+      <div class="relative w-full mx-auto max-w-site px-5 lg:px-10 pb-16 lg:pb-24 text-center">
+        <p class="kicker text-gold" data-appear>Joaillerie & accessoires — Paris</p>
+        <h1 class="mt-6 display text-[clamp(3.6rem,10vw,10rem)]" data-blur-text>Les choses précieuses <em>durent.</em></h1>
+        <p class="mt-6 mx-auto max-w-xl text-lg text-pearl/80" data-appear data-delay=".3">Or recyclé, pierres traçables, cuirs tannés au végétal : des pièces dessinées à Paris pour être portées, puis transmises.</p>
+        <div class="mt-10 flex flex-wrap justify-center gap-3" data-appear data-delay=".45"><a href="creations.html" class="btn btn-gold" data-magnetic=".2">Les créations <span aria-hidden="true">→</span></a><a href="sur-mesure.html" class="btn btn-line">Sur-mesure</a></div>
+      </div>
+    </section>
+
+    <section aria-label="Nos engagements" class="py-7 border-y border-gold/15">
+      <div data-ticker="45" data-ticker-hover>
+        <ul class="flex items-center gap-14 pr-14 display italic text-3xl lg:text-4xl text-pearl/80">
+          <li class="flex items-center gap-14 whitespace-nowrap">Or recyclé 18 carats<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Gravure offerte<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Garantie à vie<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Pierres traçables<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Fabriqué à Paris<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+          <li class="flex items-center gap-14 whitespace-nowrap">Livraison assurée<span class="text-gold text-base not-italic" aria-hidden="true">✦</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28" aria-label="Univers">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid grid-cols-2 lg:grid-cols-4 gap-3" data-stagger>
+        <a href="creations.html" class="tile group block aspect-[3/4]">
+          <img src="assets/img/p-bagues-or.webp" alt="Bagues en or" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+          <span class="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent -z-10" aria-hidden="true"></span>
+          <span class="absolute inset-x-5 bottom-5 flex items-end justify-between"><span class="display text-3xl sm:text-4xl lg:text-5xl">Bijoux</span><span class="text-gold transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></span>
+        </a>
+        <a href="creations.html" class="tile group block aspect-[3/4]">
+          <img src="assets/img/p-sac-rouge.webp" alt="Sac rouge à rabat" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+          <span class="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent -z-10" aria-hidden="true"></span>
+          <span class="absolute inset-x-5 bottom-5 flex items-end justify-between"><span class="display text-3xl sm:text-4xl lg:text-5xl">Sacs</span><span class="text-gold transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></span>
+        </a>
+        <a href="creations.html" class="tile group block aspect-[3/4]">
+          <img src="assets/img/p-montre.webp" alt="Montre au cadran blanc" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+          <span class="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent -z-10" aria-hidden="true"></span>
+          <span class="absolute inset-x-5 bottom-5 flex items-end justify-between"><span class="display text-3xl sm:text-4xl lg:text-5xl">Montres</span><span class="text-gold transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></span>
+        </a>
+        <a href="creations.html" class="tile group block aspect-[3/4]">
+          <img src="assets/img/p-solaires.webp" alt="Lunettes de soleil rondes" width="900" height="1125" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover -z-10" >
+          <span class="absolute inset-0 bg-gradient-to-t from-night/85 via-transparent -z-10" aria-hidden="true"></span>
+          <span class="absolute inset-x-5 bottom-5 flex items-end justify-between"><span class="display text-3xl sm:text-4xl lg:text-5xl">Lunettes</span><span class="text-gold transition-transform group-hover:translate-x-1" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="relative pt-28 lg:pt-32 pb-16" aria-labelledby="t-ring">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 ">
+          
+          <p class="mt-6 kicker text-gold" data-appear>Collection Aurore</p>
+          <h2 id="t-ring" class="mt-5 display text-[clamp(3.2rem,6.5vw,6.6rem)]" data-blur-text>L'éclat, <em>à votre mesure.</em></h2>
+          <form class="mt-10" data-product data-config data-base="790" data-id="solitaire-sur-mesure" data-name="Solitaire sur-mesure" data-price="790" data-img="assets/img/p-bague.webp" aria-label="Configurer la bague" onsubmit="return false">
+            <fieldset data-opt><legend class="kicker text-mist mb-3">Métal : <span data-opt-label class="text-pearl">Or jaune</span></legend>
+              <div class="grid grid-cols-3 gap-2"><label class="choice relative"><input type="radio" name="metal" value="Or jaune" data-extra="0" checked><span class="box"><i style="background:#F2C46D"></i>jaune</span></label><label class="choice relative"><input type="radio" name="metal" value="Or rose" data-extra="0"><span class="box"><i style="background:#EDB096"></i>rose</span></label><label class="choice relative"><input type="radio" name="metal" value="Or blanc" data-extra="60"><span class="box"><i style="background:#E4E6EA"></i>blanc</span></label></div>
+            </fieldset>
+            <fieldset data-opt class="mt-6"><legend class="kicker text-mist mb-3">Pierre : <span data-opt-label class="text-pearl">Diamant</span></legend>
+              <div class="grid grid-cols-2 gap-2"><label class="choice relative"><input type="radio" name="pierre" value="Diamant" data-extra="0" checked><span class="box"><i style="background:#FFFFFF"></i>Diamant<small></small></span></label><label class="choice relative"><input type="radio" name="pierre" value="Saphir" data-extra="-120"><span class="box"><i style="background:#2F55E0"></i>Saphir<small>−120 €</small></span></label><label class="choice relative"><input type="radio" name="pierre" value="Émeraude" data-extra="80"><span class="box"><i style="background:#17A06B"></i>Émeraude<small>+80 €</small></span></label><label class="choice relative"><input type="radio" name="pierre" value="Rubis" data-extra="40"><span class="box"><i style="background:#D3123F"></i>Rubis<small>+40 €</small></span></label></div>
+            </fieldset>
+            
+            <div class="mt-8 flex flex-wrap items-center gap-5">
+              <p class="display text-5xl" aria-live="polite" data-config-price>790 €</p>
+              <a href="sur-mesure.html" class="btn btn-gold">Personnaliser <span aria-hidden="true">→</span></a>
+            </div>
+          </form>
+        </div>
+        <div class="lg:col-span-7 relative h-[440px] sm:h-[560px] lg:h-[720px] ">
+          <div class="absolute inset-0 glow" aria-hidden="true"></div>
+          <canvas data-scene="ring" role="img" aria-label="Bague solitaire en 3D, à faire tourner"></canvas>
+          <p class="absolute bottom-2 inset-x-0 text-center kicker text-mist pointer-events-none">Faites tourner la bague ↔</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:py-28 overflow-hidden" aria-labelledby="t-best">
+      <div class="mx-auto max-w-site px-5 lg:px-10" data-carousel tabindex="0" aria-roledescription="carrousel">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div><p class="kicker text-gold" data-appear>Les plus aimées</p><h2 id="t-best" class="mt-4 display text-[clamp(2.8rem,6vw,5.5rem)]" data-blur-text>Nos <em>signatures</em></h2></div>
+          <div class="flex items-center gap-3">
+            <button type="button" class="w-12 h-12 rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-night transition" data-carousel-prev aria-label="Précédent">←</button>
+            <button type="button" class="w-12 h-12 rounded-full border border-gold/40 text-gold hover:bg-gold hover:text-night transition" data-carousel-next aria-label="Suivant">→</button>
+          </div>
+        </div>
+        <ul class="gap-5" data-carousel-track>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="boucles" data-product data-id="puces-halo" data-name="Puces Halo" data-price="360" data-img="assets/img/p-puces.webp">
+            <a href="#puces-halo" id="puces-halo" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-puces.webp" alt="Paire de puces d'oreilles en diamant entouré d'un halo" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Best-seller</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Puces Halo</h3><p class="text-xs text-mist mt-1 tracking-wide">Diamants de laboratoire</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">360 €</p>
+              </div>
+              <div class="swatches mt-3" aria-label="2 coloris"><i style="background:#E4E6EA"></i><i style="background:#E5C07B"></i></div>
+              <template><div class="p-7 lg:p-12" data-product data-id="puces-halo" data-name="Puces Halo" data-price="360" data-img="assets/img/p-puces.webp">
+                <p class="kicker text-gold">Boucles d'oreilles</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Puces Halo</h2>
+                <p class="mt-4 text-2xl">360 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Un diamant central entouré d'un halo pavé : l'éclat d'une pierre deux fois plus grande, au quotidien.</p>
+                <fieldset data-opt class="mt-8"><legend class="text-sm mb-3">Coloris : <span data-opt-label class="font-medium">Or blanc</span></legend><div class="flex flex-wrap gap-3"><label class="opt-color relative" title="Or blanc"><input type="radio" name="col-puces-halo" value="Or blanc" checked><span style="background:#E4E6EA"></span><span class="sr-only">Or blanc</span></label><label class="opt-color relative" title="Or jaune"><input type="radio" name="col-puces-halo" value="Or jaune"><span style="background:#E5C07B"></span><span class="sr-only">Or jaune</span></label></div></fieldset>
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="puces-halo" aria-pressed="false" aria-label="Ajouter Puces Halo aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Diamants de laboratoire 0,5 ct</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Or 18 carats recyclé</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Fermoir à vis sécurisé</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="puces-halo" aria-pressed="false" aria-label="Ajouter Puces Halo aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="colliers" data-product data-id="pendentif-ambre" data-name="Pendentif Croissant" data-price="165" data-img="assets/img/p-pendentif.webp">
+            <a href="#pendentif-ambre" id="pendentif-ambre" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-pendentif.webp" alt="Pendentif en forme de croissant de lune avec pierre bleue" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Nouveau</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Pendentif Croissant</h3><p class="text-xs text-mist mt-1 tracking-wide">Topaze et laiton doré</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">165 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="pendentif-ambre" data-name="Pendentif Croissant" data-price="165" data-img="assets/img/p-pendentif.webp">
+                <p class="kicker text-gold">Colliers</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Pendentif Croissant</h2>
+                <p class="mt-4 text-2xl">165 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Notre emblème : un croissant de lune qui retient une topaze bleue taillée en goutte.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="pendentif-ambre" aria-pressed="false" aria-label="Ajouter Pendentif Croissant aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Topaze bleue Londres</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Laiton doré à l'or fin 3 microns</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Chaîne 50 cm</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="pendentif-ambre" aria-pressed="false" aria-label="Ajouter Pendentif Croissant aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="bagues" data-product data-id="bague-solitaire" data-name="Solitaire Aurore" data-price="890" data-img="assets/img/p-bague.webp" data-needs-option>
+            <a href="#bague-solitaire" id="bague-solitaire" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-bague.webp" alt="Bague solitaire en or rose sertie d'un diamant sur fond noir" width="900" height="1125" loading="lazy" decoding="async"></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Solitaire Aurore</h3><p class="text-xs text-mist mt-1 tracking-wide">Or rose et diamant</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">890 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="bague-solitaire" data-name="Solitaire Aurore" data-price="890" data-img="assets/img/p-bague.webp">
+                <p class="kicker text-gold">Bagues</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Solitaire Aurore</h2>
+                <p class="mt-4 text-2xl">890 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Un diamant rond de 0,5 carat serti six griffes sur un anneau ajouré. Personnalisable en sur-mesure.</p>
+                
+                <fieldset data-opt data-required class="mt-7"><legend class="text-sm mb-3 flex w-full justify-between gap-4"><span>Tour de doigt : <span data-opt-label class="font-medium">à choisir</span></span></legend><div class="flex flex-wrap gap-2"><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="48"><span>48</span></label><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="50"><span>50</span></label><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="52"><span>52</span></label><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="54"><span>54</span></label><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="56"><span>56</span></label><label class="opt-size relative"><input type="radio" name="t-bague-solitaire" value="58"><span>58</span></label></div></fieldset>
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="bague-solitaire" aria-pressed="false" aria-label="Ajouter Solitaire Aurore aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Diamant de laboratoire 0,5 ct, VS1</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Or rose 18 carats recyclé</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Mise à taille offerte</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="bague-solitaire" aria-pressed="false" aria-label="Ajouter Solitaire Aurore aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick>Choisir une taille</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="colliers" data-product data-id="collier-perles" data-name="Collier Perles d'Eau Douce" data-price="189" data-img="assets/img/p-perles.webp">
+            <a href="#collier-perles" id="collier-perles" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-perles.webp" alt="Collier de perles blanches dans un écrin" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Iconique</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Collier Perles d'Eau Douce</h3><p class="text-xs text-mist mt-1 tracking-wide">Perles 7 mm, fermoir or 18 ct</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">189 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="collier-perles" data-name="Collier Perles d'Eau Douce" data-price="189" data-img="assets/img/p-perles.webp">
+                <p class="kicker text-gold">Colliers</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Collier Perles d'Eau Douce</h2>
+                <p class="mt-4 text-2xl">189 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Un rang de perles d'eau douce sélectionnées une à une pour leur lustre, monté sur soie et fermoir en or recyclé.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="collier-perles" aria-pressed="false" aria-label="Ajouter Collier Perles d'Eau Douce aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Perles d'eau douce 7 – 7,5 mm</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Fermoir en or 18 carats recyclé</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Longueur 42 cm</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="collier-perles" aria-pressed="false" aria-label="Ajouter Collier Perles d'Eau Douce aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="sacs" data-product data-id="sac-rubis" data-name="Sac Rubis" data-price="420" data-img="assets/img/p-sac-rouge.webp">
+            <a href="#sac-rubis" id="sac-rubis" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-sac-rouge.webp" alt="Sac à main rouge à rabat avec fermoir doré" width="900" height="1125" loading="lazy" decoding="async"><span class="pbadge tag">Édition limitée</span></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Sac Rubis</h3><p class="text-xs text-mist mt-1 tracking-wide">Cuir grainé, fermoir laiton</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">420 €</p>
+              </div>
+              <div class="swatches mt-3" aria-label="2 coloris"><i style="background:#B0182A"></i><i style="background:#1E1E2A"></i></div>
+              <template><div class="p-7 lg:p-12" data-product data-id="sac-rubis" data-name="Sac Rubis" data-price="420" data-img="assets/img/p-sac-rouge.webp">
+                <p class="kicker text-gold">Sacs</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Sac Rubis</h2>
+                <p class="mt-4 text-2xl">420 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Un sac structuré à porter main ou bandoulière, doublé d'agneau. Numéroté à 200 exemplaires.</p>
+                <fieldset data-opt class="mt-8"><legend class="text-sm mb-3">Coloris : <span data-opt-label class="font-medium">Rubis</span></legend><div class="flex flex-wrap gap-3"><label class="opt-color relative" title="Rubis"><input type="radio" name="col-sac-rubis" value="Rubis" checked><span style="background:#B0182A"></span><span class="sr-only">Rubis</span></label><label class="opt-color relative" title="Encre"><input type="radio" name="col-sac-rubis" value="Encre"><span style="background:#1E1E2A"></span><span class="sr-only">Encre</span></label></div></fieldset>
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="sac-rubis" aria-pressed="false" aria-label="Ajouter Sac Rubis aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Veau grainé tannage végétal</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Fermoir laiton massif</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Bandoulière amovible</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="sac-rubis" aria-pressed="false" aria-label="Ajouter Sac Rubis aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="bagues" data-product data-id="bracelet-tresse" data-name="Bracelet Tressé" data-price="290" data-img="assets/img/p-bracelet.webp">
+            <a href="#bracelet-tresse" id="bracelet-tresse" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-bracelet.webp" alt="Bracelet tressé en or rose sur fond rose" width="900" height="1125" loading="lazy" decoding="async"></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Bracelet Tressé</h3><p class="text-xs text-mist mt-1 tracking-wide">Or rose 18 ct</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">290 €</p>
+              </div>
+              
+              <template><div class="p-7 lg:p-12" data-product data-id="bracelet-tresse" data-name="Bracelet Tressé" data-price="290" data-img="assets/img/p-bracelet.webp">
+                <p class="kicker text-gold">Bracelets</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Bracelet Tressé</h2>
+                <p class="mt-4 text-2xl">290 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Une maille tressée souple qui épouse le poignet, ponctuée de petits diamants.</p>
+                
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="bracelet-tresse" aria-pressed="false" aria-label="Ajouter Bracelet Tressé aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Or rose 18 carats recyclé</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Longueur 17 cm + 2 cm</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Fermoir mousqueton</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="bracelet-tresse" aria-pressed="false" aria-label="Ajouter Bracelet Tressé aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+          <li class="shrink-0 w-[78%] sm:w-[44%] lg:w-[23.5%]"><article class="pcard " data-cat="accessoires" data-product data-id="montre-aube" data-name="Montre Aube 36 mm" data-price="290" data-img="assets/img/p-montre.webp">
+            <a href="#montre-aube" id="montre-aube" data-expand class="block">
+              <div class="pmedia"><img src="assets/img/p-montre.webp" alt="Montre au cadran blanc et bracelet cuir tenue à la main" width="900" height="1125" loading="lazy" decoding="async"></div>
+              <div class="mt-4 flex items-start justify-between gap-3">
+                <div class="min-w-0"><h3 class="font-serif text-xl">Montre Aube 36 mm</h3><p class="text-xs text-mist mt-1 tracking-wide">Bracelet cuir</p></div>
+                <p class="text-sm text-gold whitespace-nowrap">290 €</p>
+              </div>
+              <div class="swatches mt-3" aria-label="2 coloris"><i style="background:#8B5A2B"></i><i style="background:#1A1A1A"></i></div>
+              <template><div class="p-7 lg:p-12" data-product data-id="montre-aube" data-name="Montre Aube 36 mm" data-price="290" data-img="assets/img/p-montre.webp">
+                <p class="kicker text-gold">Montres</p>
+                <h2 class="mt-3 display text-5xl lg:text-6xl">Montre Aube 36 mm</h2>
+                <p class="mt-4 text-2xl">290 €</p>
+                <p class="mt-6 leading-relaxed text-mist">Un cadran épuré, verre saphir et mouvement suisse. Le bracelet s'échange sans outil.</p>
+                <fieldset data-opt class="mt-8"><legend class="text-sm mb-3">Coloris : <span data-opt-label class="font-medium">Cognac</span></legend><div class="flex flex-wrap gap-3"><label class="opt-color relative" title="Cognac"><input type="radio" name="col-montre-aube" value="Cognac" checked><span style="background:#8B5A2B"></span><span class="sr-only">Cognac</span></label><label class="opt-color relative" title="Noir"><input type="radio" name="col-montre-aube" value="Noir"><span style="background:#1A1A1A"></span><span class="sr-only">Noir</span></label></div></fieldset>
+                
+                <div class="mt-9 flex gap-3">
+                  <button type="button" data-add class="btn btn-gold flex-1">Ajouter au panier</button>
+                  <button type="button" class="wish wish-inline" data-wish="montre-aube" aria-pressed="false" aria-label="Ajouter Montre Aube 36 mm aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+                </div>
+                <ul class="mt-8 space-y-2 text-sm text-mist"><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Mouvement quartz suisse</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Verre saphir</li><li class="flex gap-2"><span class="mt-0.5 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg></span>Étanche 5 ATM</li></ul>
+              </div></template>
+            </a>
+            <button type="button" class="wish" data-wish="montre-aube" aria-pressed="false" aria-label="Ajouter Montre Aube 36 mm aux favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.6C1.2 8.3 3 4.5 6.6 4.5c2.1 0 3.4 1.2 4.4 2.6 1-1.4 2.3-2.6 4.4-2.6 3.6 0 5.4 3.8 3.8 6.9C19 15.6 12 20 12 20z"/></svg></button>
+            <button type="button" class="quick" data-quick><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ajout rapide</button>
+          </article></li>
+        </ul>
+        <div class="mt-10 text-gold" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <section class="py-10">
+      <figure class="relative h-[90vh] min-h-[520px] overflow-hidden" data-clip-scroll>
+        <img src="assets/img/portee.webp" alt="Femme portant un collier fin en or sur une blouse blanche" width="900" height="1200" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover" data-zoom-scroll="1.2">
+        <div class="absolute inset-0 bg-gradient-to-r from-night/85 via-night/40 to-transparent" aria-hidden="true"></div>
+        <figcaption class="relative h-full mx-auto max-w-site px-5 lg:px-10 flex flex-col justify-center">
+          <p class="display text-[clamp(2.6rem,6vw,6rem)] max-w-3xl">« Un bijou, c'est un souvenir <em>qu'on peut toucher.</em> »</p>
+          <p class="mt-6 kicker text-gold">Inès Valadier — Fondatrice</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="py-20 lg:py-28">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <p class="kicker text-gold text-center" data-appear>Savoir-faire</p>
+        <h2 class="mt-4 display text-center text-[clamp(2.8rem,6vw,5.5rem)]" data-blur-text>De l'esquisse <em>à l'écrin</em></h2>
+        <ol class="mt-16 grid md:grid-cols-3 gap-px bg-gold/15" data-stagger>
+          <li class="bg-night p-10 text-center" data-spotlight><span class="display italic text-gold text-5xl">I</span><h3 class="mt-6 display text-4xl">Dessin</h3><p class="mt-4 text-mist">Chaque pièce naît d'une gouache à l'atelier, puis d'un modèle en cire sculpté à la main.</p></li>
+          <li class="bg-night p-10 text-center" data-spotlight><span class="display italic text-gold text-5xl">II</span><h3 class="mt-6 display text-4xl">Fonte</h3><p class="mt-4 text-mist">L'or recyclé est fondu à Paris, à deux rues de la boutique, par un maître fondeur.</p></li>
+          <li class="bg-night p-10 text-center" data-spotlight><span class="display italic text-gold text-5xl">III</span><h3 class="mt-6 display text-4xl">Sertissage</h3><p class="mt-4 text-mist">Nos sertisseurs posent chaque pierre au microscope. Comptez 6 à 12 heures par bague.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="pb-24">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-2 gap-5" data-stagger>
+        <blockquote class="border border-gold/20 p-8 lg:p-12 flex flex-col justify-between gap-10">
+          <p class="text-gold tracking-[.3em]" aria-label="5 étoiles sur 5">★★★★★</p>
+          <p class="display text-3xl lg:text-4xl">« Ils ont transformé la bague de ma grand-mère en solitaire moderne, en gardant la pierre. Je pleure à chaque fois que je la regarde. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/a-1.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Claire D.</strong><span class="text-sm text-mist">Bague sur-mesure</span></span></footer>
+        </blockquote>
+        <blockquote class="border border-gold/20 p-8 lg:p-12 flex flex-col justify-between gap-10">
+          <p class="text-gold tracking-[.3em]" aria-label="5 étoiles sur 5">★★★★★</p>
+          <p class="display text-3xl lg:text-4xl">« Emballage sublime, gravure parfaite et livraison en 48 h. Le collier cœur a fait son effet. »</p>
+          <footer class="flex items-center gap-4"><img src="assets/img/a-2.webp" alt="" width="160" height="160" loading="lazy" decoding="async" class="w-12 h-12 rounded-full object-cover" aria-hidden="true"><span><strong class="block font-medium">Antoine L.</strong><span class="text-sm text-mist">Collier Cœur Pavé</span></span></footer>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-coal text-mist">
+    <div class="mx-auto max-w-site px-5 lg:px-10 pt-24 pb-10">
+      <div class="text-center">
+        <p class="kicker text-gold">Atelier parisien depuis 2012</p>
+        <p class="mt-6 display text-pearl text-[clamp(2.6rem,6vw,5.5rem)]">Un bijou se transmet. <em>Il commence ici.</em></p>
+        <a href="sur-mesure.html" class="mt-10 btn btn-gold" data-magnetic=".2">Prendre rendez-vous <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hairline my-16" aria-hidden="true"></div>
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 text-sm">
+        <div><p class="kicker text-pearl mb-4">Boutique</p><address class="not-italic leading-relaxed">9 rue de Grenelle<br>75006 Paris<br><a href="tel:+33145000000" class="hover:text-gold">+33 1 45 00 00 00</a></address></div>
+        <div><p class="kicker text-pearl mb-4">Créations</p><ul class="space-y-2"><li><a href="creations.html" class="hover:text-gold">Colliers</a></li><li><a href="creations.html" class="hover:text-gold">Boucles d'oreilles</a></li><li><a href="creations.html" class="hover:text-gold">Bagues</a></li><li><a href="creations.html" class="hover:text-gold">Sacs & cuir</a></li></ul></div>
+        <div><p class="kicker text-pearl mb-4">Services</p><ul class="space-y-2"><li><a href="sur-mesure.html" class="hover:text-gold">Sur-mesure</a></li><li><a href="boutique.html#faq" class="hover:text-gold">Gravure offerte</a></li><li><a href="boutique.html#faq" class="hover:text-gold">Garantie à vie</a></li><li><a href="boutique.html#faq" class="hover:text-gold">Livraison assurée</a></li></ul></div>
+        <form data-form novalidate aria-label="Inscription à la lettre Sélène"><p class="kicker text-pearl mb-4">La lettre</p><p>Nouvelles pièces et ventes privées, quatre fois par an.</p><div class="mt-4 flex border-b border-pearl/20"><label for="nl" class="sr-only">Votre e-mail</label><input id="nl" type="email" name="email" required placeholder="Votre e-mail" class="flex-1 bg-transparent py-3 outline-none text-pearl placeholder:text-mist"><button class="text-gold px-2" aria-label="S'inscrire">→</button></div><p data-form-success hidden tabindex="-1" class="mt-3 text-gold">Merci, à très vite.</p><p data-form-error hidden class="mt-3 text-red-300">Réessayez dans un instant.</p></form>
+      </div>
+      <div class="mt-16 pt-8 border-t border-pearl/10 flex flex-col sm:flex-row justify-between gap-2 text-xs">
+        <p>© <span data-year>2026</span> Sélène Joaillerie SAS — Poinçon de maître déposé</p>
+        <p><a href="#" class="hover:text-gold">CGV</a> · <a href="mentions-legales.html" class="hover:text-gold">Mentions légales</a> · <a href="confidentialite.html" class="hover:text-gold">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <div data-modal hidden role="dialog" aria-modal="true" aria-label="Fiche produit">
+    <div data-modal-panel class="shop-panel relative">
+      <button type="button" data-modal-close class="absolute right-4 top-4 z-10 w-11 h-11 rounded-full grid place-items-center text-xl bg-night/80 text-pearl backdrop-blur" aria-label="Fermer la fiche">×</button>
+      <div class="grid lg:grid-cols-2"><img data-modal-img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""><div data-modal-content></div></div>
+    </div>
+  </div>
+  <div data-cart hidden role="dialog" aria-modal="true" aria-label="Votre panier">
+    <div class="cart-panel">
+      <div class="cart-head"><p class="display text-4xl">Votre panier</p><button type="button" data-cart-close class="w-10 h-10 rounded-full grid place-items-center text-xl hover:bg-white/5" aria-label="Fermer le panier">×</button></div>
+      <div class="cart-free"><p data-free-msg></p><div class="track"><i data-free-bar></i></div></div>
+      <ul data-cart-items></ul>
+      <div data-cart-empty><p>Votre panier est vide pour le moment.</p><a href="creations.html" class="mt-6 btn btn-gold">Découvrir la boutique</a></div>
+      <div data-cart-footer hidden>
+        <div class="flex justify-between text-lg"><span>Sous-total</span><strong class="font-medium" data-cart-total>0 €</strong></div>
+        <p class="mt-1 text-xs opacity-60">TVA incluse. Frais de port calculés à l'étape suivante.</p>
+        <button type="button" data-checkout class="mt-5 btn btn-gold w-full">Commander</button>
+        <p class="mt-3 text-center text-xs opacity-60">Paiement sécurisé · Retours gratuits sous 30 jours</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

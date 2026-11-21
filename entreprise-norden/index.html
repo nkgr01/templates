@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Norden Construction — Entreprise générale du bâtiment à Lyon, Paris et Genève</title>
+  <meta name="description" content="Norden Construction conçoit et réalise des bâtiments durables depuis 1987 : construction neuve, réhabilitation, ingénierie BIM et bas carbone. Agences à Lyon, Paris et Genève.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.norden-construction.fr/">
+  <meta name="theme-color" content="#F1EFEA">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Norden Construction">
+  <meta property="og:title" content="Norden Construction — Entreprise générale du bâtiment à Lyon, Paris et Genève">
+  <meta property="og:description" content="Norden Construction conçoit et réalise des bâtiments durables depuis 1987 : construction neuve, réhabilitation, ingénierie BIM et bas carbone. Agences à Lyon, Paris et Genève.">
+  <meta property="og:url" content="https://www.norden-construction.fr/">
+  <meta property="og:image" content="https://www.norden-construction.fr/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23121212'/%3E%3Crect x='14' y='14' width='14' height='36' fill='%23F1EFEA'/%3E%3Crect x='36' y='26' width='14' height='24' fill='%23FF5B1F'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js')</script>
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"Norden Construction","url":"https://www.norden-construction.fr/","telephone":"+33 4 72 00 00 00","email":"projets@norden-construction.fr","foundingDate":"1987","address":{"@type":"PostalAddress","streetAddress":"27 quai Rambaud","postalCode":"69002","addressLocality":"Lyon","addressCountry":"FR"},"areaServed":["Auvergne-Rhône-Alpes","Île-de-France","Suisse romande"]}</script>
+</head>
+<body class="font-sans bg-paper text-ink">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="page-curtain" data-curtain aria-hidden="true"><span>Norden — Construire l'essentiel</span></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="mx-auto max-w-site px-5 lg:px-10 h-[72px] flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 font-semibold text-lg tracking-tight" aria-label="Norden Construction — accueil"><span class="flex items-end gap-[3px]" aria-hidden="true"><span class="w-2.5 h-5 bg-ink"></span><span class="w-2.5 h-3.5 bg-flame"></span></span> NORDEN</a>
+      <nav class="hidden lg:flex items-center gap-9 text-[15px]" aria-label="Navigation principale">
+          <a href="index.html" class="nav-link" aria-current="page"><span>Accueil</span><span aria-hidden="true">Accueil</span></a>
+          <a href="entreprise.html" class="nav-link"><span>Entreprise</span><span aria-hidden="true">Entreprise</span></a>
+          <a href="services.html" class="nav-link"><span>Services</span><span aria-hidden="true">Services</span></a>
+          <a href="realisations.html" class="nav-link"><span>Réalisations</span><span aria-hidden="true">Réalisations</span></a>
+          <a href="contact.html" class="nav-link"><span>Contact</span><span aria-hidden="true">Contact</span></a>
+      </nav>
+      <a href="contact.html" class="hidden lg:inline-flex btn btn-ink !py-3 !px-5 text-sm" data-magnetic=".2">Lancer un projet <span class="sq"></span></a>
+      <button class="burger lg:hidden flex flex-col gap-[6px] p-2 relative z-[60]" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-0 z-40 bg-paper flex flex-col justify-end p-5 pb-12 lg:hidden" data-menu aria-label="Navigation mobile">
+          <a href="index.html" class="flex items-baseline gap-4 border-t border-ink/15 py-4 text-4xl font-medium tracking-tight text-flame" aria-current="page"><span class="label text-stone">01</span>Accueil</a>
+          <a href="entreprise.html" class="flex items-baseline gap-4 border-t border-ink/15 py-4 text-4xl font-medium tracking-tight"><span class="label text-stone">02</span>Entreprise</a>
+          <a href="services.html" class="flex items-baseline gap-4 border-t border-ink/15 py-4 text-4xl font-medium tracking-tight"><span class="label text-stone">03</span>Services</a>
+          <a href="realisations.html" class="flex items-baseline gap-4 border-t border-ink/15 py-4 text-4xl font-medium tracking-tight"><span class="label text-stone">04</span>Réalisations</a>
+          <a href="contact.html" class="flex items-baseline gap-4 border-t border-ink/15 py-4 text-4xl font-medium tracking-tight"><span class="label text-stone">05</span>Contact</a>
+  </nav>
+  <main id="contenu">
+    <section class="relative min-h-[100svh] pt-28 lg:pt-0 flex flex-col lg:block overflow-hidden">
+      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-[64%] h-[52vh] lg:h-auto order-2 lg:[mask-image:linear-gradient(90deg,transparent,#000_30%)]" aria-hidden="true"><canvas data-scene="city"></canvas></div>
+      <div class="relative z-10 mx-auto max-w-site px-5 lg:px-10 lg:min-h-[100svh] lg:flex lg:flex-col lg:justify-center pointer-events-none">
+        <div class="flex flex-wrap gap-x-8 gap-y-2 label text-stone pointer-events-auto" data-reveal>
+          <span>Entreprise générale</span><span>Lyon · Paris · Genève</span><span>Depuis 1987</span>
+        </div>
+        <h1 class="mt-8 text-[clamp(3.6rem,11vw,11.5rem)] font-semibold leading-[.84] tracking-[-0.055em]" data-split>Construire<br>l'essentiel<span class="text-flame">.</span></h1>
+        <div class="mt-10 flex flex-col sm:flex-row sm:items-center gap-8 pointer-events-auto">
+          <p class="max-w-md text-lg leading-relaxed text-ink/70" data-reveal data-delay=".4">Nous concevons et bâtissons des lieux sobres, durables et précis — du premier croquis à la remise des clés.</p>
+          <a href="realisations.html" class="btn btn-outline shrink-0" data-reveal data-delay=".5">Voir nos réalisations <span class="sq"></span></a>
+        </div>
+      </div>
+      <p class="hidden lg:block absolute bottom-8 right-10 label text-stone">Survolez la maquette ↗</p>
+    </section>
+
+    <section class="py-8 border-y border-ink/15 bg-ink text-paper" aria-label="Métiers">
+      <div class="marquee">
+        <div class="marquee__track text-5xl md:text-7xl font-semibold tracking-[-0.04em] gap-12 pr-12">
+          <span class="flex items-center gap-12 whitespace-nowrap">Construction neuve<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Réhabilitation<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Ingénierie BIM<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Bas carbone<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Construction neuve<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Réhabilitation<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Ingénierie BIM<span class="w-5 h-5 bg-flame"></span></span><span class="flex items-center gap-12 whitespace-nowrap">Bas carbone<span class="w-5 h-5 bg-flame"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 lg:py-40">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10">
+        <p class="lg:col-span-3 label text-flame" data-reveal>(01) — Manifeste</p>
+        <h2 class="lg:col-span-9 text-[clamp(2rem,4.4vw,4.2rem)] font-medium leading-[1.04] tracking-[-0.035em]" data-split>Nous croyons qu'un bon bâtiment est d'abord un bâtiment juste : bien pensé, bien construit, et fait pour durer cent ans.</h2>
+      </div>
+      <dl class="mx-auto max-w-site px-5 lg:px-10 mt-24 grid grid-cols-2 lg:grid-cols-4" data-stagger>
+        <div class="border-t border-ink pt-5 pr-6 pb-10">
+          <dt class="label text-stone">années d'expérience</dt>
+          <dd class="mt-6 text-6xl lg:text-8xl font-semibold tracking-[-0.05em]"><span data-count="38">38</span><span class="text-flame"></span></dd>
+        </div>
+        <div class="border-t border-ink pt-5 pr-6 pb-10">
+          <dt class="label text-stone">bâtiments livrés</dt>
+          <dd class="mt-6 text-6xl lg:text-8xl font-semibold tracking-[-0.05em]"><span data-count="420">420</span><span class="text-flame"></span></dd>
+        </div>
+        <div class="border-t border-ink pt-5 pr-6 pb-10">
+          <dt class="label text-stone">de carbone en moins en moyenne</dt>
+          <dd class="mt-6 text-6xl lg:text-8xl font-semibold tracking-[-0.05em]"><span data-count="35">35</span><span class="text-flame">%</span></dd>
+        </div>
+        <div class="border-t border-ink pt-5 pr-6 pb-10">
+          <dt class="label text-stone">collaborateurs</dt>
+          <dd class="mt-6 text-6xl lg:text-8xl font-semibold tracking-[-0.05em]"><span data-count="310">310</span><span class="text-flame"></span></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="pb-28">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <div class="flex items-end justify-between gap-6 mb-10">
+          <p class="label text-flame" data-reveal>(02) — Services</p>
+          <a href="services.html" class="label hover:text-flame" data-reveal>Tous les services →</a>
+        </div>
+        <ul class="border-b border-ink/15">
+          <li class="border-t border-ink/15" data-reveal>
+            <a href="services.html#construction" class="row-link grid grid-cols-12 gap-4 items-center py-8 lg:py-10 px-2 lg:px-4">
+              <span class="col-span-2 lg:col-span-1 label">01</span>
+              <span class="col-span-10 lg:col-span-5 text-3xl lg:text-5xl font-medium tracking-[-0.03em]">Construction neuve</span>
+              <span class="hidden lg:block lg:col-span-5 text-[15px] opacity-70">Logements collectifs, bureaux, équipements publics .</span>
+              <span class="arrow hidden lg:block lg:col-span-1 justify-self-end text-3xl">→</span>
+            </a>
+          </li>
+          <li class="border-t border-ink/15" data-reveal>
+            <a href="services.html#rehabilitation" class="row-link grid grid-cols-12 gap-4 items-center py-8 lg:py-10 px-2 lg:px-4">
+              <span class="col-span-2 lg:col-span-1 label">02</span>
+              <span class="col-span-10 lg:col-span-5 text-3xl lg:text-5xl font-medium tracking-[-0.03em]">Réhabilitation & rénovation</span>
+              <span class="hidden lg:block lg:col-span-5 text-[15px] opacity-70">Transformation de bâtiments existants, restructuration lourde, surélévation et rénovation énergétique en site occupé.</span>
+              <span class="arrow hidden lg:block lg:col-span-1 justify-self-end text-3xl">→</span>
+            </a>
+          </li>
+          <li class="border-t border-ink/15" data-reveal>
+            <a href="services.html#ingenierie" class="row-link grid grid-cols-12 gap-4 items-center py-8 lg:py-10 px-2 lg:px-4">
+              <span class="col-span-2 lg:col-span-1 label">03</span>
+              <span class="col-span-10 lg:col-span-5 text-3xl lg:text-5xl font-medium tracking-[-0.03em]">Ingénierie & BIM</span>
+              <span class="hidden lg:block lg:col-span-5 text-[15px] opacity-70">Notre bureau d'études intégré optimise chaque projet dès l'esquisse .</span>
+              <span class="arrow hidden lg:block lg:col-span-1 justify-self-end text-3xl">→</span>
+            </a>
+          </li>
+          <li class="border-t border-ink/15" data-reveal>
+            <a href="services.html#bas-carbone" class="row-link grid grid-cols-12 gap-4 items-center py-8 lg:py-10 px-2 lg:px-4">
+              <span class="col-span-2 lg:col-span-1 label">04</span>
+              <span class="col-span-10 lg:col-span-5 text-3xl lg:text-5xl font-medium tracking-[-0.03em]">Bas carbone</span>
+              <span class="hidden lg:block lg:col-span-5 text-[15px] opacity-70">Matériaux biosourcés, réemploi, préfabrication hors site .</span>
+              <span class="arrow hidden lg:block lg:col-span-1 justify-self-end text-3xl">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-paper-200 overflow-hidden" data-hscroll>
+      <div class="pt-24 lg:pt-0 lg:h-screen flex flex-col justify-center">
+        <div class="mx-auto max-w-site w-full px-5 lg:px-10 flex items-end justify-between mb-10">
+          <h2 class="text-[clamp(2.4rem,5vw,4.6rem)] font-semibold tracking-[-0.04em] leading-none">Réalisations<sup class="label text-flame align-top ml-2">(6)</sup></h2>
+          <a href="realisations.html" class="label hover:text-flame hidden sm:block">Toutes les réalisations →</a>
+        </div>
+        <div class="flex gap-6 px-5 lg:px-10 pb-24 lg:pb-0 overflow-x-auto lg:overflow-visible snap-x" data-hscroll-track>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="tertiaire">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-1 aspect-[4/5]" role="img" aria-label="Visuel du projet Les Ateliers Confluence"><span class="tag label bg-paper px-2 py-1">2025</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Les Ateliers Confluence</h3><p class="text-ink/60">Bureaux — 12 400 m²</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Lyon 2e</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="logement bas-carbone">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-2 aspect-[4/5]" role="img" aria-label="Visuel du projet Résidence Saône"><span class="tag label bg-paper px-2 py-1">2024</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Résidence Saône</h3><p class="text-ink/60">86 logements — bois</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Villeurbanne</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="rehabilitation">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-3 aspect-[4/5]" role="img" aria-label="Visuel du projet Halle Gerland"><span class="tag label bg-paper px-2 py-1">2024</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Halle Gerland</h3><p class="text-ink/60">Réhabilitation — 6 800 m²</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Lyon 7e</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="public bas-carbone">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-4 aspect-[4/5]" role="img" aria-label="Visuel du projet Campus Mont-Blanc"><span class="tag label bg-paper px-2 py-1">2023</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Campus Mont-Blanc</h3><p class="text-ink/60">Équipement public</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Annecy</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="tertiaire logement">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-5 aspect-[4/5]" role="img" aria-label="Visuel du projet Tour Belvédère"><span class="tag label bg-paper px-2 py-1">2023</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Tour Belvédère</h3><p class="text-ink/60">Mixte — R+14</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Genève</p>
+              </div>
+            </a>
+          </article>
+          <article class="project-card group shrink-0 w-[78vw] sm:w-[46vw] lg:w-[30vw] snap-start" data-cat="public">
+            <a href="realisations.html" class="block">
+              <div class="arch arch-6 aspect-[4/5]" role="img" aria-label="Visuel du projet Pavillon Lumière"><span class="tag label bg-paper px-2 py-1">2022</span></div>
+              <div class="mt-4 flex items-start justify-between gap-4">
+                <div><h3 class="text-2xl font-medium tracking-tight">Pavillon Lumière</h3><p class="text-ink/60">Culture — 3 200 m²</p></div>
+                <p class="label text-stone pt-2 whitespace-nowrap">Paris 13e</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 lg:py-40">
+      <div class="mx-auto max-w-site px-5 lg:px-10">
+        <p class="label text-flame" data-reveal>(03) — Méthode</p>
+        <h2 class="mt-6 max-w-4xl text-[clamp(2.4rem,5vw,4.6rem)] font-semibold leading-[.95] tracking-[-0.04em]" data-split>Un interlocuteur unique, de l'esquisse à la livraison.</h2>
+        <ol class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/15 border border-ink/15" data-stagger>
+          <li class="bg-paper p-8 min-h-[280px] flex flex-col">
+            <span class="label text-flame">Étape 01</span>
+            <h3 class="mt-auto text-3xl font-medium tracking-tight">Faisabilité</h3>
+            <p class="mt-3 text-ink/65 leading-relaxed">Analyse du site, du programme et du budget. Premiers scénarios chiffrés sous 3 semaines.</p>
+          </li>
+          <li class="bg-paper p-8 min-h-[280px] flex flex-col">
+            <span class="label text-flame">Étape 02</span>
+            <h3 class="mt-auto text-3xl font-medium tracking-tight">Conception</h3>
+            <p class="mt-3 text-ink/65 leading-relaxed">Ingénierie intégrée et maquette BIM : chaque choix est optimisé en coût et en carbone.</p>
+          </li>
+          <li class="bg-paper p-8 min-h-[280px] flex flex-col">
+            <span class="label text-flame">Étape 03</span>
+            <h3 class="mt-auto text-3xl font-medium tracking-tight">Réalisation</h3>
+            <p class="mt-3 text-ink/65 leading-relaxed">Pilotage du chantier par nos équipes, avec reporting hebdomadaire et visites ouvertes.</p>
+          </li>
+          <li class="bg-paper p-8 min-h-[280px] flex flex-col">
+            <span class="label text-flame">Étape 04</span>
+            <h3 class="mt-auto text-3xl font-medium tracking-tight">Livraison</h3>
+            <p class="mt-3 text-ink/65 leading-relaxed">Réception sans réserve, dossier des ouvrages exécutés numérique et suivi sur 10 ans.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="py-28 lg:py-40">
+      <div class="mx-auto max-w-site px-5 lg:px-10 grid lg:grid-cols-12 gap-10 items-end">
+        <h2 class="lg:col-span-8 text-[clamp(2.6rem,6.5vw,6rem)] font-semibold leading-[.92] tracking-[-0.04em]" data-split>Un projet en tête ? Parlons-en dès la faisabilité.</h2>
+        <div class="lg:col-span-4 lg:justify-self-end" data-reveal>
+          <a href="contact.html" class="btn btn-ink" data-magnetic=".25">Lancer un projet <span class="sq"></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-ink text-paper">
+    <div class="mx-auto max-w-site px-5 lg:px-10 pt-24 pb-10">
+      <a href="contact.html" class="group block text-[clamp(3rem,11vw,10.5rem)] font-semibold leading-[.9] tracking-[-0.05em]">Construisons<br>ensemble<span class="text-flame">.</span> <span class="inline-block text-flame transition-transform duration-500 group-hover:translate-x-4 group-hover:-rotate-45" aria-hidden="true">→</span></a>
+      <div class="mt-24 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 border-t border-paper/15 pt-10 text-sm">
+        <div><p class="label text-paper/50 mb-4">Siège</p><address class="not-italic leading-relaxed">27 quai Rambaud<br>69002 Lyon</address></div>
+        <div><p class="label text-paper/50 mb-4">Contact</p><p class="leading-relaxed"><a href="tel:+33472000000" class="hover:text-flame">+33 4 72 00 00 00</a><br><a href="mailto:projets@norden-construction.fr" class="hover:text-flame">projets@norden-construction.fr</a></p></div>
+        <div><p class="label text-paper/50 mb-4">Navigation</p><ul class="space-y-1.5"><li><a class="hover:text-flame" href="index.html">Accueil</a></li><li><a class="hover:text-flame" href="entreprise.html">Entreprise</a></li><li><a class="hover:text-flame" href="services.html">Services</a></li><li><a class="hover:text-flame" href="realisations.html">Réalisations</a></li><li><a class="hover:text-flame" href="contact.html">Contact</a></li></ul></div>
+        <div><p class="label text-paper/50 mb-4">Réseaux</p><ul class="space-y-1.5"><li><a class="hover:text-flame" href="#">LinkedIn</a></li><li><a class="hover:text-flame" href="#">Instagram</a></li></ul></div>
+      </div>
+      <div class="mt-16 flex flex-col sm:flex-row justify-between gap-3 label text-paper/50">
+        <p>© <span data-year>2026</span> Norden Construction SAS</p>
+        <p><a href="mentions-legales.html" class="hover:text-flame">Mentions légales</a> — <a href="confidentialite.html" class="hover:text-flame">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

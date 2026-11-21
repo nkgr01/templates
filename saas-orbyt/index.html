@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbyt — Automatisation et analytics temps réel pour vos opérations</title>
+  <meta name="description" content="Orbyt connecte vos outils, automatise vos opérations sans code et vous donne une vision temps réel de votre activité. Essai gratuit de 14 jours, sans carte bancaire.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.orbyt.io/">
+  <meta name="theme-color" content="#07070B">
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Orbyt">
+  <meta property="og:title" content="Orbyt — Automatisation et analytics temps réel pour vos opérations">
+  <meta property="og:description" content="Orbyt connecte vos outils, automatise vos opérations sans code et vous donne une vision temps réel de votre activité. Essai gratuit de 14 jours, sans carte bancaire.">
+  <meta property="og:url" content="https://www.orbyt.io/">
+  <meta property="og:image" content="https://www.orbyt.io/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C5CFF'/%3E%3Cstop offset='1' stop-color='%2322D3EE'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%2307070B'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='url(%23g)' stroke-width='6'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js')</script>
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <!-- Tailwind (CDN pour le prototypage — voir README pour la build de production) -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/aurora.js" defer></script>
+  <!-- 3D (Three.js en module ES) -->
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="assets/js/scene.js"></script>
+  <!-- Données structurées -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Orbyt","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://www.orbyt.io/","description":"Plateforme d'automatisation et d'analytics temps réel pour les équipes opérationnelles.","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"0","highPrice":"79","offerCount":"3"},"publisher":{"@type":"Organization","name":"Orbyt SAS","url":"https://www.orbyt.io/"}}</script>
+</head>
+<body class="font-sans bg-void text-[#EDEDF5]">
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
+  <div class="page-curtain" data-curtain aria-hidden="true"><span></span></div>
+  <header class="site-header fixed inset-x-0 top-0 z-50 px-4 pt-4" data-header>
+    <div class="bar mx-auto max-w-site h-16 rounded-2xl px-4 sm:px-5 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2.5 font-display font-semibold text-lg" aria-label="Orbyt — accueil"><span class="relative w-7 h-7 rounded-full" style="background:conic-gradient(from 210deg,#7C5CFF,#22D3EE,#F472B6,#7C5CFF)"><span class="absolute inset-[5px] rounded-full bg-void"></span></span> Orbyt</a>
+      <nav class="hidden lg:flex items-center gap-1 text-sm text-fog" aria-label="Navigation principale">
+          <a href="index.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors " aria-current="page">Produit</a>
+          <a href="fonctionnalites.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Fonctionnalités</a>
+          <a href="tarifs.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Tarifs</a>
+          <a href="a-propos.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">À propos</a>
+          <a href="contact.html" class="nav-pill px-4 py-2 rounded-lg hover:text-white transition-colors">Contact</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="contact.html" class="text-sm text-fog hover:text-white px-3">Connexion</a>
+        <a href="tarifs.html" class="btn btn-primary !py-2.5 !text-sm" data-magnetic=".2">Essai gratuit</a>
+      </div>
+      <button class="burger lg:hidden flex flex-col gap-[6px] p-2" data-menu-toggle aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav id="menu-mobile" class="mobile-menu fixed inset-x-4 top-24 z-40 rounded-2xl bg-void-800/95 backdrop-blur-xl border border-white/10 p-4 flex flex-col lg:hidden" data-menu aria-label="Navigation mobile">
+          <a href="index.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5 bg-white/5 text-white" aria-current="page">Produit</a>
+          <a href="fonctionnalites.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Fonctionnalités</a>
+          <a href="tarifs.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Tarifs</a>
+          <a href="a-propos.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">À propos</a>
+          <a href="contact.html" class="px-4 py-3.5 rounded-xl text-lg font-display hover:bg-white/5">Contact</a>
+          <a href="tarifs.html" class="btn btn-primary justify-center mt-3">Essai gratuit</a>
+  </nav>
+  <main id="contenu">
+    <section class="relative pt-36 sm:pt-44 pb-10 overflow-hidden">
+      <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+      <div class="absolute left-1/2 top-0 -translate-x-1/2 w-[1100px] max-w-[160vw] h-[760px] opacity-[.45]" aria-hidden="true"><canvas data-scene="blob"></canvas></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_45%,rgba(7,7,11,.6),transparent)]" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 top-[420px] h-[400px] bg-gradient-to-b from-transparent to-void" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-site px-6 text-center">
+        <a href="fonctionnalites.html#ia" class="chip hover:border-white/20 transition-colors" data-reveal><span class="dot"></span> Nouveau : l'assistant IA Orbit Copilot <span aria-hidden="true">→</span></a>
+        <h1 class="mt-8 font-display font-semibold text-[clamp(2.8rem,8vw,6.6rem)] leading-[.98] tracking-[-0.03em] max-w-5xl mx-auto" data-split>Vos opérations, <span class="text-grad">en orbite</span> automatique.</h1>
+        <p class="mt-8 text-lg sm:text-xl text-fog max-w-2xl mx-auto leading-relaxed" data-reveal data-delay=".35">Orbyt connecte vos outils, automatise les tâches répétitives et transforme vos données en décisions — en temps réel, sans une ligne de code.</p>
+        <div class="mt-10 flex flex-wrap justify-center gap-3" data-reveal data-delay=".5">
+          <a href="tarifs.html" class="btn btn-primary" data-magnetic=".25">Démarrer l'essai gratuit →</a>
+          <a href="contact.html" class="btn btn-ghost">Réserver une démo</a>
+        </div>
+        <p class="mt-5 text-xs text-fog" data-reveal data-delay=".6">14 jours gratuits · Sans carte bancaire · Hébergé en Europe</p>
+      </div>
+      <div class="relative mx-auto max-w-[1100px] px-4 mt-20" style="perspective:1600px">
+        <div class="glass glow-border p-3 sm:p-4 shadow-[0_40px_120px_-30px_rgba(124,92,255,.55)]" data-flatten>
+          <div class="flex items-center gap-2 px-2 pb-3 border-b border-white/[.06]">
+            <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span><span class="w-2.5 h-2.5 rounded-full bg-white/15"></span><span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
+            <span class="ml-4 text-xs text-fog font-mono">app.orbyt.io/espace/operations</span>
+          </div>
+          <div class="grid grid-cols-12 gap-3 pt-3">
+            <aside class="hidden md:flex col-span-2 flex-col gap-1.5 text-xs text-fog">
+              <span class="px-3 py-2 rounded-lg bg-white/[.06] text-white">Vue d'ensemble</span><span class="px-3 py-2 rounded-lg ">Workflows</span><span class="px-3 py-2 rounded-lg ">Analytics</span><span class="px-3 py-2 rounded-lg ">Alertes</span><span class="px-3 py-2 rounded-lg ">Intégrations</span><span class="px-3 py-2 rounded-lg ">Équipe</span>
+            </aside>
+            <div class="col-span-12 md:col-span-10 grid grid-cols-6 gap-3">
+              <div class="col-span-2 rounded-xl bg-white/[.03] border border-white/[.06] p-3 sm:p-4">
+                <p class="text-[10px] sm:text-xs text-fog">Workflows actifs</p>
+                <p class="mt-1 font-display text-lg sm:text-2xl font-semibold">1 284</p>
+                <p class="text-[10px] sm:text-xs text-cyan">+12 %</p>
+              </div><div class="col-span-2 rounded-xl bg-white/[.03] border border-white/[.06] p-3 sm:p-4">
+                <p class="text-[10px] sm:text-xs text-fog">Tâches automatisées</p>
+                <p class="mt-1 font-display text-lg sm:text-2xl font-semibold">86,4 k</p>
+                <p class="text-[10px] sm:text-xs text-cyan">+31 %</p>
+              </div><div class="col-span-2 rounded-xl bg-white/[.03] border border-white/[.06] p-3 sm:p-4">
+                <p class="text-[10px] sm:text-xs text-fog">Temps gagné</p>
+                <p class="mt-1 font-display text-lg sm:text-2xl font-semibold">412 h</p>
+                <p class="text-[10px] sm:text-xs text-cyan">+18 %</p>
+              </div>
+              <div class="col-span-6 lg:col-span-4 rounded-xl bg-white/[.03] border border-white/[.06] p-4">
+                <div class="flex justify-between text-xs text-fog"><span>Exécutions / jour</span><span class="font-mono">7 j</span></div>
+                <div class="mt-4 h-36 flex items-end gap-2">
+                  <div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:55%;animation-delay:-0.00s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:72%;animation-delay:-0.37s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:48%;animation-delay:-0.74s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:90%;animation-delay:-1.11s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:66%;animation-delay:-1.48s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:100%;animation-delay:-1.85s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:82%;animation-delay:-2.22s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:61%;animation-delay:-2.59s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:94%;animation-delay:-2.96s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:78%;animation-delay:-3.33s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:88%;animation-delay:-3.70s"></div></div><div class="flex-1 h-full flex items-end"><div class="ui-col" style="height:70%;animation-delay:-4.07s"></div></div>
+                </div>
+              </div>
+              <div class="col-span-6 lg:col-span-2 rounded-xl bg-white/[.03] border border-white/[.06] p-4 text-xs">
+                <p class="text-fog mb-3">Activité en direct</p>
+                <ul class="space-y-2.5">
+                  <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan ui-pulse"></span><span class="truncate">Facture synchronisée</span></li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-violet "></span><span class="truncate">Lead qualifié par IA</span></li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-rose "></span><span class="truncate">Alerte stock résolue</span></li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-cyan "></span><span class="truncate">Rapport envoyé</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16" aria-label="Ils nous font confiance">
+      <p class="text-center text-sm text-fog mb-8 px-6">Plus de 4 200 équipes automatisent leurs opérations avec Orbyt</p>
+      <div class="marquee">
+        <div class="marquee__track gap-16 pr-16 font-display text-2xl font-semibold text-white/35">
+          <span class="whitespace-nowrap">Nordlys</span><span class="whitespace-nowrap">Kairo</span><span class="whitespace-nowrap">Veloce</span><span class="whitespace-nowrap">Mistral&nbsp;Foods</span><span class="whitespace-nowrap">Atlas&nbsp;Labs</span><span class="whitespace-nowrap">Polaris</span><span class="whitespace-nowrap">Brume</span><span class="whitespace-nowrap">Quanta</span><span class="whitespace-nowrap">Nordlys</span><span class="whitespace-nowrap">Kairo</span><span class="whitespace-nowrap">Veloce</span><span class="whitespace-nowrap">Mistral&nbsp;Foods</span><span class="whitespace-nowrap">Atlas&nbsp;Labs</span><span class="whitespace-nowrap">Polaris</span><span class="whitespace-nowrap">Brume</span><span class="whitespace-nowrap">Quanta</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28">
+      <div class="mx-auto max-w-site px-6">
+        <p class="chip" data-reveal><span class="dot"></span> Plateforme</p>
+        <h2 class="mt-6 font-display font-semibold text-[clamp(2.2rem,5vw,4rem)] leading-[1.02] tracking-tight max-w-3xl" data-split>Tout ce dont vos équipes ont besoin, au même endroit.</h2>
+        <div class="mt-14 grid md:grid-cols-6 gap-4" data-stagger>
+          <article class="glass md:col-span-4 p-8 min-h-[340px] flex flex-col" data-tilt="3">
+            <svg viewBox="0 0 420 120" class="w-full max-w-md h-28" aria-hidden="true">
+              <path class="flow-line" d="M60 60 H170 M250 60 H360" stroke="#7C5CFF" stroke-width="2" fill="none"/>
+              <path class="flow-line" d="M210 60 V20 M210 60 V100" stroke="#22D3EE" stroke-width="1.5" fill="none" opacity=".6"/>
+              <rect x="16" y="38" width="44" height="44" rx="12" fill="#15151F" stroke="rgba(255,255,255,.12)"/><text x="38" y="66" text-anchor="middle" fill="#B3A1FF" font-size="18">⚡</text>
+              <rect x="170" y="38" width="80" height="44" rx="12" fill="#1d1640" stroke="#7C5CFF"/><text x="210" y="65" text-anchor="middle" fill="#fff" font-size="12" font-family="Inter">Filtrer</text>
+              <rect x="360" y="38" width="44" height="44" rx="12" fill="#15151F" stroke="rgba(255,255,255,.12)"/><text x="382" y="66" text-anchor="middle" fill="#22D3EE" font-size="18">✉</text>
+            </svg>
+            <h3 class="mt-auto font-display text-2xl font-semibold">Automatisations visuelles</h3>
+            <p class="mt-2 text-fog max-w-md">Glissez, déposez, connectez. Construisez des workflows complexes avec conditions, boucles et validations humaines.</p>
+          </article>
+          <article class="glass md:col-span-2 p-8 min-h-[340px] flex flex-col" data-tilt="3">
+            <div class="space-y-3" aria-hidden="true">
+              <div class="ui-bar"></div><div class="ui-bar" style="animation-delay:-1.2s;opacity:.7"></div><div class="ui-bar" style="animation-delay:-2.1s;opacity:.45"></div>
+            </div>
+            <h3 class="mt-auto font-display text-2xl font-semibold">Analytics temps réel</h3>
+            <p class="mt-2 text-fog">Tableaux de bord vivants, mis à jour à la seconde.</p>
+          </article>
+          <article id="ia" class="glass md:col-span-2 p-8 min-h-[300px] flex flex-col" data-tilt="3">
+            <div class="rounded-xl bg-black/30 border border-white/[.06] p-4 font-mono text-xs text-fog" aria-hidden="true">
+              <p><span class="text-violet-300">›</span> Résume les retards de livraison de la semaine</p>
+              <p class="mt-2 text-white">3 commandes en retard, toutes chez le transporteur B. <span class="ui-pulse">▍</span></p>
+            </div>
+            <h3 class="mt-auto font-display text-2xl font-semibold">Copilote IA</h3>
+            <p class="mt-2 text-fog">Posez vos questions en langage naturel.</p>
+          </article>
+          <article class="glass md:col-span-2 p-8 min-h-[300px] flex flex-col" data-tilt="3">
+            <div class="w-16 h-16 rounded-2xl grid place-items-center bg-cyan/10 border border-cyan/30 text-cyan text-2xl" aria-hidden="true">⛨</div>
+            <h3 class="mt-auto font-display text-2xl font-semibold">Sécurité entreprise</h3>
+            <p class="mt-2 text-fog">SOC 2 Type II, SSO, chiffrement de bout en bout.</p>
+          </article>
+          <article class="glass md:col-span-2 p-8 min-h-[300px] flex flex-col" data-tilt="3">
+            <div class="flex flex-wrap gap-2" aria-hidden="true"><span class="chip !text-xs">Slack</span><span class="chip !text-xs">Notion</span><span class="chip !text-xs">HubSpot</span><span class="chip !text-xs">Stripe</span><span class="chip !text-xs">Shopify</span><span class="chip !text-xs">Salesforce</span><span class="chip !text-xs">Google Sheets</span><span class="chip !text-xs">Airtable</span></div>
+            <h3 class="mt-auto font-display text-2xl font-semibold">200+ intégrations</h3>
+            <p class="mt-2 text-fog">Vos outils, connectés en deux clics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28 border-y border-white/[.06] bg-void-800/50">
+      <div class="mx-auto max-w-site px-6 grid lg:grid-cols-2 gap-14 items-start" data-tabs>
+        <div>
+          <p class="chip" data-reveal><span class="dot"></span> Comment ça marche</p>
+          <h2 class="mt-6 font-display font-semibold text-[clamp(2.2rem,5vw,3.8rem)] leading-[1.02] tracking-tight" data-split>Opérationnel en trois étapes.</h2>
+          <div class="mt-10 flex flex-col gap-3" role="tablist" aria-label="Étapes">
+            <button role="tab" id="tab-connecter" aria-controls="panel-connecter" aria-selected="true" tabindex="0" class="text-left rounded-2xl border border-white/[.08] p-5 hover:border-white/20">
+              <span class="font-mono text-xs text-violet-300">01</span>
+              <span class="block font-display text-xl font-semibold mt-1">Connecter</span>
+              <span class="block text-sm text-fog mt-1">Reliez vos outils en quelques clics grâce à nos connecteurs natifs.</span>
+            </button>
+            <button role="tab" id="tab-automatiser" aria-controls="panel-automatiser" aria-selected="false" tabindex="-1" class="text-left rounded-2xl border border-white/[.08] p-5 hover:border-white/20">
+              <span class="font-mono text-xs text-violet-300">02</span>
+              <span class="block font-display text-xl font-semibold mt-1">Automatiser</span>
+              <span class="block text-sm text-fog mt-1">Décrivez votre processus, Orbyt le transforme en workflow fiable.</span>
+            </button>
+            <button role="tab" id="tab-piloter" aria-controls="panel-piloter" aria-selected="false" tabindex="-1" class="text-left rounded-2xl border border-white/[.08] p-5 hover:border-white/20">
+              <span class="font-mono text-xs text-violet-300">03</span>
+              <span class="block font-display text-xl font-semibold mt-1">Piloter</span>
+              <span class="block text-sm text-fog mt-1">Suivez chaque exécution et chaque KPI en temps réel.</span>
+            </button>
+          </div>
+        </div>
+        <div class="glass p-6 lg:sticky lg:top-28">
+          <div role="tabpanel" id="panel-connecter" aria-labelledby="tab-connecter" >
+            <div class="flex gap-1.5 mb-5" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-rose/60"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-300/60"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-400/60"></span></div>
+            <pre class="font-mono text-sm leading-7 overflow-x-auto"><code><span class="text-fog">// 1. Connectez vos sources</span>
+<span class="text-violet-300">orbyt</span>.connect(<span class="text-cyan">"hubspot"</span>)
+<span class="text-violet-300">orbyt</span>.connect(<span class="text-cyan">"stripe"</span>)
+<span class="text-violet-300">orbyt</span>.connect(<span class="text-cyan">"slack"</span>)
+
+<span class="text-emerald-400">✓ 3 sources synchronisées</span></code></pre>
+          </div>
+          <div role="tabpanel" id="panel-automatiser" aria-labelledby="tab-automatiser" hidden>
+            <div class="flex gap-1.5 mb-5" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-rose/60"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-300/60"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-400/60"></span></div>
+            <pre class="font-mono text-sm leading-7 overflow-x-auto"><code><span class="text-fog">// 2. Décrivez le workflow</span>
+<span class="text-violet-300">when</span>(<span class="text-cyan">"stripe.payment_failed"</span>)
+  .<span class="text-violet-300">then</span>(<span class="text-cyan">"hubspot.update_deal"</span>)
+  .<span class="text-violet-300">then</span>(<span class="text-cyan">"slack.notify"</span>, { canal: <span class="text-rose">"#finance"</span> })
+
+<span class="text-emerald-400">✓ Workflow déployé</span></code></pre>
+          </div>
+          <div role="tabpanel" id="panel-piloter" aria-labelledby="tab-piloter" hidden>
+            <div class="flex gap-1.5 mb-5" aria-hidden="true"><span class="w-2.5 h-2.5 rounded-full bg-rose/60"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-300/60"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-400/60"></span></div>
+            <pre class="font-mono text-sm leading-7 overflow-x-auto"><code><span class="text-fog">// 3. Mesurez l'impact</span>
+<span class="text-violet-300">orbyt</span>.metrics(<span class="text-cyan">"recouvrement"</span>)
+
+→ Délai moyen : <span class="text-white">2,1 j</span> <span class="text-emerald-400">(-64 %)</span>
+→ Relances auto : <span class="text-white">1 482</span>
+→ Temps gagné  : <span class="text-white">96 h / mois</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-28">
+      <div class="mx-auto max-w-site px-6">
+        <dl class="grid grid-cols-2 lg:grid-cols-4 gap-4" data-stagger>
+          <div class="glass p-7">
+            <dt class="sr-only">workflows exécutés chaque mois</dt>
+            <dd class="font-display text-4xl sm:text-5xl font-semibold text-grad"><span data-count="10">10</span> M+</dd>
+            <dd class="mt-2 text-sm text-fog">workflows exécutés chaque mois</dd>
+          </div>
+          <div class="glass p-7">
+            <dt class="sr-only">de disponibilité garantie</dt>
+            <dd class="font-display text-4xl sm:text-5xl font-semibold text-grad"><span data-count="99.99">99,99</span> %</dd>
+            <dd class="mt-2 text-sm text-fog">de disponibilité garantie</dd>
+          </div>
+          <div class="glass p-7">
+            <dt class="sr-only">équipes clientes</dt>
+            <dd class="font-display text-4xl sm:text-5xl font-semibold text-grad"><span data-count="4200">4 200</span></dd>
+            <dd class="mt-2 text-sm text-fog">équipes clientes</dd>
+          </div>
+          <div class="glass p-7">
+            <dt class="sr-only">de temps opérationnel gagné</dt>
+            <dd class="font-display text-4xl sm:text-5xl font-semibold text-grad"><span data-count="38">38</span> %</dd>
+            <dd class="mt-2 text-sm text-fog">de temps opérationnel gagné</dd>
+          </div>
+        </dl>
+        <div class="mt-20 grid md:grid-cols-3 gap-4" data-stagger>
+          <figure class="glass p-8">
+            <blockquote class="text-lg leading-relaxed">« Nous avons supprimé 30 heures de tâches manuelles par semaine dès le premier mois. »</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="w-10 h-10 rounded-full bg-gradient-to-br from-violet to-cyan grid place-items-center font-semibold">L</span><span><span class="block text-white">Léa M.</span><span class="text-fog">COO — Nordlys</span></span></figcaption>
+          </figure>
+          <figure class="glass p-8">
+            <blockquote class="text-lg leading-relaxed">« Le seul outil que nos équipes ops et finance utilisent vraiment au quotidien. »</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="w-10 h-10 rounded-full bg-gradient-to-br from-violet to-cyan grid place-items-center font-semibold">K</span><span><span class="block text-white">Karim B.</span><span class="text-fog">Head of Ops — Veloce</span></span></figcaption>
+          </figure>
+          <figure class="glass p-8">
+            <blockquote class="text-lg leading-relaxed">« Déployé en une après-midi, rentabilisé en une semaine. Bluffant. »</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="w-10 h-10 rounded-full bg-gradient-to-br from-violet to-cyan grid place-items-center font-semibold">C</span><span><span class="block text-white">Camille D.</span><span class="text-fog">CEO — Atlas Labs</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-24">
+      <div class="relative mx-auto max-w-site rounded-[28px] overflow-hidden border border-white/10 min-h-[460px] grid place-items-center text-center" data-scale-in>
+        <canvas data-aurora class="absolute inset-0" aria-hidden="true"></canvas>
+        <div class="relative px-6 py-20">
+          <h2 class="font-display font-semibold text-[clamp(2.2rem,5vw,4.4rem)] leading-[1.02] tracking-tight max-w-3xl mx-auto" data-split>Passez en orbite dès aujourd'hui.</h2>
+          <p class="mt-6 text-lg text-white/75 max-w-xl mx-auto" data-reveal>14 jours d'essai gratuit, sans carte bancaire. Déploiement en moins d'une heure.</p>
+          <div class="mt-10 flex flex-wrap justify-center gap-3" data-reveal>
+            <a href="tarifs.html" class="btn btn-primary" data-magnetic=".25">Commencer gratuitement →</a>
+            <a href="contact.html" class="btn btn-ghost backdrop-blur">Demander une démo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-white/[.06]">
+    <div class="mx-auto max-w-site px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-6">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2.5 font-display font-semibold text-lg"><span class="relative w-7 h-7 rounded-full" style="background:conic-gradient(from 210deg,#7C5CFF,#22D3EE,#F472B6,#7C5CFF)"><span class="absolute inset-[5px] rounded-full bg-void"></span></span> Orbyt</a>
+        <p class="mt-4 text-fog text-sm leading-relaxed max-w-xs">La plateforme qui connecte vos outils, automatise vos opérations et éclaire chaque décision en temps réel.</p>
+        <p class="mt-6 chip"><span class="dot"></span> Tous les systèmes opérationnels</p>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Produit</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="fonctionnalites.html">Fonctionnalités</a></li><li><a class="hover:text-white transition-colors" href="tarifs.html">Tarifs</a></li><li><a class="hover:text-white transition-colors" href="fonctionnalites.html#integrations">Intégrations</a></li><li><a class="hover:text-white transition-colors" href="fonctionnalites.html#securite">Sécurité</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Entreprise</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="a-propos.html">À propos</a></li><li><a class="hover:text-white transition-colors" href="a-propos.html#carrieres">Carrières</a></li><li><a class="hover:text-white transition-colors" href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Ressources</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="#">Documentation</a></li><li><a class="hover:text-white transition-colors" href="#">API</a></li><li><a class="hover:text-white transition-colors" href="#">Statut</a></li></ul>
+      </div>
+      <div>
+        <p class="font-display text-sm text-white mb-4">Légal</p>
+        <ul class="space-y-2.5 text-sm text-fog"><li><a class="hover:text-white transition-colors" href="mentions-legales.html">Mentions légales</a></li><li><a class="hover:text-white transition-colors" href="confidentialite.html">Confidentialité</a></li><li><a class="hover:text-white transition-colors" href="#">CGU</a></li></ul>
+      </div>
+    </div>
+    <div class="mx-auto max-w-site px-6 py-6 border-t border-white/[.06] flex flex-col sm:flex-row justify-between gap-3 text-xs text-fog">
+      <p>© <span data-year>2026</span> Orbyt SAS. Conçu à Paris.</p>
+      <p>Hébergé en Europe · Conforme RGPD · SOC 2 Type II</p>
+    </div>
+  </footer>
+
+</body>
+</html>
